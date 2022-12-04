@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Maven+Pro&display=swap');
+:root{
+  --var1:#003153;/*blu petrolio #001b2e*/
+  --var2:#F7C407;
+  --var3:white;
+  --var4:#ca9f00;
+}
+html, body{
+  height:100%;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  background: black;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/*- ****************************************
+/*-GRID AREA
+/*- **************************************-*/
+body{
+  display: grid;
+  display: block;
+  grid-template-areas:
+  'header'
+  'main'
+  'footer';
+  grid-gap: 0px; 
+}
+
+/*- ****************************************************
+/*-Style NAVBAR and the links inside the navigation bar 
+/*- **************************************************-*/
+.topnav {
+  grid-area: header;
+  padding: 8px 7px;
+  width: 100%;  
+  z-index: 999; 
+  display: block;   
+  position: fixed;     
+  align-items: center;          ;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Kanit', sans-serif;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.topnav-a{
+  float: right;
+  margin-top: 10px;
+  right: 0%;
+}
+.topnav a{
+  
+  width: max-content;
+  height: max-content;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/*_ ***************Change the color of links on hover *************************/
+.topnav a:hover {
+  background-color: rgba(255, 255, 255,0.3);
+  color: black;
+}
+/*_ *************Add a color to the active/current link **********************/
+.topnav a.active {
+  background-color: rgba(255, 255, 255,0.3);
+  color: white;
+}
+/*_ Hide the link that should open and close the topnav on small screens *****/
+.topnav .icon {
+  display: none;
+}
+/*_ When the screen is less than 600 pixels wide, hide all links, 
+/*_ except for the first one ("Home"). Show the link that contains should 
+/*_ open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav  {position: absolute; padding: 5px 7px ;  padding-right: 0px;} 
+  .topnav a:not(null) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    top:5px;
+    right: 8px;
+    font-size: 10px;
+  }
+}
+/*_ The "responsive" class is added to the topnav with JavaScript when the
+/*_ user clicks on the icon. This class makes the topnav look good on small screens
+/*_ (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive  {position: absolute;padding: 5px 7px; padding-right: 8px;}
+  .topnav.responsive a.icon {
+    float: right;
+    display: block;
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+  }
+  .topnav.responsive .topnav-a{
+    float: none;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+.logonav{
+  float:left;
+  background-color: rgba(0, 0, 0,0);
+  position: relative;
+  background-size: contain;
+  background-image: url(logo2.png);
+  display: flex;
+  height: 35px;
+  width: 35px;
+  margin-top: 5px;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  text-decoration: none;
+}
+/*- ****************************************************
+/*-Style  RIGHT FOR SOCIAL
+/*- **************************************************-*/
+.right{
+  position: fixed;
+  top: 80px;
+  right: 0px;
+  width: 30px;
+  height: 100%;
+  background-color: #F7C407a0;
+}
+/*- ****************************************************
+/*-Style  MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN
+/*- **************************************************-*/
+.main{
+  display: grid;
+  grid-template-columns: auto;
+  grid-area: main;
+  min-height: 100%;
+  height: max-content;
+  color:white;
+  background-color: black;
+}
+/*_ ************* WELCOME *************/
+
+/*_ SOCIAL */
+.right{
+  position: fixed;
+  top: 80px;
+  right: 0px;
+  width: 30px;
+  height: 100%;
+  background-color: #F7C407a0;
+}
+.end{
+  grid-area: footer;
+  width: 100%;
+  max-height: max-content;
+  margin-bottom: 0px;
+  background-color:red;
+}
+.welcome{
+  position: static;
+  height: 100%;
+  width: 100%;
+}
+.earth {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  border-radius: 100%;
+}
+
+.earth img{
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 200px;
+  clip-path: circle(49%);/** to delete the black border into the gif*/
+  transform: rotate(-23.27deg);
+}
+img{
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+}
+.moon-container {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  }
+.moon{
+  animation: spin 20s linear infinite;
+  background: none;
+  height: 50px;
+  width: 50px;
+  pointer-events:none;
+  transform-origin: 25px;
+  border-radius: 100%;
+
+}
+.moon img{
+  height: 50px;
+  transform: translateX(-160px) translateY(-160px);
+  width: 50px;
+}
+.earth,
+.moon {
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 1);
+}
+.earth,
+.moon {
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 1.6);
+}
+
+@keyframes spin {
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes  rotate{
+  to{
+    transform: rotateY(360deg);
+  }
+}

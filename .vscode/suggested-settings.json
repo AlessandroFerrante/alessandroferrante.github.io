@@ -1,0 +1,85 @@
+{
+    "aaron-bond.better-comments": {
+        "workbench.editor.enablePreview": false,
+        "workbench.settings.enableNaturalLanguageSearch": false,
+        "workbench.enableExperiments": false,
+        "files.autoSave": "afterDelay",
+        "editor.multiCursorModifier": "ctrlCmd",
+        "editor.minimap.showSlider": "always",
+    
+        "editor.hover.enabled": false,
+        "code-runner.runInTerminal": true,
+        "C_Cpp.autocomplete": "Disabled",
+        "C_Cpp.intelliSenseEngine": "Tag Parser",
+        "window.zoomLevel": -2,
+        "better-comments.highlightPlainText": true,
+        "better-comments.tags": [
+    
+            {
+                "tag": "!",
+                "color": "#FF2D00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "?",
+                "color": "#3498DB",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "//",
+                "color": "#474747",
+                "strikethrough": true,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "todo",
+                "color": "#FF8C00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "*",
+                "color": "#98C379",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "-",//--create by me to distinguish different part 1.0
+                "color": "#ffff00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "_",//_create by me to distinguish different part 2.0
+                "color": "#ffffff",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            }
+        ],
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.CustomBrowser": "chrome"
+    }
+}
