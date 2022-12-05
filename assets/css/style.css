@@ -71,10 +71,10 @@ body{
   margin-top: 10px;
   height: 61px;
   margin-left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.0);
+  transform: translateX(-50%); 
   border-color: 1px solid black;
   border-radius: 35px;
+  background: rgba(255, 255, 255, 0.0);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(0px);
@@ -198,7 +198,7 @@ body{
     font-size: 10px;
   }
 }
-/*-----END----RESPONSIVE-f----*/
+/*-----END----RESPONSIVE-----*/
 
 .logonav{
   float:left;
@@ -294,14 +294,19 @@ body{
 }
 .social-icons li .fa{
   color: #fff;
-}
+}/*
 .social-icons li .fa-solid{
   color: red;
 
-  background-color: white;}
-
+  background-color: white;
+}*/
+.social-icons li .fa-solid{
+  color: white;
+}
 .social-icons li:nth-child(1) a{
-  background-color: #3b5999;
+  /*background-color: #3b5999;*/
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
 }
 .social-icons li:hover:nth-child(1) a::before{
   background-color: #2f477a;
@@ -310,7 +315,9 @@ body{
   background-color: #4e69a3;
 }
 .social-icons li:nth-child(2) a{
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+ /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);*/
 }
 .social-icons li:hover:nth-child(2) a::after{
   background: #d6249f;
@@ -319,7 +326,9 @@ body{
   background: #285AEB;
 }
 .social-icons li:nth-child(3) a{
-  background-color: #00aced;
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  /*background-color: #00aced;*/
 }
 .social-icons li:hover:nth-child(3) a::after{
   background-color:#53b9e0;
@@ -328,7 +337,9 @@ body{
   background-color: #097aa5;
 }
 .social-icons li:nth-child(4) a{
-  background-color: #006600;
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  /*background-color: #006600;*/
 }
 .social-icons li:hover:nth-child(4) a::after{
   background-color:#004d00;
@@ -337,13 +348,21 @@ body{
   background-color: #003300;
 }
 .social-icons li:nth-child(5) a{
-  background-color: whitesmoke;
-}
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+ /*background-color: whitesmoke;*/
+}/*
 .social-icons li:hover:nth-child(5) a::after{
   background: linear-gradient(to left, green 25%,yellow );
 }
 .social-icons li:hover:nth-child(5) a::before{
   background: linear-gradient(to top,red 25%,#285AEB);
+}*/
+.social-icons li:hover:nth-child(5) a::after{
+  background: red;
+}
+.social-icons li:hover:nth-child(5) a::before{
+  background: #285AEB;
 }
 /*- ****************************************************
 /*-Style  MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN
@@ -375,11 +394,30 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-40%,-50%);
   z-index: 100;
 }
 .typewriter-class{
   flex:1 1 max-content;
+  color:white;
+}
+.typewriter-class:hover{
+  font-size: 1.5em;
+}
+.typewriter-class a{
+  color: white;
+  text-decoration:none;
+  border-radius: 30px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(50px);
+}
+.typewriter-class a:hover{
+  transition: 1.1s;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  animation: blink 1000ms linear infinite alternate;
 }
 #typewriter{
   font-size: 1.1em;
@@ -432,12 +470,99 @@ body{
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
+/*_ ************** RESPONSIVE TYPEWRITER**************/
+@media screen and (max-width: 950px) {
+  .textarea{
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+  }
+}
+@media screen and (max-width: 850px) {
+  .textarea{
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+  }
+}
+@media screen and (max-height:1180px) {
+  .textarea{
+    flex-direction: column;
+    margin-top: 30%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+  }
+}
+@media screen and (max-height:920px) {
+  .textarea{
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0%;
+    margin-left: -35%;
+    transform: translate(0%,-50%);
+  }
+}
+@media screen and (max-height:500px) {
+  .textarea{
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0%;
+    margin-left: -40%;
+    transform: translate(0%,-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .textarea{
+    flex-direction: column;
+    margin-top: 20%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+  }
+  #typewriter{
+    font-size: 1em;
+    margin: 0;
+    font-family: "Courier New";
+    top:0;
+  }
+  #typewriter2{
+    font-size: 1em;
+    margin: 0;
+    font-family: "Courier New";
+    top:0;
+    left:0;
+  }
+}
+@media screen and (max-width: 530px) {
+  .textarea{
+    flex-direction: column;
+    margin-top: 30%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+  }
+  #typewriter{
+    font-size: 1em;
+    margin: 0;
+    font-family: "Courier New";
+    top:0;
+  }
+  #typewriter2{
+    font-size: 1em;
+    margin: 0;
+    font-family: "Courier New";
+    top:0;
+    left:0;
+  }
+}
+/*_ *****END TYPEWRITER******************/
+
 .first{
   position:relative ;
   width:100%;
   background-image: url("../images/cielo.jpg") ;
   background-size: cover;
-  box-shadow: ;
+  box-shadow: 50px 50px 50px rgba(0, 0, 0,0.5); ;
   height:100vh;
   top: 50%;
   left: 50%;
@@ -491,7 +616,7 @@ img{
   background: none;
   height: 0px;
   width: 0px;
-  pointer-events:none;
+  
   transform-origin: 25px;
   border-radius: 100%;
 
@@ -522,6 +647,7 @@ img{
     transform: rotateY(360deg);
   }
 }
+
 /*_  MIDDLE*/
 
 .middle1{
@@ -531,7 +657,7 @@ img{
   width: 92%;
   height: 100vh;
   padding: 50px 0px;
-  border: 4px solid white;
+  border: 3px solid white;
   border-style: dashed;
   border-radius: 10px;
 }
@@ -540,7 +666,7 @@ img{
   margin-top: 30px;
   height: 200px;
   width: max;
-  border-top: 4px dashed white;
+  border-top: 3px dashed white;
 }
 .test{
   margin-top:30px;
@@ -552,7 +678,7 @@ img{
   width: 92%;
   height: 100vh;
   padding: 50px 0px;
-  border: 4px solid white;
+  border: 3px solid white;
   margin-bottom: 40px;
   border-style: dashed;
   border-radius: 10px;
@@ -561,7 +687,7 @@ img{
   margin-top: 30px;
   height: 200px;
   width: max;
-  border-top: 4px dashed white;
+  border-top: 3px dashed white;
 }
 
 /*_ END */
