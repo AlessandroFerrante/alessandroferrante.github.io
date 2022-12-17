@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Maven+Pro&display=swap');
 :root{
-  --var1:#003153;/*blu petrolio #001b2e*/
-  --var2:#F7C407;
-  --var3:white;
-  --var4:#ca9f00;
-  --var5:rgb(0, 27, 46);
+  --blue:#003153;/*blu petrolio #001b2e*/
+  --yellow:#FF9505;
+  --withe:#f7f0f0;
+  --green:#032309;
+  --black:#000000;
+  --background-middle:#897c8011;
 }
 html, body{
   height:100%;
@@ -455,6 +456,7 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
+  pointer-events: all;
   transform: translate(-40%,-50%);
   z-index: 100;
 }
@@ -477,20 +479,39 @@ body{
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
   animation: blink 1000ms linear infinite alternate;
 }
+.firma{
+  pointer-events: none;
+  width: 330px;
+  border-bottom: 1px solid #ffffff33;
+  padding-bottom:7px;
+  padding-right:27px;
+  padding-right:27px;
+  margin: 0;
+}
+#name-typewriter{
+  font-size: 3rem;
+  font-weight: 900;
+  border-bottom: 1px solid #ffffff33;
+  padding-bottom:7px;
+}
+#hi-typewriter{
+  font-size: 1.2rem;
+  font-weight: 900;
+}
 #typewriter{
-  
-  font-size: 1.1em;
+  font-size: 1rem;
   margin: 0;
   font-family: "Courier New";
   top:0;
   left:0;
+  margin-left: -40px;
 }
 #typewriter::after{
     content: "|";
     animation: blink 500ms linear infinite alternate;
  }
  #typewriter2{
-  font-size: 1.1em;
+  font-size: 0.9em;
   margin: 0;
   font-family: "Courier New";
   margin-top:0;
@@ -538,6 +559,10 @@ body{
     margin-left: -50%;
     transform: translate(0%,-50%);
   }
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
+  }
   #typewriter{
     font-size: 1em;
     margin: 0;
@@ -575,9 +600,19 @@ body{
     margin-top:80px;
     left:0;
   }
+  a{
+    cursor:none;
+  }
 }
 @media only screen and (max-device-width: 640px) and (max-device-height: 960px) {
   /* CSS per smartphone qui */
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
+  }
+  a{
+    cursor:none;
+  }
 }
 @media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
   /* CSS per iPhone 8 Plus anche agli altri modelli di iPhone con dimensioni dello schermo simili, 
@@ -587,6 +622,19 @@ body{
     margin-top: 0%;
     margin-left: -50%;
     transform: translate(0%,-50%);
+  }
+  .firma{
+    pointer-events: none;
+    width: 330px;
+    border-bottom: 1px solid #ffffff33;
+    padding-bottom:7px;
+    padding-right:0px;
+    padding-right:0px;
+    margin: 0;
+  }
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
   }
   #typewriter{
     font-size: 1em;
@@ -601,6 +649,9 @@ body{
     margin-top:30px;
     left:0;
   }
+  a{
+    cursor:none;
+  }
 }
 @media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (aspect-ratio: 375/667)  {
   /* CSS per iPhone 8 e iPhone SE (prima generazione) e simili qui */
@@ -609,6 +660,18 @@ body{
     margin-top: 0%;
     margin-left: -50%;
     transform: translate(0%,0%);
+  }
+  .firma{
+    pointer-events: none;
+    width: 330px;
+    border-bottom: 1px solid #ffffff33;
+    padding-bottom:7px;
+    padding-right:0px;
+    padding-right:0px;
+  }
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
   }
   #typewriter{
     font-size: 1em;
@@ -624,6 +687,9 @@ body{
     margin-top:0px;
     left:0;
   }
+  a{
+    cursor:none;
+  }
 }
 @media only screen and (max-device-width: 640px) and (max-device-height: 960px) and (max-device-height: 1366px) {
   /* CSS per tutti i modelli di iPhone 11 e 12 e simili qui */
@@ -637,6 +703,18 @@ body{
     margin-top: -10%;
     margin-left: -50%;
     transform: translate(0%,-50%);
+  }
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
+  }
+  .firma{
+    pointer-events: none;
+    width: 330px;
+    border-bottom: 1px solid #ffffff33;
+    padding-bottom:7px;
+    padding-right:0px;
+    padding-right:0px;
   }
   #typewriter{
     font-size: 1em;
@@ -652,6 +730,9 @@ body{
     margin-top:50px;
     left:0;
   }
+  a{
+    cursor:none;
+  }
 }
 @media only screen and (max-device-width: 720px) and (max-device-height: 1080px) {
   /* CSS per Samsung Galaxy S21/A51/71 e simili qui */
@@ -661,23 +742,52 @@ body{
     margin-left: -50%;
     transform: translate(0%,-50%);
   }
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
+    max-width: 100px;
+  }
+  .firma{
+    pointer-events: none;
+    width: 330px;
+    border-bottom: 1px solid #ffffff33;
+    padding-bottom:7px;
+    padding-right:0px;
+    padding-right:0px;
+  }
+  .typewriter-class{
+    max-height:400px;
+    flex:1 1 max-content;
+    color:white;
+  }
   #typewriter{
     font-size: 1em;
     margin: 0;
     font-family: "Courier New";
     top:0;
-    margin-top: -20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -60px;
   }
   #typewriter2{
     font-size: 1em;
     margin: 0;
     font-family: "Courier New";
     margin-top:50px;
-    left:0;
+    top:0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  a{
+    cursor:none;
   }
 }
 @media only screen and (max-device-width: 1440px) and (max-device-height: 3200px) {
   /* CSS per Samsung Galaxy S21 Ultra qui */
+  #name-typewriter{
+    font-size:2rem;
+    font-weight: 900;
+  }
 }
 /*_ *****END TYPEWRITER******************/
 
@@ -704,13 +814,17 @@ body{
   position: relative;
   
 }
+.space{
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
 .earth {
   position: absolute;
   top: calc(50% - 100px);
   left: calc(50% - 100px);
   border-radius: 100%;
 }
-
 .earth img{
   height: 200px;
   width: 200px;
@@ -777,15 +891,16 @@ body{
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100vh;
+  height: max-content;
   padding: 50px 0px;
-  background: rgba(0, 102, 0, 0.1);
+  background-color: var(--background-middle);
+  /*background: #0066001a;*/
   /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);*/
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 0px;
 }
-@media  screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .aboutme{
     flex-direction: column;
     padding: 50px;
@@ -799,7 +914,7 @@ body{
     color: #991d1d;
     font-size: 1rem;
     font-weight: 100;
-    width: 100%;
+    min-width: 80%;
    }
 }
 .aboutme{
@@ -813,51 +928,216 @@ body{
   padding: 20px;
   margin-top: 30px;
   height: max-content;
-  width: 90%;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  -webkit-text-size-adjust: 100%;
   border-top: 0.1px solid rgba(255, 255, 255, 0.215);
 }
 .mypresentation{
+  padding: 4%;
   color: #9b9999;
-  font-size: 1rem;
-  font-weight: 100;
-  width: 50%;
+  font-size: 20px;
+  max-width: 50%;
  }
 .aboutme h1{
   color:rgb(11, 102, 29);
+  width: 100%;
  }
-.test{
-  margin-top:30px;
+ .aboutme h2{
+  color:rgb(11, 102, 29);
+  width: 100%;
+ }
+ .hobbies{
+  font-weight: 100;
+  font-size:16px;
+  display: grid;
+  height: min-content;
+  grid-template-columns: auto auto auto;
+  width: 50%;
+  gap: 1rem;
+ }
+.skills{
+  padding: 4%;
+  color: #9b9999;
+  
+}
+.skills-intern{
+  display: grid;
+  height: min-content;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+.items-skills{
+  color:#0b661d;
+  font-weight:750;
+  background-color: #000000;
+  width: max-content;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 .middle2{
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100vh;
+  height: max-content;
   padding: 50px 0px;
-  background: rgba(0, 102, 0, 0.1);
+  background-color: var(--background-middle);
   /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);*/
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 0px;
 }
-.text{
+.projects{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 20px;
   margin-top: 30px;
-  height: 200px;
+  height: 100%;
   width: 90%;
   border-top: 0.1px solid rgba(255, 255, 255, 0.215);
 }
+.projects h1 {
+  color:#0b661d;
+  width:100%;
+ }
+ :root {
+  --surface-color: #000000;
+  --curve: 25;
+}
 
+.cards{
+  box-sizing: border-box;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  transform: translateY(100%);
+  background-color: var(--surface-color);
+  transition: 1.2s ease-in-out;
+
+}
+
+.card__overlay.responsive {
+  border-radius: calc(var(--curve) * 1px);    
+  transform: translateY(0%);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: 0.8s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card__header.responsive {
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  transform: translateY(0%);
+}
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: var(--green);
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  display: -webkit-box;
+  background-color:var(--surface-color);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+}  
 /*_ END */
 
 .end{
   grid-area: footer;
   width: 100%;
   height: max-content;
-  background-color:darkslategrey;
+  filter: opacity(100%);
   padding: 15px 0px;
   font-size: 12px;
   line-height: 22px;

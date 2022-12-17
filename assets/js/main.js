@@ -12,6 +12,87 @@ function responsiveFunction() {
     x.className = "topnav";
   }
 };
+function detailsFunction1() {
+  var x = document.getElementById("card__header1");
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  var y = document.getElementById("card__overlay1");
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  var z = document.getElementById("fa-solid fa-arrow-down1");
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
+function detailsFunction2() {
+  var x = document.getElementById("card__header2");
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  var y = document.getElementById("card__overlay2");
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  var z = document.getElementById("fa-solid fa-arrow-down2");
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
+function detailsFunction3() {
+  var x = document.getElementById("card__header3");
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  var y = document.getElementById("card__overlay3");
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  var z = document.getElementById("fa-solid fa-arrow-down3");
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
+function detailsFunction4() {
+  var x = document.getElementById("card__header4");
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  var y = document.getElementById("card__overlay4");
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  var z = document.getElementById("fa-solid fa-arrow-down4");
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
+
 function copyEmail() {
     navigator.clipboard.writeText("aleferrante003@gmail.com");
     alert("Copied the email: aleferrante003@gmail.com");
@@ -100,7 +181,14 @@ function showLoading(){ //Mostra
 function hideLoading(){ //Nascondi
     document.getElementById("loading").style.display="none";
 }
+
+showLoading();
+function showLoading(){ //Mostra
+    document.getElementById("main").style.display="";
+}
 /*SECOND LOADER*/
+var intervalID = window.setInterval(updateScreen, 200);
+var main = document.getElementById("main");
 var intervalID = window.setInterval(updateScreen, 200);
 var console = document.getElementById("console");
 const msg = document.querySelector(".msg");

@@ -63,45 +63,67 @@
         <div class="first">   
           <div class="textarea">
             <pre id="typewriter" class="typewriter-class">
-Hi, I'm <span class="string-highlight">Alessandro Ferrante</span>
-    
-<i>"I haven't special talent. 
-I'm passionately curious"</i>
+<span id="hi-typewriter">Hi, I'm </span>
+<span class="string-highlight" id="name-typewriter">Alessandro Ferrante</span>
+
+
+<i>"I have no special talent. 
+I'm passionately curious" </i>
+<i class="string-highlight">A.Einstein</i>
               
 <a href="#aboutme" text-decoration="none"> About me </a> </pre>
     
             <pre id="typewriter2" class="typewriter-class">
 <span class="var-highlight">var</span> model3d = {
-    name: <span class="string-highlight">'Foo'</span>,
-    type: <span class="string-highlight">'Bar'</span>,
-    location: <span class="string-highlight">'Earth'</span>,
+    name: <span class="string-highlight">'Earth&Moon'</span>,
+    type: <span class="string-highlight">'Animation'</span>,
+    location: <span class="string-highlight">'Space'</span>,
     properties:[<span class="string-highlight">'Javascript'</span>,
                 <span class="string-highlight">'HTML'</span>,
                 <span class="string-highlight">'CSS'</span>];
 }; </pre>
-            </div>  
+        </div>  
+        <div class="space">
           <div class="earth">
             <img src="assets/images/Rotating_earth_animated_transparent.gif" alt="">
           </div> 
           <div class="moon-container">
             <div class="moon">
-              <img src="https://cssanimation.rocks/images/random/moon.png" alt="">
+              <img src="assets/images/moon.png" alt="">
             </div>
           </div>
+        </div>
         </div> 
         <div class="middle1" id="aboutme">
           <div class="aboutme"> 
             <div class="mypresentation">
               <h1>About me</h1>
-              <p>wip</p><!--
-              <p>Hi! I am Alessandro, I have always been passionate about technological evolution, 
-                I have addressed my curiosity in the world of computer science and from this curiosity was born a passion, 
-                I chose to carry on enrolling in a technical institute, where I graduated as a computer expert, 
-                I am currently a computer science student at the University of Catania.</p>-->
-            </div> 
-            <div>
-              <h1>wip</h1>
-              <p>wip</p>
+              <p>Hi! I am Alessandro, I have always been passionate 
+                about technological evolution, what has aroused my curiosity has been the IT world, 
+                from this curiosity was born a passion, in fact I chose to attend a technical institute, 
+                where I obtained the diploma of IT Expert, 
+                I am currently a computer science student at the University of Catania.</p>
+                <h2>Hobbies</h2>
+                <div class="hobbies">
+                  <p class="items-skills">Astronomy</p>
+                  <p class="items-skills">Photograpy</p>
+                  <p class="items-skills">Read</p>
+                </div>
+              </div> 
+              <div class="skills">
+                <h1>Skills</h1>
+                <div class="skills-intern">
+                <p class="items-skills">C</p>
+                <p class="items-skills">JAVASCRIPT</p>
+                <p class="items-skills">JQUERY</p>
+                <p class="items-skills">JAVA</p>
+                <p class="items-skills">PHP</p>
+                <p class="items-skills">SQL</p>
+                <p class="items-skills">HTML & CSS</p>
+                <p class="items-skills">THREE.JS</p>
+                <p class="items-skills">MARKDOWN</p>
+                <p class="items-skills">CISCO</p>
+              </div>
             </div>    
           </div>
         </div>
@@ -115,29 +137,81 @@ I'm passionately curious"</i>
             <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
             </div>
           -->
-        <div class="text"> 
-          <div>
-            <h1>wip</h1>
-          </div> 
-          <div>
-            <h1>wip</h1>
-          </div> 
-          <div>
-            <h1>wip</h1>
-          </div>   
-          <div id="container">            
-          </div> 
-          <div>
-            <h1>wip</h1>
-          </div>  
-          <div>
-            <h1>wip</h1>
-          </div>     
-          <div>
-            <h1>wip</h1>
-          </div> 
-        </div>   
-        </div> 
+          <div class="projects"> 
+            <h1>Projects</h1>
+            <br>
+            <ul class="cards">
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction1()">
+                  <div class="card">
+                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay1">
+                      <div class="card__header" id="card__header1">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                        <div class="card__header-text">
+                          <h3 class="card__title">Tilte</h3>            
+                          <span class="card__status"><i id="fa-solid fa-arrow-down1" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <p class="card__description">wip</p>
+                    </div>
+                  </div>  
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction2()">
+                  <div class="card">
+                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay2">        
+                      <div class="card__header" id="card__header2">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Title</h3>
+                          <span class="card__status"><i id="fa-solid fa-arrow-down2" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <p class="card__description">wip</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction3()">
+                  <div  class="card">
+                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay3">
+                      <div class="card__header" id="card__header3">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                        <div class="card__header-text">
+                          <h3 class="card__title">Title</h3>
+                          <span class="card__status"><i id="fa-solid fa-arrow-down3" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <p class="card__description">wip</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction4()">
+                  <div  class="card" >
+                    <img src="assets/images/Immagine3.png" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay4">
+                      <div class="card__header" id="card__header4">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Title</h3>
+                          <span  class="card__status" ><i id="fa-solid fa-arrow-down4" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>          
+                      </div>
+                      <p class="card__description">wip</p>
+                    </div>
+                  </div>
+                </a>
+              </li>    
+            </ul>
+          </div>      
+        </div>
       </div> 
     <!---end part-->
       <div class="end" id="end">
