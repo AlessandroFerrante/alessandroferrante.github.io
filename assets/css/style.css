@@ -470,6 +470,7 @@ body{
 }
 .typewriter-class a{
   color: white;
+  font-weight: 800;
   text-decoration:none;
   border-radius: 30px;
   padding: 5px;
@@ -932,8 +933,8 @@ body{
   margin-top: 30px;
   height: max-content;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight:100;
   line-height: 1.5;
   color: #212529;
   -webkit-text-size-adjust: 100%;
@@ -946,11 +947,11 @@ body{
   max-width: 50%;
  }
 .aboutme h1{
-  color:rgb(54, 148, 0);
+  color:rgb(75, 202, 0);
   width: 100%;
  }
  .aboutme h2{
-  color:rgb(11, 102, 29);
+  color:rgb(75, 202, 29);
   width: 100%;
  }
  .hobbies{
@@ -971,10 +972,17 @@ body{
   display: grid;
   height: min-content;
   grid-template-columns: auto auto auto;
-  gap: 1rem;
+  gap: 2rem;
+}
+.skills-intern img{
+  transition: transform .9s;
+  width: 45px;
+}
+.skills-intern img:hover {
+  transform: scale(1.5);
 }
 .items-skills{
-  color:rgb(53, 144, 1);
+  color:rgb(75, 202, 29);
   font-weight:750;
   background-color: #000000;
   width: max-content;
@@ -994,7 +1002,7 @@ body{
   border-radius: 0px;
 }
 .projects{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -1007,7 +1015,7 @@ body{
   border-top: 0.1px solid rgba(255, 255, 255, 0.215);
 }
 .projects h1 {
-  color:#0b661d;
+  color:rgb(75, 202, 29);
   width:100%;
  }
  :root {
@@ -1025,11 +1033,12 @@ body{
   gap: 2rem;
   margin: 4rem 5vw;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   list-style-type: none;
 }
 
 .card {
+  font-family: 'Poppins', sans-serif;
   position: relative;
   display: block;
   height: 100%;  
@@ -1107,14 +1116,7 @@ body{
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color:rgb(54, 148, 0);
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-size: .8em; 
-  color: #D7BDCA;  
+  color:rgb(75, 202, 29);
 }
 .card a{
   text-decoration: none;
@@ -1125,6 +1127,7 @@ body{
 }
 
 .card__description {
+  font-size: 14px;
   padding: 0 2em 2em;
   margin: 0;
   color: #D7BDCA;
@@ -1147,7 +1150,7 @@ body{
   font-size: 12px;
   line-height: 22px;
   font-weight: 100;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: smaller;
   text-align: center;
   background-color: #00305366;
