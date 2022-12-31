@@ -171,24 +171,6 @@ typewriter = setupTypewriter(typewriter2);
 typewriter.type();
  
 /*loader*/
-showLoading();
- setTimeout(() => {
-    hideLoading();}, 2600);
-
-function showLoading(){ //Mostra
-    document.getElementById("loading").style.display="flex";
-}
-function hideLoading(){ //Nascondi
-    document.getElementById("loading").style.display="none";
-}
-
-showLoading();
-function showLoading(){ //Mostra
-    document.getElementById("main").style.display="";
-}
-/*SECOND LOADER*/
-var intervalID = window.setInterval(updateScreen, 200);
-var main = document.getElementById("main");
 var intervalID = window.setInterval(updateScreen, 200);
 var console = document.getElementById("console");
 const msg = document.querySelector(".msg");

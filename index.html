@@ -11,6 +11,11 @@
     <title>Alessandro's web site</title>
     <link rel="icon" href="assets/images/Immagine3.ico">
     <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap'); </style>
+    <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
+    <script defer src="/dist/nft-card.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a726a595d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -74,7 +79,7 @@ I'm passionately curious" </i>
 <a href="#aboutme" text-decoration="none"> About me </a> </pre>
     
             <pre id="typewriter2" class="typewriter-class">
-<span class="var-highlight">var</span> model3d = {
+<span class="string-highlight">var</span> model3d = {
     name: <span class="string-highlight">'Earth&Moon'</span>,
     type: <span class="string-highlight">'Animation'</span>,
     location: <span class="string-highlight">'Space'</span>,
@@ -128,32 +133,25 @@ I'm passionately curious" </i>
           </div>
         </div>
         <div class="middle2" id="projects">
-          <!--
-            <div class="test" >
-            <nft-card
-            contractAddress="0x2953399124f0cbb46d2cbacd8a89cf0599974963"
-            tokenId="65581650382493699040570393731656260056136545966874649273228518780268313575425">
-            </nft-card>
-            <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
-            </div>
-          -->
           <div class="projects"> 
             <h1>Projects</h1>
-            <br>
+            <br>       
             <ul class="cards">
               <li>
                 <a  href="javascript:void(0);" onclick="detailsFunction1()">
-                  <div class="card">
-                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                  <div class="card">              
+                    <img style="filter: blur(4px);" class="card__image" src="https://i.seadn.io/gae/JUncy7ocQ8LjlRHdSOSAO9eNDCfDxHwFd2TjHCCnax4s7y7siXqNkzal2DtlW9QfkJLyo8vMAKHA1FTO44I_6wjwjyRdaNWz-jYot_A?auto=format&w=1000" alt="">
                     <div class="card__overlay" id="card__overlay1">
                       <div class="card__header" id="card__header1">
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                         <div class="card__header-text">
-                          <h3 class="card__title">Tilte</h3>            
+                          <h3 class="card__title">PartialSolarEclipseAF - <b>NFT</b></h3>          
                           <span class="card__status"><i id="fa-solid fa-arrow-down1" class="fa-solid fa-arrow-down"></i> more details</span>
                         </div>
                       </div>
-                      <p class="card__description">wip</p>
+                      <p class="card__description">Partial Solar Eclipse 25 October 2022 Began at 11:36:07</p>
+                      <a class="card__description" style="color:#15B2E5;" href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/65581650382493699040570393731656260056136545966874649273228518780268313575425/"><b>Buy now on OpenSea</b> <i class="fa-solid fa-cart-shopping"></i></a>
+                      <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/65581650382493699040570393731656260056136545966874649273228518780268313575425/" title="Buy on OpenSea" target="_blank"><img style="width:120px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png" alt="Available on OpenSea" /></a>
                     </div>
                   </div>  
                 </a>
@@ -161,16 +159,18 @@ I'm passionately curious" </i>
               <li>
                 <a  href="javascript:void(0);" onclick="detailsFunction2()">
                   <div class="card">
-                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                    <img style="filter: blur(4px);" src="assets/images/newcolnft.jpg" class="card__image" alt="" />
                     <div class="card__overlay" id="card__overlay2">        
                       <div class="card__header" id="card__header2">
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
                         <div class="card__header-text">
-                          <h3 class="card__title">Title</h3>
+                          <h3 class="card__title">New NFT collection coming soon</h3>
                           <span class="card__status"><i id="fa-solid fa-arrow-down2" class="fa-solid fa-arrow-down"></i> more details</span>
                         </div>
                       </div>
-                      <p class="card__description">wip</p>
+                      <p class="card__description">coming soon</p>
+                      <a class="card__description" style="color:#15B2E5;" href="https://opensea.io/"><b>Buy now on OpenSea</b> <i class="fa-solid fa-cart-shopping"></i></a>
+                      <a href="https://opensea.io/" title="Buy on OpenSea" target="_blank"><img style="width:120px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png" alt="Available on OpenSea" /></a>
                     </div>
                   </div>
                 </a>
@@ -178,16 +178,17 @@ I'm passionately curious" </i>
               <li>
                 <a  href="javascript:void(0);" onclick="detailsFunction3()">
                   <div  class="card">
-                    <img src="assets/images/cielo.jpg" class="card__image" alt="" />
+                    <img style="filter: blur(4px);" src="assets/images/curriculum.jpg" class="card__image" alt="" />
                     <div class="card__overlay" id="card__overlay3">
                       <div class="card__header" id="card__header3">
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                         <div class="card__header-text">
-                          <h3 class="card__title">Title</h3>
+                          <h3 class="card__title">Curriculum vitae XML</h3>
                           <span class="card__status"><i id="fa-solid fa-arrow-down3" class="fa-solid fa-arrow-down"></i> more details</span>
                         </div>
                       </div>
-                      <p class="card__description">wip</p>
+                      <a href="https://alessandroferrante.github.io/curriculumvitaeXML/" class="card__description">Curriculum vitae <i class="fa-solid fa-link"></i></a>
+                      <a href="https://github.com/"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="assets/images/GitHub_Logo_White.png" alt=""></a>
                     </div>
                   </div>
                 </a>
@@ -195,16 +196,17 @@ I'm passionately curious" </i>
               <li>
                 <a  href="javascript:void(0);" onclick="detailsFunction4()">
                   <div  class="card" >
-                    <img src="assets/images/Immagine3.png" class="card__image" alt="" />
+                    <img style="filter: blur(4px);" src="assets/images/managerial.jpg" class="card__image" alt="" />
                     <div class="card__overlay" id="card__overlay4">
                       <div class="card__header" id="card__header4">
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
                         <div class="card__header-text">
-                          <h3 class="card__title">Title</h3>
+                          <h3 class="card__title">Managerial</h3>
                           <span  class="card__status" ><i id="fa-solid fa-arrow-down4" class="fa-solid fa-arrow-down"></i> more details</span>
                         </div>          
                       </div>
-                      <p class="card__description">wip</p>
+                      <a href="https://alessandroferrante.github.io/managerial/" class="card__description">Managerial <i class="fa-solid fa-link"></i></a>
+                      <a href="https://github.com/"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="assets/images/GitHub_Logo_White.png" alt=""></a>
                     </div>
                   </div>
                 </a>
@@ -220,12 +222,13 @@ I'm passionately curious" </i>
             <h3>Contacts</h3>
             <p>aleferrante003@gmail.com</p>
           </div>
-          <div>
-            <h3>wip</h3>
-            <p></p>
+          <div class="credits">
+            <h3>Credits</h3>
+            <a href="https://github.com/"><img style="width:80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="assets/images/GitHub_Logo_White.png" alt=""></a>
+            <a href="https://opensea.io/" title="Buy on OpenSea" target="_blank"><img style="width:80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png" alt="Available on OpenSea" /></a>
           </div>
-          <div>
-            <h3>wip</h3>
+          <div >
+            <h3></h3>
             <p></p>
           </div>    
         </div>
@@ -235,5 +238,10 @@ I'm passionately curious" </i>
         </div>
       </div>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#loading").toggle();
+      });
+    </script>
   </body>
 </html>
