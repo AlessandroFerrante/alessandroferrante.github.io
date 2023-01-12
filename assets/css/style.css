@@ -989,6 +989,9 @@ body{
   padding: 4px 10px;
   border-radius: 20px;
 }
+@media(max-width:767px) {
+  .skills-intern {width: 90vw;}
+}
 .middle2{
   margin-left: 50%;
   transform: translateX(-50%);
@@ -1078,7 +1081,7 @@ body{
   align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  border-radius: calc(var(--curve) * 1px) 0 calc(var(--curve) * 1px) calc(var(--curve) * 1px);    
   background-color: var(--surface-color);
   transform: translateY(-100%);
   backdrop-filter: blur(10px);
@@ -1139,6 +1142,7 @@ body{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(20px);
 }  
+
 /*_ END */
 
 .end{
@@ -1327,3 +1331,4 @@ body{
     opacity: 1;
   }
 }
+
