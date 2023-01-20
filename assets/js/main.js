@@ -218,8 +218,12 @@ function updateScreen() {
   console.appendChild(docfrag);
 }
 
-setTimeout(() => { msg.style.background = "limegreen";
-msg.innerHTML = "ACCESS GRANTED";
-msg.style.boxShadow = "0 0 30px limegreen";}, 1200);
+setTimeout(() => { 
+  //msg.style.background = "#ff000000";
+  msg.innerHTML = "ACCESS GRANTED";
+  msg.style.color="limegreen";
+  msg.style.textshadow="limegreen";
+  msg.style.boxShadow = "0 0 30px limegreen";
+}, 750);
 
 

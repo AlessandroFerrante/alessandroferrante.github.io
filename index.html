@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap'); </style>
     <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a726a595d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,7 +36,7 @@
       </div>
       <div class="loader" id="loader"></div>
           <img class="logoloader" src="assets/images/Immagine3.png" alt=""> 
-      <div class="msg">LOADING...</div>
+     <div class="msg">LOADING...</div>
     </div>
     <!--- navbar-->
       <div class="topnav" id="myTopnav" data-options="is_hover:true">         
@@ -254,7 +255,9 @@ I'm passionately curious" </i>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
       $(document).ready(function() {
-        $("#loading").toggle(5000);
+        setTimeout(function(){
+            $("#loading").hide();
+          },1000);
       });
     </script>
   </body>

@@ -453,7 +453,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   place-items: center;
   position: absolute;
   top: 50%;
@@ -517,7 +517,7 @@ body{
     animation: blink 500ms linear infinite alternate;
  }
  #typewriter2{
-  font-size: 0.9em;
+  font-size: 1.05em;
   margin: 0;
   font-family: "Courier New";
   margin-top:0;
@@ -557,211 +557,63 @@ body{
   100%{opacity: 1;}
 }
 /*_ ************** RESPONSIVE TYPEWRITER**************/
-@media only screen and (max-width: 900px) and (max-height:720px){
-  /* metà schermo computer */
-  .textarea{
-    flex-direction: column;
-    margin-top: 15%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
 
-  }
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-  #typewriter{
-    font-size: 1em;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    top:0;
-    margin-top: 0px;
-  }
-  #typewriter2{
-    font-size: 1em;
-    margin: 0;
-    font-family: "Courier New";
-    margin-top:80px;
-    left:0;
-  }
-}
-@media only screen and (min-device-width: 641px) and (max-device-width: 1024px) and (min-device-height: 961px) and (max-device-height: 1366px) {
-  /* tablet */
-  .textarea{
-    flex-direction: column;
-    margin-top: 40%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
-  }
-  #typewriter{
-    font-size: 1em;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    top:0;
-    margin-top: 0px;
-  }
-  #typewriter2{
-    font-size: 1em;
-    margin: 0;
-    font-family: "Courier New";
-    margin-top:80px;
-    left:0;
-  }
-  a{
-    cursor:none;
-  }
-}
-@media only screen and (max-device-width: 640px) and (max-device-height: 960px) {
-  /*smartphone */
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-  a{
-    cursor:none;
-  }
-}
-@media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
-  /* CSS per iPhone 8 Plus anche agli altri modelli di iPhone con dimensioni dello schermo simili, 
-  come iPhone X e iPhone XS */
-  .textarea{
-    flex-direction: column;
-    margin-top: 0%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
-  }
-  .firma{
-    pointer-events: none;
-    width: 330px;
-    border-bottom: 1px solid #ffffff33;
-    padding-bottom:7px;
-    padding-right:0px;
-    padding-right:0px;
-    margin: 0;
-  }
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-  #typewriter{
-    font-size: 1em;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    top:0;
-  }
-  #typewriter2{
-    font-size: 1em;
-    margin: 0;
-    font-family: "Courier New";
-    margin-top:30px;
-    left:0;
-  }
-  a{
-    cursor:none;
-  }
-}
-@media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (aspect-ratio: 375/667)  {
-  /* CSS per iPhone 8 e iPhone SE (prima generazione) e simili qui */
-  .textarea{
-    flex-direction: column;
-    margin-top: 0%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
-  }
-  .firma{
-    pointer-events: none;
-    width: 330px;
-    border-bottom: 1px solid #ffffff33;
-    padding-bottom:7px;
-    padding-right:0px;
-    padding-right:0px;
-  }
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-  #typewriter{
-    font-size: 1em;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    top:0;
-    margin-top: 0px;
-  }
-  #typewriter2{
-    font-size: 1em;
-    margin: 0;
-    font-family: "Courier New";
-    margin-top:0px;
-    left:0;
-  }
-  a{
-    cursor:none;
-  }
-}
-@media only screen and (max-device-width: 640px) and (max-device-height: 960px) and (max-device-height: 1366px) {
-  /* CSS per tutti i modelli di iPhone 11 e 12 e simili qui */
-}
-@media only screen and (max-device-width: 640px) and (max-device-height: 960px) and (max-device-height: 1366px) and (max-device-aspect-ratio: 375/812) {
-  /* CSS per tutti i modelli di iPhone 11 Pro e 12 Pro qui */
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 896px)  and (max-device-height: 852px) and (max-device-aspect-ratio: 375/812) { 
-  .textarea{
-    flex-direction: column;
-    margin-top: -10%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
-  }
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-  .firma{
-    pointer-events: none;
-    width: 330px;
-    border-bottom: 1px solid #ffffff33;
-    padding-bottom:7px;
-    padding-right:0px;
-    padding-right:0px;
-  }
-  #typewriter{
-    font-size: 1em;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    top:0;
-    margin-top: 0px;
-  }
-  #typewriter2{
-    font-size: 1em;
-    margin: 0;
-    font-family: "Courier New";
-    margin-top:50px;
-    left:0;
-  }
-  a{
-    cursor:none;
-  }
+/* Iphone 14 pro */
+@media only screen and (max-device-width: 430px ) and (max-device-height: 932px) and  (-webkit-device-pixel-ratio:3)  { 
+      .textarea{
+        flex-direction: column;
+        margin-top: 35%;
+        margin-left: -50%;
+        transform: translate(0%,-50%);
+        width: 100vw;  
+      }
+      #name-typewriter{
+        font-size:2rem;
+        font-weight: 900;
+        max-width: 100px;
+      }
+      .typewriter-class{
+        max-height:400px;
+        flex:1 1 max-content;
+        /*color:white;*/
+
+      }
+      #typewriter{
+        font-size: 1em;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        top:0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: -60px;
+      }
+      #typewriter2{
+        font-size: 1em;
+        margin: 0;
+        font-family: "Courier New";
+        margin-top:50px;
+        top:0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      a{
+        cursor:none;
+      }
 }
 @media only screen and (max-device-width: 720px) and (max-device-height: 1080px) {
-  /* CSS per Samsung Galaxy S21/A51/71 e simili qui */
-  .textarea{
+  /* CSS per Samsung Galaxy A51/71 e simili qui */
+  .textarea{  
+    align-items: center; 
     flex-direction: column;
     margin-top: 50%;
     margin-left: -50%;
+    top: 50%;
     transform: translate(0%,-50%);
-    max-width: 100%;
   }
   #name-typewriter{
     font-size:2rem;
     font-weight: 900;
     max-width: 100px;
-  }
-  .firma{
-    pointer-events: none;
-    width: 330px;
-    border-bottom: 1px solid #ffffff33;
-    padding-bottom:7px;
-    padding-right:0px;
-    padding-right:0px;
   }
   .typewriter-class{
     max-height:400px;
@@ -772,7 +624,7 @@ body{
     font-size: 1em;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    top:0;
+    top:0px;;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: -60px;
@@ -790,21 +642,9 @@ body{
     cursor:none;
   }
 }
-@media only screen and (max-device-width: 1440px) and (max-device-height: 3200px) {
-  /* CSS per Samsung Galaxy S21 Ultra qui */
-  .textarea{
-    flex-direction: column;
-    margin-top: 50%;
-    margin-left: -50%;
-    transform: translate(0%,-50%);
-    max-width: 100%;
-  }
-  #name-typewriter{
-    font-size:2rem;
-    font-weight: 900;
-  }
-}
+/*_ *************************************/
 /*_ *****END TYPEWRITER******************/
+/*_ *************************************/
 
 .first{
   position:relative ;
@@ -1002,7 +842,6 @@ body{
 }
 @media(max-width:767px) {
   .skills-intern {width: 90vw;}
-
 }
 .middle2{
   margin-left: 50%;
@@ -1043,6 +882,7 @@ body{
 }
 
 .cards {
+  width: min-content;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -1212,6 +1052,7 @@ body{
   box-sizing: border-box;
   z-index: 999;
   height: 100%;
+  touch-action: pan-down;
   width: 100%;
   z-index: 9999999;
   background-color: #000000;
@@ -1292,8 +1133,8 @@ body{
   transform: translateX(-50%);
   height: 200px;
   width: 350px;
-  background-color: #00305366;
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  background-color: #00000066;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.268);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 15px;
@@ -1316,20 +1157,21 @@ body{
   text-transform: uppercase;
   font-size: 2vh;
   padding-top: 2vh;
-  background: red;
-  box-shadow: 0 0 30px red;
-  text-shadow: 0 0 20px white;
-  color: white;
+  background: #ff000000;
+  box-shadow: 0 0 60px #ff0000;
+  text-shadow: 0 0 60px rgb(255, 0, 0);
+  color: #ff0000;
   padding : 20px;
   position: absolute;
   left: 50%;
+  border-radius: 50px;
   transform: translateX(-50%);
   top: 80%;
   margin-top: -5vh;
   text-align: center;
   min-width: 100px;
   animation-name: blink;
-  animation-duration: 1.9s;
+  /*animation-duration: 1.9;*/
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
