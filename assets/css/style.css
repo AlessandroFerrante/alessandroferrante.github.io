@@ -123,6 +123,7 @@ body{
 /*_ open and close the topnav (.icon) */
 @media screen and (max-width: 400px) {
   body::-webkit-scrollbar {
+    overflow-x: hidden;
     display: none;
   }
   .topnav a:hover {
@@ -132,6 +133,7 @@ body{
 }
 @media screen and (max-width: 820px) {
   body::-webkit-scrollbar {
+    overflow-x: hidden;
     display: none;
   }
 }
@@ -556,12 +558,13 @@ body{
 }
 /*_ ************** RESPONSIVE TYPEWRITER**************/
 @media only screen and (max-width: 900px) and (max-height:720px){
-  /* Inserisci qui gli stili per la metà dello schermo del computer */
+  /* metà schermo computer */
   .textarea{
     flex-direction: column;
     margin-top: 15%;
     margin-left: -50%;
     transform: translate(0%,-50%);
+
   }
   #name-typewriter{
     font-size:2rem;
@@ -583,7 +586,7 @@ body{
   }
 }
 @media only screen and (min-device-width: 641px) and (max-device-width: 1024px) and (min-device-height: 961px) and (max-device-height: 1366px) {
-  /* CSS per tablet qui */
+  /* tablet */
   .textarea{
     flex-direction: column;
     margin-top: 40%;
@@ -609,7 +612,7 @@ body{
   }
 }
 @media only screen and (max-device-width: 640px) and (max-device-height: 960px) {
-  /* CSS per smartphone qui */
+  /*smartphone */
   #name-typewriter{
     font-size:2rem;
     font-weight: 900;
@@ -620,7 +623,7 @@ body{
 }
 @media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
   /* CSS per iPhone 8 Plus anche agli altri modelli di iPhone con dimensioni dello schermo simili, 
-  come ad esempio iPhone X e iPhone XS */
+  come iPhone X e iPhone XS */
   .textarea{
     flex-direction: column;
     margin-top: 0%;
@@ -663,7 +666,7 @@ body{
     flex-direction: column;
     margin-top: 0%;
     margin-left: -50%;
-    transform: translate(0%,0%);
+    transform: translate(0%,-50%);
   }
   .firma{
     pointer-events: none;
@@ -745,6 +748,7 @@ body{
     margin-top: 50%;
     margin-left: -50%;
     transform: translate(0%,-50%);
+    max-width: 100%;
   }
   #name-typewriter{
     font-size:2rem;
@@ -788,6 +792,13 @@ body{
 }
 @media only screen and (max-device-width: 1440px) and (max-device-height: 3200px) {
   /* CSS per Samsung Galaxy S21 Ultra qui */
+  .textarea{
+    flex-direction: column;
+    margin-top: 50%;
+    margin-left: -50%;
+    transform: translate(0%,-50%);
+    max-width: 100%;
+  }
   #name-typewriter{
     font-size:2rem;
     font-weight: 900;
@@ -821,7 +832,7 @@ body{
 .space{
   margin: 0;
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
 }
 .earth {
   position: absolute;
@@ -966,7 +977,7 @@ body{
 .skills{
   padding: 4%;
   color: #9b9999;
-  
+  width: min-content;
 }
 .skills-intern{
   display: grid;
@@ -977,10 +988,10 @@ body{
 .skills-intern img{
   transition: transform .9s;
   width: 45px;
-}
+}/*
 .skills-intern img:hover {
   transform: scale(1.5);
-}
+}*/
 .items-skills{
   color:rgb(75, 202, 29);
   font-weight:750;
@@ -991,6 +1002,7 @@ body{
 }
 @media(max-width:767px) {
   .skills-intern {width: 90vw;}
+
 }
 .middle2{
   margin-left: 50%;
