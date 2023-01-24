@@ -24,6 +24,7 @@
   --typewriter-class:var(--light-grey);
   --background-middle:var(--black);
   --line-middle:var(--line-trasparent);
+  --blur-li:200px;
   --aboutme-font:var(--green);
   --items-skills:var(--background-middle);
   --project-font:var(--green);
@@ -513,7 +514,16 @@ body{
   font-size: 3rem;
   font-weight: 900;
   border-bottom: 1px solid #ffffff33;
-  padding-bottom:7px;
+  padding-bottom:5px;
+}
+#IT-typewriter{
+  font-size: 1.3rem;
+  font-weight: 900;
+  width: 502px;
+  box-sizing: border-box;
+  text-align: right;
+  position: absolute;
+  padding-top:14px;
 }
 #hi-typewriter{
   font-size: 1.2rem;
@@ -582,6 +592,14 @@ body{
         transform: translate(0%,-50%);
         width: 100vw;  
       }
+      #IT-typewriter{
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-bottom: 0%;
+        right: 0%;
+        transform: translateX(0%);
+        position: absolute;
+      }
       #name-typewriter{
         font-size:2rem;
         font-weight: 900;
@@ -625,6 +643,14 @@ body{
     margin-left: -50%;
     top: 50%;
     transform: translate(0%,-50%);
+  }
+  #IT-typewriter{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 0%;
+    right: 0%;
+    transform: translateX(0%);
+    position: absolute;
   }
   #name-typewriter{
     font-size:2rem;
