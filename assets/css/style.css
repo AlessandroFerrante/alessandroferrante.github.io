@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Maven+Pro&display=swap');
-:root{    
+:root{ /*dark*/   
   --trasparent:#00000000;/*topnav*/
   --line-trasparent:#d1d1d13e;
   --blue:#003153;
@@ -8,23 +8,31 @@
   --blue-bdazzled:#285786;
   --withe-dirty:#f7f0f0;/*(topnav-desk)*/
   --withe:#ffffff;
+  --withe-cream: #fffffe;
+  --withe-im:#dedede;
   --off-withe:#d1d1d1;
   --hard-grey:#101010;
   --grey:#9CAEA9;/*(text-topnav-mobile)*/
+  --trasparent-grey:#2d2d2d82;
+  --grey-hot:#555555;
   --light-grey:#DEEBE3;
   --green: #4bca00;
   --black:#000000;
+  --list-icon:var(--grey);
+  --blur-li:1px;  
   --topnav:var(--trasparent);
   --text-topnav-desk:var(--withe-dirty);
   --text-topnav-mob:var(--grey);
   --border-nav:var(--black);
   --main_color:var(--withe);
   --background-main:var(--black);
+  --background-first:var(--black);
   --string-highlight:var(--green);
-  --typewriter-class:var(--light-grey);
+  --typewriter-class:var(--light-greygrey);
+  --line-typewriter-name:var(--line-trasparent);
+  --typewriter-button:var(--light-grey);
   --background-middle:var(--black);
   --line-middle:var(--line-trasparent);
-  --blur-li:200px;
   --aboutme-font:var(--green);
   --items-skills:var(--background-middle);
   --project-font:var(--green);
@@ -41,13 +49,65 @@
   --console-font:limegreen;
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
+[data-theme="dark"]{  /*light  */
+  --trasparent:#00000000;/*topnav*/
+  --line-trasparent:#d1d1d13e;
+  --blue:#003153;
+  --blue-petrolium:#001b2e;
+  --blue-indigo:#124375;
+  --blue-bdazzled:#285786;
+  --withe-dirty:#f7f0f0;/*(topnav-desk)*/
+  --withe:#ffffff;
+  --withe-cream: #fffffe;
+  --withe-im:#dedede;
+  --off-withe:#d1d1d1;
+  --hard-grey:#101010;
+  --grey:#9CAEA9;/*(text-topnav-mobile)*/
+  --trasparent-grey:#2d2d2d82;
+  --grey-hot:#555555;
+  --light-grey:#DEEBE3;
+  --green: #4bca00;
+  --black:#000000;
+  --list-icon:var(--grey);/* grey-hot*/
+  --blur-li:2px;/*2*/
+  --topnav:var(--light-grey);
+  --text-topnav-desk:var(--grey-hot);/* grey-hot*/
+  --text-topnav-mob:var(--grey-hot);/* grey-hot*/
+  --border-nav:var(--black);
+  --main_color:var(--withe);
+  --background-main:var(--black);
+  --background-first:var(--withe-cream);
+  --string-highlight:var(--green);
+  --typewriter-class:var(--grey);/*grey-hot*/
+  --line-typewriter-name:var(--grey);
+  --typewriter-button:var(--grey);
+  --background-middle:var(--withe-cream);
+  --line-middle:var(--grey);
+  --aboutme-font:var(--green);
+  --items-skills:var(--background-middle);
+  --project-font:var(--green);
+  --card-project: var(--light-grey);
+  --border-items-project:var(--light-grey);
+  --description-card:var(--grey-hot);
+  --curve: 25;
+  --background-end:var(--grey);/* hard-grey*/
+  --end-font:var(--grey-hot);/*off-withe*/
+  --line-end:var(--line-trasparent);
+  --background-loading:var(--light-grey);
+  --console:var(--trasparent);
+  --border-console:var(--black);
+  --console-font:limegreen;
+  /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
+}
+
+
 
 html, body{
   height:100%;
   width:100%;
   padding:0px;
   margin:0px;
-  background: #000000;
+  background-color: #000000;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -112,9 +172,9 @@ body{
   border-color: 1px solid var(--black);
   border-radius: 35px;
   background: var(--trasparent);
-  box-shadow: 0px 0px 10px #ffffff12;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-family: 'Kanit', sans-serif;
 }
 /*_ div of all a*/
@@ -166,6 +226,7 @@ body{
     padding-right: 0px; 
     border-radius: 35px;
     font-weight: 800;
+    backdrop-filter: blur(4px);
   } 
   .topnav a:not(null) {
     display: none;
@@ -182,9 +243,9 @@ body{
     font-size: 10px;
   }
 }
-/*_ The "responsive" class is added to the topnav with JavaScript when the
-/*_ user clicks on the icon. This class makes the topnav look good on small screens
-/*_ (display the links vertically instead of horizontally) */
+/** The "responsive" class is added to the topnav with JavaScript when the
+/** user clicks on the icon. This class makes the topnav look good on small screens
+/** (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
   .topnav.responsive  {
     position: absolute;
@@ -237,6 +298,69 @@ body{
   text-decoration: none;
 }
 /*- ****************************************************
+/*-Style  LEFT FOR DARK AND LIGHT MODE
+/*- **************************************************-*/
+.left{
+  z-index: 99999;
+  position: fixed;
+  bottom: 14px;
+  left: 15px;
+}
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 56px;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-switch input {
+  display:none;
+}
+.slider {
+  background-color: var(--black);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.7s;
+  box-shadow: 0 0 80px #00000005;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 22px;
+  left: 4px;
+  position: absolute;
+  transition: .7s;
+  width: 22px;
+}
+input:checked + .slider {
+  background-color: var(--green);
+  border-bottom:0px solid var(--light-grey);/*elimina il bordo*/
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 900px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/*- ****************************************************
+/*-Style  LEFT FOR DARK AND LIGHT MODE
+/*- **************************************************-*/
+
+/*- ****************************************************
 /*-Style  RIGHT FOR SOCIAL
 /*- **************************************************-*/
 .right{
@@ -272,17 +396,19 @@ body{
   transition: 1s;
   position: relative;
   display: block;
-  border-radius: 15%;
+  border-radius: 20%;
   display: flex;
   width: 30px;
   height: 30px;
-  color: #555;
+  color: #555555;
+  border-right: 0.1px solid var(--grey);
+  border-bottom: 0.1px solid var(--grey);;
   background: #fff;
   text-decoration: none;
   align-items: center;
   justify-content: center;
   transition: 0.5s;
-  box-shadow: -20px 20px 10px rgb(0 0 0 / 50%);
+  box-shadow: 0px 0px 10px rgba(243, 239, 239, 0.803);
   transform: perspective(1000px) rotate(0deg) skew(0deg) translate(0,0);
 }
 .social-icons li a::before{
@@ -308,13 +434,13 @@ body{
   transform: rotate(0deg) skewX(-45deg);
 }
 .social-icons li a:hover{
-  border-radius: 0%;
+  border-radius: 20%;
   transform: perspective(1000px) rotate(-30deg)
   skew(25deg) translate(5px, -5px);
   box-shadow: -50px 50px 50px rgba(0, 0, 0,0.5);
 }
 .social-icons li .fa{
-  color: #fff;
+  color: var(--list-icon);
 }/*
 .social-icons li .fa-solid{
   color: red;
@@ -322,99 +448,99 @@ body{
   background-color: white;
 }*/
 .social-icons li .fa-solid{
-  color: white;
+  color: var(--list-icon);
 }
 .social-icons li:nth-child(1) a{
   transition: 1s;
-  background-color: #3b599966;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #3b599900;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(1) a::before{
   transition: 1s;
-  background-color: #2f477a66;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #2f477a00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(1) a::after{
   transition: 1s;
-  background-color: #4e69a366;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #4e69a300;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:nth-child(2) a{
   transition: 1s;
-  background: rgba(255, 255, 255, 0.0);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
-  background: radial-gradient(circle at 30% 107%, #fdf4976c 0%, #fdf4976c 5%, #fd59496c 45%,#d6249f6c 60%,#285AEB6c 90%);
+  background: #ffffff00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+  background: radial-gradient(circle at 30% 107%, #fdf49700 0%, #fdf49700 5%, #fd594900 45%,#d6249f00 60%,#285AEB00 90%);
 }
 .social-icons li:hover:nth-child(2) a::after{
   transition: 1s;
-  background: #d6249f66;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background: #d6249f00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(2) a::before{
   transition: 1s;
-  background: #285AEB66;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background: #285AEB00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter:blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:nth-child(3) a{
   transition: 1s;
-  background-color: #00aeed66;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #00aeed00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(3) a::after{
   transition: 1s;
-  background-color:#53b9e066;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color:#53b9e000;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(3) a::before{
   transition: 1s;
-  background-color: #097aa566;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #097aa500;
+  backdrop-filter: var(--blur-li);
+  -webkit-backdrop-filter: var(--blur-li);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:nth-child(4) a{
   transition: 1s;
-  background-color: #00660066;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #00660000;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(4) a::after{
   transition: 1s;
-  background-color:#004d0066;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color:#004d0000;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:hover:nth-child(4) a::before{
   transition: 1s;
-  background-color: #00330066;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background-color: #00330000;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 .social-icons li:nth-child(5) a{
   transition: 1s;
-  background: #ffffff33;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background: #ffffff00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
  /*background-color: whitesmoke;*/
 }/*
 .social-icons li:hover:nth-child(5) a::after{
@@ -425,17 +551,17 @@ body{
 }*/
 .social-icons li:hover:nth-child(5) a::after{
   transition: 1s;
-  background: #ff000066;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: #ff000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
 }
 .social-icons li:hover:nth-child(5) a::before{
   transition: 1s;
-  background: #285AEB66;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.07);
+  background: #285AEB00;
+  backdrop-filter: blur(var(--blur-li));
+  -webkit-backdrop-filter: blur(var(--blur-li));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
 }
 /*- ****************************************************
 /*-Style  MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN
@@ -498,8 +624,11 @@ body{
   text-decoration:none;
   border-radius: 30px;
   padding: 4.5px;
-  background: var(--hard-grey);
-  border-bottom: 0.1px solid var(--typewriter-class);
+  backdrop-filter: blur(var(--blur-li));
+  background: var(--trasparent);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.1px solid var(--grey);
+  border-right: 0.1px solid var(--grey);;
 }
 .firma{
   pointer-events: none;
@@ -513,8 +642,8 @@ body{
 #name-typewriter{
   font-size: 3rem;
   font-weight: 900;
-  border-bottom: 1px solid #ffffff33;
-  padding-bottom:5px;
+  border-bottom: 1px solid var(--line-typewriter-name);
+  padding-bottom:8px;  
 }
 #IT-typewriter{
   font-size: 1.3rem;
@@ -523,7 +652,6 @@ body{
   box-sizing: border-box;
   text-align: right;
   position: absolute;
-  padding-top:14px;
 }
 #hi-typewriter{
   font-size: 1.2rem;
@@ -535,7 +663,8 @@ body{
   font-family: 'Poppins', sans-serif;
   top:0;
   left:0;
-  margin-left: -40px;
+  width: min-content;
+  margin-left: -40px;  
 }
 #typewriter::after{
     content: "|";
@@ -543,6 +672,7 @@ body{
  }
  #typewriter2{
   font-size: 1.1rem;
+  font-weight: 550;
   margin: 0;
   font-family: "Courier New";
   margin-top:0;
@@ -693,7 +823,20 @@ body{
 .first{
   position:relative ;
   width:100%;
+  background-color: var(--background-first);
   background-image: url("../images/cielo2.jpg") ;
+  background-size: cover;
+  height:100vh;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.first.light-theme{
+  position:relative;
+  width:100%;
+  background-color: var(--background-first);
+  background-image: url("../images/cielolight1.jpg") ;
   background-size: cover;
   height:100vh;
   top: 50%;
@@ -704,6 +847,9 @@ body{
 @media screen and (max-width: 800px) {
   .first{
     background-image: url("../images/cielo3.jpg") ;
+  }
+  .first.light-theme{
+    background-image: url("../images/cielolight2.jpg") ;
   }
 }
 .earth-demo{
@@ -941,7 +1087,7 @@ body{
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
-  border: 0.4px solid var(--border-items-project);
+  border: 0.1px solid var(--border-items-project);
 }
 
 .card__image {      
@@ -1170,10 +1316,10 @@ body{
   height: 200px;
   width: 350px;
   background-color: var(--console);
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.268);
+  box-shadow: 0px 0px 0px rgba(12, 12, 12, 0);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0px;
 }
 #console p {
   font-family: monospace;
@@ -1198,6 +1344,7 @@ body{
   text-shadow: 0 0 60px rgb(255, 0, 0);
   color: #ff0000;
   padding : 20px;
+  backdrop-filter: blur(20px);
   position: absolute;
   left: 50%;
   border-radius: 50px;

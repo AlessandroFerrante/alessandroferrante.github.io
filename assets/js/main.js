@@ -169,7 +169,63 @@ typewriter = setupTypewriter(typewriter);
 typewriter.type();
 typewriter = setupTypewriter(typewriter2);
 typewriter.type();
- 
+/*********** */
+/* switch mode */
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light') {
+    toggleSwitch.checked = true;
+   document.documentElement.setAttribute('data-theme', 'light');
+   var x = document.getElementById("first");
+   if (x.className === "first") {
+   }else{
+     x.className = "first";
+   } 
+  }
+  else{
+    toggleSwitch.checked = false;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    var x = document.getElementById("first");
+    if (x.className === "first") {
+      x.className += " light-theme";
+    } 
+  }
+}
+function switchTheme(e) {
+  $(document).ready(function() {
+        $("#loading").show();
+  });
+    if (e.target.checked) {                 
+        var x = document.getElementById("first");
+        if (x.className === "first") {
+        }else{
+          x.className = "first";
+        } 
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        $(document).ready(function() {
+          $("#loading").toggle();
+        });
+    }
+    else {
+          
+          var x = document.getElementById("first");
+        if (x.className === "first") {
+          x.className += " light-theme";
+        } 
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          $(document).ready(function() {
+            $("#loading").toggle();
+          });
+    } 
+      
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
+/************ */
 /*loader*/
 var intervalID = window.setInterval(updateScreen, 200);
 var console = document.getElementById("console");
