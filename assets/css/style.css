@@ -654,6 +654,7 @@ input:checked + .slider:before {
   box-sizing: border-box;
   text-align: right;
   position: absolute;
+  padding-top:14px;
 }
 #hi-typewriter{
   font-size: 1.2rem;
