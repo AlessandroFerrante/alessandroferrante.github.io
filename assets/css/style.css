@@ -21,6 +21,7 @@
   --list-icon:var(--grey);
   --blur-li:1px;  
   --topnav:var(--trasparent);
+  --boxshadow-nav:#ffffff18;
   --text-topnav-desk:var(--withe-dirty);
   --text-topnav-mob:var(--grey);
   --border-nav:var(--black);
@@ -71,6 +72,7 @@
   --list-icon:var(--grey);/* grey-hot*/
   --blur-li:2px;/*2*/
   --topnav:var(--light-grey);
+  --boxshadow-nav:#0000001a;
   --text-topnav-desk:var(--grey-hot);/* grey-hot*/
   --text-topnav-mob:var(--grey-hot);/* grey-hot*/
   --border-nav:var(--black);
@@ -172,7 +174,7 @@ body{
   border-color: 1px solid var(--black);
   border-radius: 35px;
   background: var(--trasparent);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px var(--boxshadow-nav);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   font-family: 'Kanit', sans-serif;
