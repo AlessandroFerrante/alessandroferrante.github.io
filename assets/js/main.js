@@ -207,8 +207,10 @@ function switchTheme(e) {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
         $(document).ready(function() {
-          $("#loading").toggle();
-        });
+        setTimeout(function(){
+            $("#loading").hide();
+          },400);
+      });
     }
     else {
           
@@ -219,8 +221,10 @@ function switchTheme(e) {
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
           $(document).ready(function() {
-            $("#loading").toggle();
-          });
+        setTimeout(function(){
+            $("#loading").hide();
+          },400);
+      });
     } 
       
 }
