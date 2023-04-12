@@ -32,10 +32,10 @@
   --typewriter-class:var(--light-greygrey);
   --line-typewriter-name:var(--line-trasparent);
   --typewriter-button:var(--light-grey);
-  --background-middle:var(--black);
+  --background-middle:var(--trasparent);
   --line-middle:var(--line-trasparent);
   --aboutme-font:var(--green);
-  --items-skills:var(--background-middle);
+  --items-skills:var(--black);
   --project-font:var(--green);
   --card-project: black;
   --border-items-project:#2d2d2d82;
@@ -50,7 +50,7 @@
   --console-font:limegreen;
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
-[data-theme="dark"]{  /*light  */
+[data-theme="dark"]{  /*THIS IS light because the dark is the default theme*/
   --trasparent:#00000000;/*topnav*/
   --line-trasparent:#d1d1d13e;
   --blue:#003153;
@@ -73,20 +73,20 @@
   --blur-li:2px;/*2*/
   --topnav:var(--light-grey);
   --boxshadow-nav:#0000001a;
-  --text-topnav-desk:var(--grey-hot);/* grey-hot*/
-  --text-topnav-mob:var(--grey-hot);/* grey-hot*/
+  --text-topnav-desk:var(--light-grey);/* grey-hot*/
+  --text-topnav-mob:var(--light-grey);/* grey-hot*/
   --border-nav:var(--black);
   --main_color:var(--withe);
-  --background-main:var(--black);
-  --background-first:var(--withe-cream);
+  --background-main:var(--withe-cream);
+  --background-first:var(--withe-t);
   --string-highlight:var(--green);
-  --typewriter-class:var(--grey);/*grey-hot*/
+  --typewriter-class:var(--off-withe);/*grey-hot*/
   --line-typewriter-name:var(--grey);
   --typewriter-button:var(--grey);
-  --background-middle:var(--withe-cream);
+  --background-middle:var(--trasparent);
   --line-middle:var(--grey);
   --aboutme-font:var(--green);
-  --items-skills:var(--background-middle);
+  --items-skills:var(--withe-cream);
   --project-font:var(--green);
   --card-project: var(--light-grey);
   --border-items-project:var(--light-grey);
@@ -597,7 +597,7 @@ input:checked + .slider:before {
 /*_ *****TYPEWRITER******************/
 .textarea{
   /*display: inline-grid;
-  grid-template-columns:  auto auto auto ;*/
+  /*grid-template-columns:  auto auto auto ;*/
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -839,8 +839,9 @@ input:checked + .slider:before {
   position:relative;
   width:100%;
   background-color: var(--background-first);
-  background-image: url("../images/cielolight1.jpg") ;
+  background-image: url("../images/cielochiaro1.jpg") ;
   background-size: cover;
+
   height:100vh;
   top: 50%;
   left: 50%;
@@ -852,7 +853,7 @@ input:checked + .slider:before {
     background-image: url("../images/cielo3.jpg") ;
   }
   .first.light-theme{
-    background-image: url("../images/cielolight2.jpg") ;
+    background-image: url("../images/cielochiaro2.jpg") ;
   }
 }
 .earth-demo{
@@ -872,42 +873,72 @@ input:checked + .slider:before {
   height: 100vh;
   max-width: 100%;
 }
-.earth {
+.sole {
   position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
+  top: calc(50% - 110px);
+  left: calc(50% - 120px);
   border-radius: 100%;
+  box-shadow: 0 0 12em 1em #b66011;
 }
-.earth img{
-  height: 200px;
-  width: 200px;
+.sole img{
+  height: 360px;
+  width: 360px;
   position: absolute;
   top: 0;
   left:0;
-  clip-path: circle(49%);/** to delete the black border into the gif*/
+  /*clip-path: circle(150%);/** to delete the black border into the gif*/
   transform: rotate(-23.27deg);
 }
-.earth img{
+.sole img{
   pointer-events:none;
-  height: 200px;
+  height: 240px;
   position: absolute;
   top: 0;
   left:0;
-  width: 200px;
+  width: 240px;
   border-radius: 50%;
-  box-shadow: 0 0 12em 1em rgba(110, 140, 200, .6);
+  -webkit-filter: drop-shadow(0px 0px 6px #b661118f);
+  filter: drop-shadow(0px 0px 6px #b661118f);
+  box-shadow: 0 0 12em 1em #b661118f;
 }
-.moon-container {
+.earth-zone{
   position: absolute;
   top: calc(50% - 25px);
   left: calc(50% - 25px);
-  }
-.moon{
+}
+.earth-container {
   animation: spin 20s linear infinite;
+  }
+.earth{
   background: none;
   height: 0px;
   width: 0px;
   transform-origin: 25px;
+  border-radius: 100%;
+  pointer-events:none;
+  box-shadow: 0 0 12em 0.002em #349cd8;
+}
+.earth img{
+  height: 120px;
+  pointer-events:none;
+  transform-origin: 25px;
+  transform: translateX(-380px) translateY(-380px) rotate(210.27deg);
+  width: 120px;
+  -webkit-filter: drop-shadow(0px 0px 55px #349cd8);
+  filter: drop-shadow(-50px -0px 55px #349cd8);
+  /*clip-path: circle(%);/** to delete the black border into the gif*/
+}
+.moon-container {
+  position: absolute;
+  top: calc(50% - 320px);
+  left: calc(50% - 420px);
+  }
+.moon{
+  animation: spin 10s linear infinite;
+  background: none;
+  height: 0px;
+  width: 0px;
+  transform-origin: 0px;
   border-radius: 100%;
   pointer-events:none;
 }
@@ -915,17 +946,13 @@ input:checked + .slider:before {
   height: 50px;
   pointer-events:none;
   transform-origin: 25px;
-  transform: translateX(-160px) translateY(-160px);
+  transform: translateX(-75px) translateY(-225px);
   width: 50px;
+  -webkit-filter: drop-shadow(0px 0px 155px #f3f7f7);
+  filter: drop-shadow(0px 0px 155px #ffffff);
 }
-.earth,
-.moon {
-  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 1);
-}
-.earth,
-.moon {
-  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 1.6);
-}
+
+
 
 @keyframes spin {
   to{
@@ -938,6 +965,7 @@ input:checked + .slider:before {
   }
 }
 
+
 /*_  MIDDLE*/
 
 .middle1{
@@ -946,6 +974,7 @@ input:checked + .slider:before {
   width: 100%;
   height: max-content;
   padding: 50px 0px;
+  backdrop-filter: blur(10px);
   background-color: var(--background-middle);
 }
 @media only screen and (max-width: 800px) {
@@ -1041,6 +1070,7 @@ input:checked + .slider:before {
   width: 100%;
   height: max-content;
   padding: 50px 0px;
+  backdrop-filter: blur(10px);
   background-color: var(--background-middle);
   /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);*/
   backdrop-filter: blur(20px);
