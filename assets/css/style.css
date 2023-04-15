@@ -48,7 +48,11 @@
   --console:#00000066;
   --border-console:var(--black);
   --console-font:limegreen;
+  
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
+}
+*{
+  --scale-space:0.7;
 }
 [data-theme="dark"]{  /*THIS IS light because the dark is the default theme*/
   --trasparent:#00000000;/*topnav*/
@@ -767,9 +771,9 @@ input:checked + .slider:before {
       }
 }*/
 @media only screen and (max-device-width: 720px) and (max-device-height: 1080px) {
-  .space{
-    scale: 0.5;
-  }
+  *{
+    --scale-space:0.45;
+  } 
   .textarea{  
     top: 50%;
     left: 50%;
@@ -870,6 +874,7 @@ input:checked + .slider:before {
   margin: 0;
   height: 100vh;
   width: 100%;
+  scale: var( --scale-space);
 }
 .sole {
   position: absolute;
@@ -905,7 +910,7 @@ input:checked + .slider:before {
   left: calc(50% - 25px);
 }
 .earth-container {
-  animation: spin 20s linear infinite;
+  animation: spin  31.536s linear infinite;
   }
 .earth{
   background: none;
@@ -920,19 +925,19 @@ input:checked + .slider:before {
   height: 120px;
   pointer-events:none;
   transform-origin: 25px;
-  transform: translateX(-380px) translateY(-380px) rotate(210.27deg);
+  transform: translateX(-440px) translateY(-440px) rotate(210.27deg);
   width: 120px;
-  -webkit-filter: drop-shadow(0px 0px 55px #349cd8);
-  filter: drop-shadow(-50px -0px 55px #349cd8);
+  -webkit-filter: drop-shadow(-50px 0px 55px #349cd8);
+  filter: drop-shadow(-50px 0px 55px #349cd8);
   /*clip-path: circle(%);/** to delete the black border into the gif*/
 }
 .moon-container {
   position: absolute;
-  top: calc(50% - 320px);
-  left: calc(50% - 420px);
+  top: calc(50% - 400px);
+  left: calc(50% - 450px);
   }
 .moon{
-  animation: spin 10s linear infinite;
+  animation: spin 5s linear infinite;/*dovrebbe essere 2.36s*/
   background: none;
   height: 0px;
   width: 0px;
@@ -941,16 +946,86 @@ input:checked + .slider:before {
   pointer-events:none;
 }
 .moon img{
+  height: 40px;
+  pointer-events:none;
+  transform-origin: 25px;
+  transform: translateX(-75px) translateY(-150px);
+  width: 40px;
+  -webkit-filter: drop-shadow(0px 0px 5px #ffffff);
+  filter: drop-shadow(0px 0px 5px #ffffff);
+}
+.mercurio-container {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  animation: spin 7.6032s linear infinite;
+  }
+.mercurio{
+  background: none;
+  height: 0px;
+  width: 0px;
+  transform-origin: 25px;
+  border-radius: 100%;
+  pointer-events:none;
+  box-shadow: 0 0 12em 0.002em #349cd8;
+}
+.mercurio img{
   height: 50px;
   pointer-events:none;
   transform-origin: 25px;
-  transform: translateX(-75px) translateY(-225px);
+  transform: translateX(-220px) translateY(-200px) rotate(210.27deg);
   width: 50px;
-  -webkit-filter: drop-shadow(0px 0px 155px #f3f7f7);
-  filter: drop-shadow(0px 0px 155px #ffffff);
+  -webkit-filter: drop-shadow(0px 0px 55px #ffa600);
+  filter: drop-shadow(0px -0px 55px #ffa600);
 }
-
-
+.venere-container {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  animation: spin 19.3536s linear infinite;
+  }
+.venere{
+  background: none;
+  height: 0px;
+  width: 0px;
+  transform-origin: 25px;
+  border-radius: 100%;
+  pointer-events:none;
+  box-shadow: 0 0 12em 0.002em #349cd8;
+}
+.venere img{
+  height: 110px;
+  pointer-events:none;
+  transform-origin: 25px;
+  transform: translateX(-290px) translateY(-290px) rotate(210.27deg);
+  width: 110px;
+  -webkit-filter: drop-shadow(-35px 0px 55px #ffa600db);
+  filter: drop-shadow(-35px -0px 55px #ffa600db);
+}
+.marte-container {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  animation: spin 59.3548s linear infinite;
+  }
+.marte{
+  background: none;
+  height: 0px;
+  width: 0px;
+  transform-origin: 25px;
+  border-radius: 100%;
+  pointer-events:none;
+  box-shadow: 0 0 12em 0.002em #349cd8;
+}
+.marte img{
+  height: 70px;
+  pointer-events:none;
+  transform-origin: 25px;
+  transform: translateX(-600px) translateY(-480px) rotate(210.27deg);
+  width: 70px;
+  -webkit-filter: drop-shadow( 0px-55px 55px #ff1100db);
+  filter: drop-shadow(-35px -0px 55px #ff0000db);
+}
 
 @keyframes spin {
   to{
