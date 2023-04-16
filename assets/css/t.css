@@ -1,0 +1,162 @@
+:root{    
+  --trasparent:#00000000;/*topnav*/
+  --line-trasparent:#d1d1d13e;
+  --blue:#003153;
+  --blue-petrolium:#001b2e;
+  --blue-indigo:#124375;
+  --blue-bdazzled:#285786;
+  --withe-dirty:#f7f0f0;/*(topnav-desk)*/
+  --withe:#ffffff;
+  --off-withe:#d1d1d1;
+  --hard-grey:#101010;
+  --grey:#9CAEA9;/*(text-topnav-mobile)*/
+  --light-grey:#DEEBE3;
+  --green: #4bca00;
+  --black:#000000;
+  --topnav:var(--trasparent);
+  --text-topnav-desk:var(--withe-dirty);
+  --text-topnav-mob:var(--grey);
+  --border-nav:var(--black);
+  --main_color:var(--withe);
+  --background-main:var(--black);
+  --string-highlight:var(--green);
+  --typewriter-class:var(--light-grey);
+  --background-middle:var(--black);
+  --line-middle:var(--line-trasparent);
+  --blur-li:200px;
+  --aboutme-font:var(--green);
+  --items-skills:var(--background-middle);
+  --project-font:var(--green);
+  --card-project: black;
+  --border-items-project:#2d2d2d82;
+  --description-card:var(--grey);
+  --curve: 25;
+  --background-end:var(--hard-grey);
+  --end-font:var(--off-withe);
+  --line-end:var(--line-trasparent);
+  --background-loading:var(--black);
+  --console:#00000066;
+  --border-console:var(--black);
+  --console-font:limegreen;
+  /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
+}
+/*light*/
+:root{    
+  --trasparent:#00000000;/*topnav*/
+  --line-trasparent:#d1d1d13e;
+  --blue:#003153;
+  --blue-petrolium:#001b2e;
+  --blue-indigo:#124375;
+  --blue-bdazzled:#285786;
+  --withe-dirty:#f7f0f0;/*(topnav-desk)*/
+  --withe:#ffffff;
+  --withe-cream: #fffffe;
+  --withe-im:#dedede;
+  --off-withe:#d1d1d1;
+  --hard-grey:#101010;
+  --grey:#9CAEA9;/*(text-topnav-mobile)*/
+  --trasparent-grey:#2d2d2d82;
+  --grey-hot:#555555;
+  --light-grey:#DEEBE3;
+  --green: #4bca00;
+  --black:#000000;
+  --list-icon:var(--grey-hot);
+  --blur-li:2px;
+  --shodw-list-light: 0px 0px 10px #000000;
+  --shodw-list-dark:  0px 0px 10px #ffffff4d;
+  --topnav:var(--light-grey);
+  --text-topnav-desk:var(--grey-hot);
+  --text-topnav-mob:var(--grey-hot);
+  --border-nav:var(--black);
+  --main_color:var(--withe);
+  --background-main:var(--black);
+  --background-first:var(--withe-cream);
+  --string-highlight:var(--green);
+  --typewriter-class:var(--grey-hot);
+  --line-typewriter-name:var(--grey);
+  --typewriter-button:var(--grey);
+  --background-middle:var(--withe-cream);
+  --line-middle:var(--blue-bdazzled);
+  --aboutme-font:var(--green);
+  --items-skills:var(--background-middle);
+  --project-font:var(--green);
+  --card-project: var(--withe-dirty);
+  --border-items-project:var(--light-grey);
+  --description-card:var(--grey-hot);
+  --curve: 25;
+  --background-end:var(--hard-grey);
+  --end-font:var(--off-withe);
+  --line-end:var(--line-trasparent);
+  --background-loading:var(--light-grey);
+  --console:var(--trasparent);
+  --border-console:var(--black);
+  --console-font:limegreen;
+  /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
+}
+:root{    
+
+  --trasparent:#00000000;/*topnav*/
+  --line-trasparent:#d1d1d13e;
+  --blue:#003153;
+  --blue-petrolium:#001b2e;
+  --blue-indigo:#124375;
+  --blue-bdazzled:#285786;
+  --withe-dirty:#f7f0f0;/*(topnav-desk)*/
+  --withe:#ffffff;
+  --withe-cream: #fffffe;
+  --withe-im:#dedede;
+  --off-withe:#d1d1d1;
+  --hard-grey:#101010;
+  --grey:#9CAEA9;/*(text-topnav-mobile)*/
+  --trasparent-grey:#2d2d2d82;
+  --grey-hot:#555555;
+  --light-grey:#DEEBE3;
+  --green: #4bca00;
+  --black:#000000;
+  --list-icon:var(--grey-hot);
+  --blur-li:2px;
+  --topnav:var(--light-grey);
+  --text-topnav-desk:var(--grey-hot);
+  --text-topnav-mob:var(--grey-hot);
+  --border-nav:var(--black);
+  --main_color:var(--withe);
+  --background-main:var(--black);
+  --background-first:var(--withe-cream);
+  --string-highlight:var(--green);
+  --typewriter-class:var(--grey-hot);
+  --line-typewriter-name:var(--grey);
+  --typewriter-button:var(--grey);
+  --background-middle:var(--withe-cream);
+  --line-middle:var(--blue-bdazzled);
+  --aboutme-font:var(--green);
+  --items-skills:var(--background-middle);
+  --project-font:var(--green);
+  --card-project: var(--withe-dirty);
+  --border-items-project:var(--light-grey);
+  --description-card:var(--grey-hot);
+  --curve: 25;
+  --background-end:var(--hard-grey);
+  --end-font:var(--off-withe);
+  --line-end:var(--line-trasparent);
+  --background-loading:var(--light-grey);
+  --console:var(--trasparent);
+  --border-console:var(--black);
+  --console-font:limegreen;
+  /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
+}
+/*da considerare*/
+--list-icon:var(--grey);
+
+--blur-li:1px;  
+
+--text-topnav-desk:var(--withe-dirty);
+
+--text-topnav-mob:var(--grey);
+
+--typewriter-class:var(--grey);
+
+--background-end:var(--grey);
+
+--end-font:var(--grey-hot);
+
+--line-end:var(--line-trasparent);
