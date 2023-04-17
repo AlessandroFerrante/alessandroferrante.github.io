@@ -17,6 +17,7 @@
   --grey-hot:#555555;
   --light-grey:#DEEBE3;
   --green: #4bca00;
+  --green2: #1e8601;
   --black:#000000;
   --list-icon:var(--grey);
   --blur-li:1px;  
@@ -350,7 +351,7 @@ body{
   width: 22px;
 }
 input:checked + .slider {
-  background-color: var(--green);
+  background-color: var(--green2);
   border-bottom:0px solid var(--light-grey);/*elimina il bordo*/
 }
 input:checked + .slider:before {
