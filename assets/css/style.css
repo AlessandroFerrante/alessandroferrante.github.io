@@ -17,7 +17,7 @@
   --grey-hot:#555555;
   --light-grey:#DEEBE3;
   --green: #4bca00;
-  --green2: #1e8601;
+  --green2: #1e8601;/*#125901*/
   --black:#000000;
   --list-icon:var(--grey);
   --blur-li:1px;  
@@ -49,7 +49,8 @@
   --console:#00000066;
   --border-console:var(--black);
   --console-font:limegreen;
-  
+  --url-logo:url(../images/LogoWhite.svg);
+  --drop-logo:var(--withe);
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
 *{
@@ -104,6 +105,8 @@
   --console:var(--trasparent);
   --border-console:var(--black);
   --console-font:limegreen;
+  --url-logo:url(../images/LogoGreayLigth.svg);
+  --drop-logo:#c2c2c2;
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
 
@@ -169,7 +172,7 @@ body{
   width: 90%;  
   z-index: 999; 
   position: fixed;     
-  align-items: center;          
+  align-items: center;
   box-sizing: border-box;
   overflow: hidden;
   margin-top: 10px;
@@ -226,7 +229,7 @@ body{
 
 @media screen and (max-width: 800px) {
   .topnav  {
-    height: 61px;
+    height: 50px;
     transition: 1s;
     position: absolute; 
     padding: 5px 7px ;
@@ -245,10 +248,14 @@ body{
     border-radius: 50px ;
     display: block;
     position: fixed;
-    margin:5px;
+    margin:0px;
     right: 9px;
     font-size: 10px;
   }
+  .logonav{
+    top: -5px;
+  }
+
 }
 /** The "responsive" class is added to the topnav with JavaScript when the
 /** user clicks on the icon. This class makes the topnav look good on small screens
@@ -288,22 +295,116 @@ body{
     text-align: center;
     font-size: 10px;
   }
+  .logonav{
+    top: -5px;
+  }
 }
 /*-----END----RESPONSIVE-----*/
 
-.logonav{
-  float:left;
-  background-color: rgba(0, 0, 0,0);
+.logonav {
+  float: left;
+  background-color: rgba(54, 115, 19, 0);
   background-size: contain;
-  background-image: url(../images/Immagine3.png);
+  background-image: url(../images/LogoGreayLigth.svg);
   display: flex;
   height: 40px;
   width: 40px;
-  margin: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
   background-repeat: no-repeat;
-  border-radius: 100px;
   text-decoration: none;
+  position: relative;
 }
+
+.logonav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-image: var(--url-logo);
+  background-size: contain;
+  animation: flickerlogo 0.15ms alternate infinite;
+  filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo));
+}
+
+          @keyframes flickerlogo {  
+            0% {
+                opacity: 0;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            2% {
+                opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            3% {
+                opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            10% {
+              
+                opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            15% {
+                opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            20% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            25% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            50% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            51% {
+              opacity: 1;
+              filter: drop-shadow(0 0 5px var(--drop-logo)) drop-shadow(0 0 15px var(--drop-logo)); 
+            }
+            52% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            69% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            70% {
+              opacity: 0.5;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            71% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            
+            80% {
+              opacity: 1;
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            
+            85% {
+              opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            
+            90% {
+              opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+            100% {
+              opacity: 1;
+                filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 12px var(--drop-logo)); 
+            }
+          }  
+            
 /*- ****************************************************
 /*-Style  LEFT FOR DARK AND LIGHT MODE
 /*- **************************************************-*/
@@ -651,6 +752,96 @@ input:checked + .slider:before {
   font-weight: 900;
   border-bottom: 1px solid var(--line-typewriter-name);
   padding-bottom:8px;  
+}
+
+span #name-typewriter{ 
+    position: relative; 
+} 
+
+span #name-typewriter::before { 
+    content: attr(data-text); 
+    position: absolute; 
+    color: #55ff00; 
+    width: 100%; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: animate 0.15ms alternate-reverse infinite; 
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+} 
+
+@keyframes animate { 
+  0% {
+      opacity: 0;
+      filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  2% {
+      opacity: 1;
+      filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  3% {
+      opacity: 1;
+      filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  10% {
+    
+      opacity: 1;
+      filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00);
+  }
+  15% {
+      opacity: 1;
+      filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  20% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  25% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  51% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #55ff00) drop-shadow(0 0 15px #55ff00); 
+  }
+  52% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  69% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  70% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00);
+  }
+  71% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+
+  80% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+
+  85% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+
+  90% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px #55ff00) drop-shadow(0 0 12px #55ff00); 
+  }
 }
 #IT-typewriter{
   font-size: 1.3rem;
@@ -1349,16 +1540,14 @@ input:checked + .slider:before {
 .logoloader{
   position: absolute ;
   background-color: var(--trasparent);
-  background-size: contain;
-  background-image: url(../images/Immagine3.png);
-  object-fit: contain;
-  height: 40px;
-  width: 40px;
+  background-image: url(../images/LogoGreen.svg);
+  height: 45px;
+  width: 45px;
   top: 65%;
   margin-left:50%;
   transform: translate(-50%,-50%);
   background-repeat: no-repeat;
-  border-radius: 100px;
+  border-color: var(--trasparent);
   text-decoration: none;
 }
 .loader{
@@ -1375,30 +1564,30 @@ input:checked + .slider:before {
 
 .loader::before{
     content: '';
-    width: 50px;
-    height: 50px; 
-    border: 1px solid #ffffff;
+    width: 65px;
+    height: 65px; 
+    border: 2px solid #ffffff;
     z-index: -1;
     position:absolute;
     border-radius:100%;
     border-top-color: transparent;
     border-bottom-color: transparent;
     /* border-bottom-color: transparent; */
-    animation: loader linear infinite 2s;
+    animation: loader linear infinite 0.75s;
 }
 
 .loader::after{
     content:'';
-    width: 30px;
-    height: 30px;
+    width: 55px;
+    height: 55px;
     padding: 20px;
-    border:2px solid #228b22;
+    border: 3px solid #228b22;
     z-index: -1;
     position: absolute;
     border-radius:100%;
     border-top-color: transparent;
     border-bottom-color: transparent;
-    animation: inverted-loader linear infinite 2s;
+    animation: inverted-loader linear infinite 1.5s;
     transform: rotate(00deg);
     /*display: none; /* -- rimuovere per mostrare seconda barra di caricamento -- */
 }
