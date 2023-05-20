@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>Memorizza Pi Greco</title>
+    <script>
+        // Definizione del numero Pi greco
+        var pi = "3.14159";
+        var currentDigit = 0; // Parte da 3 per iniziare dalla terza cifra decimale
+
+        // Funzione per verificare l'input e mostrare il suggerimento
+        function checkInput() {
+        var input = document.getElementById("pi-input").value;
+        var expectedDigits = pi.substring(0, currentDigit + 1);
+
+        if (input === expectedDigits) {
+            if (currentDigit === pi.length - 1) {
+            alert("Hai memorizzato Pi Greco correttamente!");
+            resetInput();
+            currentDigit = 0; // Ricomincia dalla terza cifra decimale
+            showHint(); // Mostra il suggerimento
+            } else {
+            currentDigit++;
+            resetInput();
+            showHint(); // Mostra il suggerimento
+            }
+        } else {
+            alert("Hai sbagliato. Ricomincia da capo!");
+            resetInput();
+            currentDigit = 0;
+            showHint(); // Mostra il suggerimento
+        }
+        }
+
+        // Funzione per ripulire l'input
+        function resetInput() {
+        document.getElementById("pi-input").value = "";
+        }
+
+        // Funzione per mostrare il suggerimento
+        function showHint() {
+        var hint = pi.charAt(currentDigit);
+        document.getElementById("hint-paragraph").innerText = "Cifra succesiva: " + hint;
+        }
+
+        // All'avvio della pagina, mostra il suggerimento iniziale
+        window.onload = showHint;
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Maven+Pro&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(assets/images/mathematical-formulas.jpg);
+            background: cover;
+            background-size: 200% 100%;
+            animation: mirrorBackground 10s linear infinite alternate;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+        @keyframes mirrorBackground {
+            to {
+                background-position: 100% 0;
+            }
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.641);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            margin: 20px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+        background-color: #0056b3;
+        }
+        #hint-paragraph {
+        font-size: 16px;
+        font-style: italic;
+        }
+       .topnav {
+            grid-area: header;
+            padding: 5px 8px;
+            width: 90%;  
+            z-index: 999; 
+            position: fixed;     
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-top: 10px;
+            height: 61px;
+            margin-left: 50%;
+            transform: translateX(-50%); 
+            border-color: 1px solid var(--black);
+            border-radius: 35px;
+            background: var(--trasparent);
+            box-shadow: 0px 0px 10px var(--boxshadow-nav);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Memorizza Pi Greco</h1>
+        <p>Inserisci le cifre del numero Pi Greco:</p>
+        <p id="hint-paragraph"></p>
+
+        <input type="text" id="pi-input" value="" />
+        <button onclick="checkInput()">Verifica</button>
+    </div>
+</body>
+</html>
