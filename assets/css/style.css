@@ -2,6 +2,7 @@
 :root{ /*dark*/   
   --trasparent:#00000000;/*topnav*/
   --line-trasparent:#d1d1d13e;
+  --azure:#007bff;
   --blue:#003153;
   --blue-petrolium:#001b2e;
   --blue-indigo:#124375;
@@ -16,7 +17,7 @@
   --trasparent-grey:#2d2d2d82;
   --grey-hot:#555555;
   --light-grey:#DEEBE3;
-  --green: #4bca00;
+  --green: #32e600;/*4bca00*/
   --green2: #1e8601;/*#125901*/
   --black:#000000;
   --list-icon:var(--grey);
@@ -59,6 +60,7 @@
 [data-theme="dark"]{  /*THIS IS light because the dark is the default theme*/
   --trasparent:#00000000;/*topnav*/
   --line-trasparent:#d1d1d13e;
+  --azure:#007bff;
   --blue:#003153;
   --blue-petrolium:#001b2e;
   --blue-indigo:#124375;
@@ -91,15 +93,15 @@
   --typewriter-button:var(--grey);
   --background-middle:var(--trasparent);
   --line-middle:var(--grey);
-  --aboutme-font:var(--green);
+  --aboutme-font:var(--azure);
   --items-skills:var(--withe-cream);
-  --project-font:var(--green);
+  --project-font:var(--azure);
   --card-project: var(--light-grey);
   --border-items-project:var(--light-grey);
   --description-card:var(--grey-hot);
   --curve: 25;
   --background-end:var(--grey);/* hard-grey*/
-  --end-font:var(--grey-hot);/*off-withe*/
+  --end-font:var(--azure);/*off-withe*//*grey-hot*/
   --line-end:var(--line-trasparent);
   --background-loading:var(--light-grey);
   --console:var(--trasparent);
