@@ -332,7 +332,6 @@ body{
   /*animation: flickerlogo 0.15ms alternate infinite;*/
   filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 400px var(--drop-logo));
 }
-
           @keyframes flickerlogo {  
             0% {
                 opacity: 0;
@@ -361,7 +360,7 @@ body{
             }
             25% {
               opacity: 1;
-              filter: drop-shadow(0 0 2px va-drop-logo)) drop-shadow(0 0 40px var(--drop-logo)); 
+              filter: drop-shadow(0 0 2px var(--drop-logo)) drop-shadow(0 0 40px var(--drop-logo)); 
             }
             50% {
               opacity: 1;
