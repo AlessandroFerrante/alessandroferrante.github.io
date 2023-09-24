@@ -36,6 +36,7 @@
   --typewriter-button:var(--light-grey);
   --background-middle:var(--trasparent);
   --line-middle:var(--line-trasparent);
+  --border-middle:var(--trasparent-grey);
   --aboutme-font:var(--green);
   --items-skills:var(--black);
   --project-font:var(--green);
@@ -93,6 +94,7 @@
   --typewriter-button:var(--grey);
   --background-middle:var(--trasparent);
   --line-middle:var(--grey);
+  --border-middle:var(--line-trasparent);
   --aboutme-font:var(--azure);
   --items-skills:var(--withe-cream);
   --project-font:var(--azure);
@@ -184,7 +186,7 @@ body{
   transform: translateX(-50%); 
   border-color: 1px solid var(--black);
   border-radius: 35px;
-  background: var(--trasparent);
+  background: #58010101;
   box-shadow: 0px 0px 10px var(--boxshadow-nav);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -690,9 +692,9 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: auto;
   grid-area: main;
-  height: max-content;
   color:var(--main_color);
-  background-color: var(--background-main);
+  /*background-color: var(--background-main);*/
+  background: red;
 }
 /*_ ************* WELCOME *************/
 .var-highlight{
@@ -1021,28 +1023,34 @@ span #name-typewriter::before {
 /*_ *************************************/
 
 .first{
-  position:relative ;
+  position: relative;
+  position: sticky; 
+  position: -webkit-sticky;
+  /*position: fixed;*/
   background-color: var(--background-first);
   background-image: url("../images/cielo2.jpg") ;
   background-size: cover;
   width:100%;
-  height:100vh;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  max-height:min-content;
+  top: 0%;
+  left: 0%;
+  -ms-transform: translate(0%,0%);
+  transform: translate(0%,0%);
 }
 .first.light-theme{
-  position:relative;
+  position: relative;
+  position: sticky;
+  /*position: fixed;*/
+  position: -webkit-sticky;
   background-color: var(--background-first);
   background-image: url("../images/cielochiaro1.jpg") ;
   background-size: cover;
   width:100%;
-  height:100vh;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  max-height:min-content;
+  top: 0%;
+  left: 0%;
+  -ms-transform: translate(0%,0%);
+  transform: translate(0%,0%);
 }
 @media screen and (max-width: 800px) {
   .first{
@@ -1067,7 +1075,7 @@ span #name-typewriter::before {
 .space{
   margin: 0;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   scale: var( --scale-space);
 }
 .sole {
@@ -1234,12 +1242,15 @@ span #name-typewriter::before {
 .middle1{
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 92%;
+  border-radius: 30px;
+  border: 0.1px solid var(--border-middle);
+  margin-bottom: 20px;
   height: max-content;
   padding: 50px 0px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: var(--background-middle);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background-color: var(--trasparent-green);
 }
 @media only screen and (max-device-width: 720px) and (max-device-height: 1080px) {
   .aboutme{
@@ -1257,7 +1268,7 @@ span #name-typewriter::before {
     font-size: 1rem;
     font-weight: 100;
     min-width: 80%;
-    color:#9b9999;
+    color:#a50101;
    }
 }
 .aboutme{
@@ -1280,7 +1291,7 @@ span #name-typewriter::before {
 }
 .mypresentation{
   padding: 4%;
-  color: #9b9999;
+  color: #cbcbcb;
   font-size: 20px;
   max-width: 50%;
  }
@@ -1334,7 +1345,10 @@ span #name-typewriter::before {
 .middle2{
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 92%;
+  border-radius: 30px;
+  border: 0.1px solid var(--border-middle);
+  margin-bottom: 20px;
   height: max-content;
   padding: 50px 0px;
   backdrop-filter: blur(10px);
@@ -1342,7 +1356,6 @@ span #name-typewriter::before {
   /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);*/
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 0px;
 }
 .projects{
   font-family: 'Poppins', sans-serif;
@@ -1485,6 +1498,7 @@ span #name-typewriter::before {
 /*_ END */
 
 .end{
+  position: sticky;
   grid-area: footer;
   width: 100%;
   height: min-content;
