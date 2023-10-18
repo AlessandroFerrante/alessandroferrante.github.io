@@ -112,6 +112,26 @@ function detailsFunction5() {
     z.className = "fa-solid fa-arrow-down";
   }
 };
+function detailsFunction6() {
+  var x = document.getElementById("card__header6");
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  var y = document.getElementById("card__overlay6");
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  var z = document.getElementById("fa-solid fa-arrow-down6");
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
 function copyEmail() {
     navigator.clipboard.writeText("aleferrante003@gmail.com");
     alert("Copied the email: aleferrante003@gmail.com");
