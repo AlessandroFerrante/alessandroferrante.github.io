@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1e8601" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#43a509" />
+    <meta name="description" content="Ferrante Alessandro, IT Expert in Modica (RG), I have no special talent. I'm passionately curious">
+    <meta name="keywords" content="Alessandro, Ferrante, Designer, Developer, Web Developer, Web Designer, Siti, Web, Modica, Ragusa, Sicilia, Italia, github, git">
+    <meta name="author" content="Alessandro Ferrante">
+    <meta content="Ferrante, Alessandro, ferrante alessandro, alessandro ferrante, full stack developer,developer, siti web, modica, gestionali, informatico, sistemazione computer, gestione server, hosting, gestione dominio" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alessandro's web site</title>
+    <link rel="icon" href="../../assets/images/LogoWhite.svg">
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap'); </style>
+    <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a726a595d5.js" crossorigin="anonymous"></script>
+    <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content=""/>
+    <meta property="og:site_name" content="Alessandro Ferrante website">
+    <meta property="og:title" content="Alessandro's web site">
+    <meta property="og:description" content="Ferrante Alessandro, IT Expert in Modica (RG), I have no special talent. I'm passionately curious">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AlessandroFerrante/alessandroferrante.github.io/main/../assets/images/WebSite-banner.jpg">
+    <meta property="og:image:width" content="500"/>
+    <meta property="og:image:height" content="500"/>
+    <meta property="og:url" content="http://alessandroferrante.github.io">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--
+    <div class="loader" id="loading">
+			<div class="loader2" id="loading2">
+				<a href="https://www.instagram.com/alessandroferrantee/?hl=it"> 
+					<img src="../assets/images/Immagine3.ico" alt="">
+				</a> 
+	       </div>
+	    </div>
+    --> 
+    
+    <div class="loading" id="loading">
+      <div id="console">
+      </div>
+      <div class="loader" id="loader"></div>
+          <img class="logoloader" src="../../assets/images/LogoGreen.svg" alt=""> 
+     <div class="msg">LOADING...</div>
+    </div>
+    <!--- navbar-->
+      <div class="topnav" id="myTopnav" data-options="is_hover:true">         
+        <div class="logonav" href="#main"></div>
+          <div class="topnav-a">
+            <a class="" href="#main">Home</a>
+            <a class="" href="#aboutme">About me</a>
+            <a class=""href="#projects">Projects</a>
+            <a class=""href="#end">Contacts</a>
+          </div>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveFunction()">
+              <i class="fa fa-bars"></i> </a>
+      </div>
+    <!---left and right-->
+      <div class="left">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" checked id="checkbox"/>
+              <div class="slider round"></div>
+            </label>
+          </div>
+      </div>
+      <div class="right">
+        <div class="container">
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com/AlessandroFerrante/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/alessandroferrantee/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/AlessandroF_"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/AlessandroFerrante/"><i class="fa fa-github" aria-hidden="true"></i></a></li>     
+            <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" onclick="copyEmail()"><i class="fa-solid fa-m" aria-hidden="true"></i></a></li>       
+          </ul>
+        </div>
+      </div>
+    <!---main-->  
+      <div class="main" id="main"> 
+        <div id="first" class="first">   
+          <div class="textarea">
+            <pre id="typewriter" class="typewriter-class">
+<span id="hi-typewriter">Hi, I'm </span>
+<span data-text="Alessandro Ferrante" class="string-highlight" id="name-typewriter">Alessandro Ferrante</span>
+<span id="IT-typewriter" class="string-highlight">IT Expert</span>
+
+<i>"I have no special talent. 
+I'm passionately curious" </i>
+<i class="string-highlight">A.Einstein</i>
+              
+<a href="#aboutme" text-decoration="none"> About me </a> </pre>
+    
+            <pre id="typewriter2" class="typewriter-class">
+<span class="string-highlight">var</span> model3d = {
+    name: <span class="string-highlight">'Earth&Moon'</span>,
+    type: <span class="string-highlight">'Animation'</span>,
+    location: <span class="string-highlight">'Space'</span>,
+    properties:[<span class="string-highlight">'Javascript'</span>,
+                <span class="string-highlight">'HTML'</span>,
+                <span class="string-highlight">'CSS'</span>];
+}; </pre>
+        </div>  
+        <div class="space">
+          <div class="sole">
+            <img src="../assets/images/sole.png" alt="">
+          </div> 
+          <div class="mercurio-container">
+            <div class="mercurio">
+              <img src="../assets/images/Mercurio.png" alt="">
+            </div>
+          </div>
+          <div class="venere-container">
+            <div class="venere">
+              <img src="../assets/images/Venere.png" alt="">
+            </div>
+          </div>
+          <div class="earth-zone">
+            <div class="earth-container">
+              <div class="moon-container">
+                <div class="moon">
+                  <img src="../assets/images/moon.png" alt="">
+                </div>
+              </div>
+              <div class="earth">
+                <img src="../assets/images/Rotating_earth_animated_transparent.gif" alt="">
+              </div>
+            </div>
+         </div>
+         <div class="marte-container">
+          <div class="marte">
+            <img src="../assets/images/Marte.png" alt="">
+          </div>
+        </div>
+        </div>
+        </div> 
+        <div class="middle1" id="aboutme">
+          <div class="aboutme"> 
+            <div class="mypresentation">
+              <h1>About me</h1>
+              <p>Hi! I am Alessandro, I have always been passionate 
+                about technological evolution, what has aroused my curiosity has been the IT world, 
+                from this curiosity was born a passion, in fact I chose to attend a technical institute, 
+                where I obtained the diploma of IT Expert, 
+                I am currently a computer science student at the University of Catania.</p>
+                <h2>Hobbies</h2>
+                <div class="hobbies">
+                  <p class="items-skills">Astronomy</p>
+                  <p class="items-skills">Photograpy</p>
+                  <p class="items-skills">Read</p>
+                </div>
+              </div> 
+              <div class="skills">
+                <h1>Skills</h1>
+                <div class="skills-intern">
+                  <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img  src="../assets/images/logoc.png" alt="C"></a>
+                  <a href="https://en.wikipedia.org/wiki/C%2B%2B"><img src="../assets/images/logoc++.png" alt="C++"></a> 
+                  <a href="https://en.wikipedia.org/wiki/JavaScript"><img src="../assets/images/logojavascript.png" alt="JAVASCRIPT"></a> 
+                  <a href="https://en.wikipedia.org/wiki/JQuery"><img src="../assets/images/logojquery.png" alt="JQUERY"></a> 
+                  <a href="https://en.wikipedia.org/wiki/Java_(programming_language)"><img src="../assets/images/logojava.png" alt="JAVA"></a> 
+                  <a href="https://en.wikipedia.org/wiki/PHP"><img src="../assets/images/logophp.png" alt="PHP"></a> 
+                  <a href="https://en.wikipedia.org/wiki/SQL"><img src="../assets/images/logosql.svg" alt="SQL"></a> 
+                  <a href="https://www.haskell.org/"><img src="../assets/images/logoHaskell.svg" alt="Haskell"></a> 
+                  <a href="https://en.wikipedia.org/wiki/Assembly_language"><img src="../assets/images/logoassembly.png" alt="Assembly"></a> 
+                  <a href="https://en.wikipedia.org/wiki/CSS"><img src="../assets/images/logohtmlcss.png" alt="HTML & CSS"></a> 
+                  <a href="https://threejs.org/"><img src="../assets/images/logotheejs.png" alt="THREE.JS"></a> 
+                  <a href="https://www.markdownguide.org/"><img src="../assets/images/logomarkdown.png" alt="MARKDOWN"></a> 
+                  <a href="https://www.arduino.cc/"><img src="../assets/images/logoarduino.png" alt="ARDUINO"></a> 
+                  <a href="https://www.cisco.com/c/it_it/index.html?team=digital_marketing&medium=paid_search&campaign=campaign_independent&ccid=cc003671&dtid=pseggl000015&gclid=CjwKCAjwgsqoBhBNEiwAwe5w00suT3oafEBM7waP-GmhTLVJfuHZFCj7u8Ky5Ur3NPLLc0NDb067dhoCw1QQAvD_BwE&gclsrc=aw.ds"><img src="../assets/images/logocisco.png" alt="CISCO"></a> 
+
+                  <!--
+                <p class="items-skills">C</p>
+                <p class="items-skills">JAVASCRIPT</p>
+                <p class="items-skills">JQUERY</p>
+                <p class="items-skills">JAVA</p>
+                <p class="items-skills">PHP</p>
+                <p class="items-skills">SQL</p>
+                <p class="items-skills">HTML & CSS</p>
+                <p class="items-skills">THREE.JS</p>
+                <p class="items-skills">MARKDOWN</p> 
+                <p class="items-skills">CISCO</p>
+              -->
+              </div>
+            </div>    
+          </div>
+        </div>
+        <div class="middle2" id="projects">
+          <div class="projects"> 
+            <h1>Projects</h1>
+            <br>       
+            <ul class="cards">
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction1()">
+                  <div class="card">              
+                    <img style="filter: blur(4px);" class="card__image" src="https://i.seadn.io/gae/JUncy7ocQ8LjlRHdSOSAO9eNDCfDxHwFd2TjHCCnax4s7y7siXqNkzal2DtlW9QfkJLyo8vMAKHA1FTO44I_6wjwjyRdaNWz-jYot_A?auto=format&w=1000" alt="">
+                    <div class="card__overlay" id="card__overlay1">
+                      <div class="card__header" id="card__header1">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                        <div class="card__header-text">
+                          <h3 class="card__title">PartialSolarEclipseAF - <b>NFT</b></h3>          
+                          <span class="card__status"><i id="fa-solid fa-arrow-down1" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <p class="card__description"><i>Partial Solar Eclipse 25 October 2022 Began at 11:36:07</i></p>
+                      <a class="card__description" style="color:#15B2E5;" href="https://opensea.io/../assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/65581650382493699040570393731656260056136545966874649273228518780268313575425/"><b>Buy now on OpenSea</b> <i class="fa-solid fa-cart-shopping"></i></a>
+                      <a href="https://opensea.io/../assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/65581650382493699040570393731656260056136545966874649273228518780268313575425/" title="Buy on OpenSea" target="_blank"><img style="width:120px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png" alt="Available on OpenSea" /></a>
+                    </div>
+                  </div>  
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction2()">
+                  <div class="card">
+                    <img style="filter: blur(4px);" src="../assets/images/newcolnft.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay2">        
+                      <div class="card__header" id="card__header2">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Earth: Cosmic Oasis - <b>NFT Collection</b></h3>
+                          <span class="card__status"><i id="fa-solid fa-arrow-down2" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <p class="card__description">Items <b>66</b> · Chain <b>Ethereum</b> · Category <b>Art</b></p>
+                      <p class="card__description"><i>Earth is a kind of oasis in the middle of a vast universe, surrounded by nebulae and cosmic dust.</i></p>
+                      <a class="card__description" style="color:#15B2E5;" href="https://opensea.io/collection/earth-cosmic-oasis"><b>Buy now on OpenSea</b> <i class="fa-solid fa-cart-shopping"></i></a>
+                      <a href="https://opensea.io/collection/earth-cosmic-oasis" title="Buy on OpenSea" target="_blank"><img style="width:120px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Dark.png" alt="Available on OpenSea" /></a>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction3()">
+                  <div  class="card">
+                    <img style="filter: blur(4px);" src="../assets/images/curriculum.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay3">
+                      <div class="card__header" id="card__header3">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                        <div class="card__header-text">
+                          <h3 class="card__title">Curriculum vitae XML</h3>
+                          <span class="card__status"><i id="fa-solid fa-arrow-down3" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>
+                      </div>
+                      <a href="https://alessandroferrante.github.io/curriculumvitaeXML/" class="card__description" style="color:#15B2E5;"><b>Curriculum vitae<i class="fa-solid fa-link"></b></i></a>
+                      <a href="https://alessandroferrante.github.io/curriculumvitaeXML/"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="../assets/images/GitHub_Logo_White.png" alt=""></a>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction4()">
+                  <div  class="card" >
+                    <img style="filter: blur(4px);" src="../assets/images/managerial.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay4">
+                      <div class="card__header" id="card__header4">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Managerial</h3>
+                          <span  class="card__status" ><i id="fa-solid fa-arrow-down4" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>          
+                      </div>
+                      <a href="https://alessandroferrante.github.io/managerial/" class="card__description" style="color:#15B2E5;"><b>Managerial</b> <i class="fa-solid fa-link"></i></a>
+                      <a href="https://alessandroferrante.github.io/managerial/"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="../assets/images/GitHub_Logo_White.png" alt=""></a>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction5()">
+                  <div  class="card" >
+                    <img style="filter: blur(2px);" src="../assets/images/Pi-Memory.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay5">
+                      <div class="card__header" id="card__header5">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Pi-π Memory</h3>
+                          <span  class="card__status" ><i id="fa-solid fa-arrow-down5" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>          
+                      </div>
+                      <p class="card__description">Train your brain by learning the digits of pi(π)</p>
+                      <a href="https://alessandroferrante.github.io/Pi-grecoMemory" class="card__description" style="color:#15B2E5;"><b>Pi Memory</b> <i class="fa-solid fa-link"></i></a>
+                      <a href="https://alessandroferrante.github.io/Pi-grecoMemory"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="../assets/images/GitHub_Logo_White.png" alt=""></a>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a  href="javascript:void(0);" onclick="detailsFunction6()">
+                  <div  class="card" >
+                    <img style="filter: blur(2px);" src="../assets/images/WeatherApp.jpg" class="card__image" alt="" />
+                    <div class="card__overlay" id="card__overlay6">
+                      <div class="card__header" id="card__header6">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">Weather App</h3>
+                          <span  class="card__status" ><i id="fa-solid fa-arrow-down6" class="fa-solid fa-arrow-down"></i> more details</span>
+                        </div>          
+                      </div>
+                      <p class="card__description">Weather widget with Javascript, Vitejs, using openweathermap.org API</p>
+                      <a href="https://alessandroferrante.github.io/WeatherApp" class="card__description" style="color:#15B2E5;"><b>Weather App</b> <i class="fa-solid fa-link"></i></a>
+                      <a href="https://alessandroferrante.github.io/WeatherApp"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="../assets/images/GitHub_Logo_White.png" alt=""></a>
+                    </div>
+                  </div>
+                </a>
+              </li>    
+            </ul>
+          </div>      
+        </div>
+      </div> 
+    <!---end part-->
+      <div class="end" id="end">
+        <div class="gridend">
+          <div>
+            <h3>Contacts</h3>
+            <p>aleferrante003@gmail.com</p>
+          </div>
+          <div class="credits">
+            <h3>Credits</h3>
+            <a href="https://github.com/"><img style="width:80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="../assets/images/GitHub_Logo_White.png" alt=""></a>
+            <a href="https://opensea.io/" title="Buy on OpenSea" target="_blank"><img style="width:80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20Light.png" alt="Available on OpenSea" /></a>
+          </div>
+          <div >
+            <h3></h3>
+            <p></p>
+          </div>    
+        </div>
+        <div class="intern-end">
+          <p>© 2023 Ferrante Alessandro. All rights reserved. </p>
+          <p> Ferrante Alessandro based in Modica(RG)</p>
+        </div>
+      </div>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function(){
+            $("#loading").hide();
+          });
+      });
+    </script>
+  </body>
+</html>
