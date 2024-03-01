@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 4267 4263" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-miterlimit:2;">
+    <rect id="Green" x="3.223" y="-0" width="4259.58" height="4259.63" style="fill:none;"/>
+    <g id="Green1" serif:id="Green">
+        <g>
+            <g>
+                <g id="F">
+                    <path d="M2533.71,1299.36L2569.77,1042.81L4036.42,1042.81L4000.36,1299.36L2533.71,1299.36Z" style="fill:rgb(0,123,255);stroke:rgb(0,123,255);stroke-width:158.34px;"/>
+                    <path d="M2439.09,1972.62L3747.06,1972.62L3711,2229.17L2690.72,2229.17L2551.92,3216.82L2264.22,3216.82L2439.09,1972.62L2439.09,1972.62Z" style="fill:rgb(0,123,255);stroke:rgb(0,123,255);stroke-width:158.34px;"/>
+                </g>
+                <path d="M1486.26,1271.18C1438.99,1410.58 535.106,3216.82 535.106,3216.82L229.617,3216.82L1370.06,1042.8L1680,1042.8L2264.23,3216.82L1936.5,3216.82C1936.5,3216.82 1503.34,1388.83 1486.26,1271.18L1486.26,1271.18Z" style="fill:rgb(0,123,255);stroke:rgb(0,123,255);stroke-width:158.34px;"/>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,3860.21,3178.5)">
+                    <text x="0px" y="0px" style="font-family:'Poppins-Bold', 'Poppins';font-weight:700;font-size:189.269px;fill:rgb(0,123,255);">C</text>
+                </g>
+                <circle cx="3931.38" cy="3111.78" r="105.038" style="fill:none;stroke:rgb(0,123,255);stroke-width:28.01px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;"/>
+            </g>
+        </g>
+    </g>
+</svg>

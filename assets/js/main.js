@@ -136,6 +136,60 @@ function copyEmail() {
     navigator.clipboard.writeText("aleferrante003@gmail.com");
     alert("Copied the email: aleferrante003@gmail.com");
   }
+/******************/
+/* STAR OF SPACE */
+/****************/
+  const stars = document.querySelector('.stars');
+  const numStars = 350;
+  
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+  
+    // Posizionamento casuale
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    const duration = Math.random() * 200 + 500;
+    star.style.left = `${left}%`;
+    star.style.top = `${top}%`;
+    star.style.zIndex =`${0}`;
+    star.style.animationDuration = `${duration}ms`;
+    const r= Math.random() * 200 +56;
+    const g= Math.random() * 200 +56;
+    const b= Math.random() * 200 +56;
+    star.style.backgroundColor = `rgb(${r},${g},${b})`;
+    stars.appendChild(star);
+  }
+  const numStars2 = 0;
+  for (let i = 0; i < numStars2; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star2');
+  
+    // Posizionamento casuale
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    //const duration = Math.random() * 700 + 500;
+    star.style.left = `${left}%`;
+    star.style.top = `${top}%`;
+    star.style.zIndex =`${0}`;
+    const r= Math.random() * 256;
+    const g= Math.random() * 256;
+    const b= Math.random() * 256;
+    star.style.backgroundColor = `rgb(${r},${g},${b})`;
+    //star.style.animationDuration = `${duration}ms`;
+    stars.appendChild(star);
+  }
+  const stars2 = document.querySelectorAll('.star2');
+
+  for (let i = 0; i < stars2.length; i++) {
+    const duration = Math.random() * 650 + 400; // Durata casuale tra 500ms e 1500ms
+    stars2[i].style.animationDuration = `${duration}ms`;
+    stars2[i].style.zIndex =`${0}`;
+  }
+
+/***************/
+
+ /*Typewriter */ /*
 function setupTypewriter(t) {
   var HTML = t.innerHTML;
 
@@ -201,13 +255,15 @@ function setupTypewriter(t) {
   };
 }
 
-var typer = document.getElementById('typewriter');
-var typer2 = document.getElementById('typewriter2');
+
+
 
 typewriter = setupTypewriter(typewriter);
 typewriter.type();
 typewriter = setupTypewriter(typewriter2);
 typewriter.type();
+*/
+
 /*********** */
 /* switch mode */
 
@@ -322,7 +378,7 @@ setTimeout(() => {
   msg.innerHTML = "ACCESS GRANTED";
   msg.style.color="limegreen";
   msg.style.textshadow="limegreen";
-  msg.style.boxShadow = "0 0 30px limegreen";
-}, 750);
+  msg.style.boxShadow = "-6px -8px 5px var(--up-box), 2px 2px 6px var(--green)";
+}, 850);
 
 
