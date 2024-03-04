@@ -381,4 +381,9 @@ setTimeout(() => {
   msg.style.boxShadow = "-6px -8px 5px var(--up-box), 2px 2px 6px var(--green)";
 }, 850);
 
-
+$(document).ready(function() {
+  $("#loading").show();
+  if(navigator.platform === "iPhone") {
+    document.getElementById('first-component').style.marginTop = '100px'
+   }
+});
