@@ -1,332 +1,6 @@
-function m() {
-  $("#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4").click(function () {
-    $(this).toggleClass("open");
-  });
-};
 
-function responsiveFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-};
-function detailsFunction1() {
-  var x = document.getElementById("card__header1");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay1");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down1");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function detailsFunction2() {
-  var x = document.getElementById("card__header2");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay2");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down2");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function detailsFunction3() {
-  var x = document.getElementById("card__header3");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay3");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down3");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function detailsFunction4() {
-  var x = document.getElementById("card__header4");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay4");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down4");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function detailsFunction5() {
-  var x = document.getElementById("card__header5");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay5");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down5");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function detailsFunction6() {
-  var x = document.getElementById("card__header6");
-  if (x.className === "card__header") {
-    x.className += " responsive";
-  } else {
-    x.className = "card__header";
-  }
-  var y = document.getElementById("card__overlay6");
-  if (y.className === "card__overlay") {
-    y.className += " responsive";
-  } else {
-    y.className = "card__overlay";
-  }
-  var z = document.getElementById("fa-solid fa-arrow-down6");
-  if (z.className === "fa-solid fa-arrow-down") {
-    z.className = " fa-solid fa-arrow-up";
-  } else {
-    z.className = "fa-solid fa-arrow-down";
-  }
-};
-function copyEmail() {
-    navigator.clipboard.writeText("aleferrante003@gmail.com");
-    alert("Copied the email: aleferrante003@gmail.com");
-  }
-/******************/
-/* STAR OF SPACE */
-/****************/
-  const stars = document.querySelector('.stars');
-  const numStars = 350;
-  
-  for (let i = 0; i < numStars; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star');
-  
-    // Posizionamento casuale
-    const left = Math.random() * 100;
-    const top = Math.random() * 100;
-    const duration = Math.random() * 200 + 500;
-    star.style.left = `${left}%`;
-    star.style.top = `${top}%`;
-    star.style.zIndex =`${0}`;
-    star.style.animationDuration = `${duration}ms`;
-    const r= Math.random() * 200 +56;
-    const g= Math.random() * 200 +56;
-    const b= Math.random() * 200 +56;
-    star.style.backgroundColor = `rgb(${r},${g},${b})`;
-    stars.appendChild(star);
-  }
-  const numStars2 = 0;
-  for (let i = 0; i < numStars2; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star2');
-  
-    // Posizionamento casuale
-    const left = Math.random() * 100;
-    const top = Math.random() * 100;
-    //const duration = Math.random() * 700 + 500;
-    star.style.left = `${left}%`;
-    star.style.top = `${top}%`;
-    star.style.zIndex =`${0}`;
-    const r= Math.random() * 256;
-    const g= Math.random() * 256;
-    const b= Math.random() * 256;
-    star.style.backgroundColor = `rgb(${r},${g},${b})`;
-    //star.style.animationDuration = `${duration}ms`;
-    stars.appendChild(star);
-  }
-  const stars2 = document.querySelectorAll('.star2');
-
-  for (let i = 0; i < stars2.length; i++) {
-    const duration = Math.random() * 650 + 400; // Durata casuale tra 500ms e 1500ms
-    stars2[i].style.animationDuration = `${duration}ms`;
-    stars2[i].style.zIndex =`${0}`;
-  }
-
-/***************/
-
- /*Typewriter */ /*
-function setupTypewriter(t) {
-  var HTML = t.innerHTML;
-
-  t.innerHTML = "";
-
-  var cursorPosition = 0,
-      tag = "",
-      writingTag = false,
-      tagOpen = false,
-      typeSpeed = 100,
-      tempTypeSpeed = 0;
-
-  var type = function() {
-    
-      if (writingTag === true) {
-          tag += HTML[cursorPosition];
-      }
-
-      if (HTML[cursorPosition] === "<") {
-          tempTypeSpeed = 0;
-          if (tagOpen) {
-              tagOpen = false;
-              writingTag = true;
-          } else {
-              tag = "";
-              tagOpen = true;
-              writingTag = true;
-              tag += HTML[cursorPosition];
-          }
-      }
-      if (!writingTag && tagOpen) {
-          tag.innerHTML += HTML[cursorPosition];
-      }
-      if (!writingTag && !tagOpen) {
-          if (HTML[cursorPosition] === " ") {
-              tempTypeSpeed = 0;
-          }
-          else {
-              tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-          }
-          t.innerHTML += HTML[cursorPosition];
-      }
-      if (writingTag === true && HTML[cursorPosition] === ">") {
-          tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-          writingTag = false;
-          if (tagOpen) {
-              var newSpan = document.createElement("span");
-              t.appendChild(newSpan);
-              newSpan.innerHTML = tag;
-              tag = newSpan.firstChild;
-          }
-      }
-
-      cursorPosition += 1;
-      if (cursorPosition < HTML.length - 1) {
-          setTimeout(type, tempTypeSpeed);
-      }
-
-  };
-
-  return {
-      type: type
-  };
-}
-
-
-
-
-typewriter = setupTypewriter(typewriter);
-typewriter.type();
-typewriter = setupTypewriter(typewriter2);
-typewriter.type();
-*/
-
-/*********** */
-/* switch mode */
-
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'light') {
-    toggleSwitch.checked = true;
-   document.documentElement.setAttribute('data-theme', 'light');
-   var x = document.getElementById("first");
-   if (x.className === "first") {
-   }else{
-     x.className = "first";
-   } 
-  }
-  else{
-    toggleSwitch.checked = false;
-    document.documentElement.setAttribute('data-theme', 'dark');
-    var x = document.getElementById("first");
-    if (x.className === "first") {
-      x.className += " light-theme";
-    } 
-  }
-}
-function switchTheme(e) {
-  $(document).ready(function() {
-        $("#loading").show();
-  });
-    if (e.target.checked) {                 
-        var x = document.getElementById("first");
-        if (x.className === "first") {
-        }else{
-          x.className = "first";
-        } 
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        $(document).ready(function() {
-        setTimeout(function(){
-            $("#loading").hide();
-          },400);
-      });
-    }
-    else {
-          
-          var x = document.getElementById("first");
-        if (x.className === "first") {
-          x.className += " light-theme";
-        } 
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          $(document).ready(function() {
-        setTimeout(function(){
-            $("#loading").hide();
-          },400);
-      });
-    } 
-      
-}
-toggleSwitch.addEventListener('change', switchTheme, false);
-/************ */
 /*loader*/
-var intervalID = window.setInterval(updateScreen, 200);
+var intervalID = window.setInterval(updateScreen, 0);
 var console = document.getElementById("console");
 const msg = document.querySelector(".msg");
 
@@ -382,8 +56,274 @@ setTimeout(() => {
 }, 850);
 
 $(document).ready(function() {
+  setTimeout(function(){
+      clearInterval(intervalID);
+      $("#loading").hide();
+    }, 100);
+});
+
+/**
+ * change browser bar color on reload to "light" mode (witch is reversed with dark mode)
+ * otherwise use the color #0f0f0f of the html tag */
+document.addEventListener("DOMContentLoaded", function() {
+  var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  if (currentTheme === 'dark' && metaThemeColor && metaThemeColor.setAttribute('content', '#007bff')) {
+  } 
+});
+
+
+/* switch mode */
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light') {
+    toggleSwitch.checked = true;
+    document.documentElement.setAttribute('data-theme', 'light');
+    var x = document.getElementById("first");
+    if (x.className === "first") {
+    }
+    else
+      x.className = "first";
+  }
+  else{
+    toggleSwitch.checked = false;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    var x = document.getElementById("first");
+    if (x.className === "first") {
+      x.className += " light-theme";
+    } 
+  }
+}
+function switchTheme(e) {
+  $(document).ready(function() {
+        intervalID = window.setInterval(updateScreen, 0);
+        $("#loading").show();
+  });
+    if (e.target.checked) {                 
+        var x = document.getElementById("first");
+        if (x.className === "first") {
+        }else{
+          x.className = "first";
+        } 
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        
+        // browser bar
+        var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+          metaThemeColor.setAttribute('content', '#0f0f0f');/*1e8601*/
+        }
+
+        $(document).ready(function() {
+        setTimeout(function(){
+            $("#loading").hide();
+            clearInterval(intervalID);
+          },150);
+      });
+    }
+    else {
+          var x = document.getElementById("first");
+        if (x.className === "first") {
+          x.className += " light-theme";
+        } 
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+
+          // browser bar
+          var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+          if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', '#007bff');/*e0e0e0*/
+          }
+
+
+          $(document).ready(function() {
+        setTimeout(function(){
+            $("#loading").hide();
+            clearInterval(intervalID);
+          },150);
+      });
+    } 
+      
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
+/************ */
+$(document).ready(function() {
   $("#loading").show();
   if(navigator.platform === "iPhone") {
     document.getElementById('first-component').style.marginTop = '100px'
    }
 });
+
+function responsiveFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+};
+
+function copyEmail() {
+  var email = "me@alessandroferrante.net";
+
+  // Copia il testo negli appunti
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  dummy.value = email;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+
+  // Mostra il messaggio di notifica
+  var notification = document.getElementById("notification");
+  notification.style.display = "flex";
+
+  // Nasconde il messaggio dopo 3 secondi
+  setTimeout(function() {
+    notification.style.display = "none";
+  }, 3000);
+}
+
+
+/******************/
+/* STAR OF SPACE */
+/****************/
+  const stars = document.querySelector('.stars');
+  const numStars = 450;
+  
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+  
+    // Posizionamento casuale
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    const duration = Math.random() * 200 + 500;
+    star.style.left = `${left}%`;
+    star.style.top = `${top}%`;
+    star.style.zIndex =`${0}`;
+    star.style.animationDuration = `${duration}ms`;
+    const r= Math.random() * 200 +56;
+    const g= Math.random() * 200 +56;
+    const b= Math.random() * 200 +56;
+    star.style.backgroundColor = `rgb(${r},${g},${b})`;
+    stars.appendChild(star);
+  }
+  const numStars2 = 0;
+  for (let i = 0; i < numStars2; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star2');
+  
+    // Posizionamento casuale
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    //const duration = Math.random() * 700 + 500;
+    star.style.left = `${left}%`;
+    star.style.top = `${top}%`;
+    star.style.zIndex =`${0}`;
+    const r= Math.random() * 256;
+    const g= Math.random() * 256;
+    const b= Math.random() * 256;
+    star.style.backgroundColor = `rgb(${r},${g},${b})`;
+    //star.style.animationDuration = `${duration}ms`;
+    stars.appendChild(star);
+  }
+  const stars2 = document.querySelectorAll('.star2');
+
+  for (let i = 0; i < stars2.length; i++) {
+    const duration = Math.random() * 650 + 400; // Durata casuale tra 500ms e 1500ms
+    stars2[i].style.animationDuration = `${duration}ms`;
+    stars2[i].style.zIndex =`${0}`;
+  }
+/********** */
+document.addEventListener("DOMContentLoaded", function () {
+  var postContainer = document.getElementById("posts");
+  var clonePosts = postContainer.innerHTML;
+  var slideInterval;
+  var isPlaying = true;
+
+  // Aggiunge il contenuto clonato all'inizio e alla fine del container
+  postContainer.innerHTML = clonePosts + clonePosts;
+
+  function scrollPosts() {
+    postContainer.scrollLeft += 1; // Regola la velocità di scorrimento se necessario
+    // Se raggiunge la fine del contenuto, torna all'inizio
+    if (postContainer.scrollLeft >= postContainer.scrollWidth / 2) {
+      postContainer.scrollLeft = 0;
+    }
+  }
+
+  function startSlider() {
+    slideInterval = setInterval(scrollPosts, 20); // Regola l'intervallo per uno scorrimento fluido
+  }
+
+  function pauseSlider() {
+    clearInterval(slideInterval);
+  }
+
+  function toggleSlider() {
+    if (isPlaying) {
+      pauseSlider();
+      document.getElementById("toggleBtn").innerHTML = '<i class="fas fa-play"></i>';
+    } else {
+      startSlider();
+      document.getElementById("toggleBtn").innerHTML = '<i class="fas fa-pause"></i>';
+    }
+    isPlaying = !isPlaying;
+  }
+
+  function prevSlide() {
+    // Scorre all'indietro di un determinato valore
+    postContainer.scrollLeft -= 250; // Imposta la quantità appropriata per tornare alla slide precedente
+    // Se è tornato all'inizio, va alla fine del contenuto
+    if (postContainer.scrollLeft <= 0) {
+      postContainer.scrollLeft = postContainer.scrollWidth / 2;
+    }
+  }
+
+  function nextSlide() {
+    // Scorre in avanti di un determinato valore
+    postContainer.scrollLeft += 250; // Imposta la quantità appropriata per passare alla slide successiva
+    // Se è alla fine del contenuto, torna all'inizio
+    if (postContainer.scrollLeft >= postContainer.scrollWidth / 2) {
+      postContainer.scrollLeft = 0;
+    }
+  }
+
+  document.getElementById("toggleBtn").addEventListener("click", toggleSlider);
+  document.getElementById("prevBtn").addEventListener("click", prevSlide);
+  document.getElementById("nextBtn").addEventListener("click", nextSlide);
+
+  postContainer.addEventListener("mouseover", pauseSlider);
+  postContainer.addEventListener("mouseout", function() {
+    if (isPlaying) {
+      startSlider();
+    }
+  });
+  startSlider();
+});
+ 
+/******************/
+function toggleDetails(cardId, overlayId, arrowId) {
+  var x = document.getElementById(cardId);
+  if (x.className === "card__header") {
+    x.className += " responsive";
+  } else {
+    x.className = "card__header";
+  }
+  
+  var y = document.getElementById(overlayId);
+  if (y.className === "card__overlay") {
+    y.className += " responsive";
+  } else {
+    y.className = "card__overlay";
+  }
+  
+  var z = document.getElementById(arrowId);
+  if (z.className === "fa-solid fa-arrow-down") {
+    z.className = " fa-solid fa-arrow-up";
+  } else {
+    z.className = "fa-solid fa-arrow-down";
+  }
+};
