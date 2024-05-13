@@ -1,0 +1,358 @@
+html, body{
+    height:100%;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    background-color: #000000;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.loading{
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 999;
+  height: 100%;
+  touch-action: pan-down;
+  width: 100%;
+  z-index: 9999999;
+  background-color: black;
+}
+.logoloader{
+  position: absolute ;
+  background-image: url(../images/LogoWhite.svg);
+  height: 45px;
+  width: 45px;
+  top: 50%;
+  margin-left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.loader-container{
+  position: fixed;
+  width: 120px;
+  height: 120px; 
+  border-radius: 100%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+.loader{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader::before{
+    content: '';
+    width: 65px;
+    height: 65px; 
+    border: 1px solid #ffffff;
+    z-index: 1;
+    border-radius:100%;
+    padding: 2px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    /* border-bottom-color: transparent; */
+    animation: loader linear infinite 0.55s;
+}
+
+.loader::after{
+    content:'';
+    width: 55px;
+    height: 55px;
+    padding: 25px;
+    border: 1px solid silver;
+    z-index: -1;
+    position: absolute;
+    border-radius:100%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: inverted-loader linear infinite .85s;
+    transform: rotate(00deg);
+    -webkit-transform: rotate(00deg);
+    /*display: none; /* -- rimuovere per mostrare seconda barra di caricamento -- */
+}
+
+@keyframes loader {
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes inverted-loader {
+    100%{
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+
+/* ------------------------ */
+/* ---------SPACE--------- */
+/* ---------------------- */
+.sky {
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    z-index: 0;
+    width: 100%;
+    background-image: url("../images/sky2.jpg");
+    overflow: hidden;
+}
+  .space{
+    pointer-events: none;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    scale: 0.5;
+    animation: spin 60.24s linear infinite;
+  }
+  .stars{
+   z-index: -10;
+  }
+  
+  .star2 {
+    pointer-events:none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 0px 5px #fbff00);
+    filter: drop-shadow(0px 0px 5px #fbff00);
+    animation-name: move;
+    animation-iteration-count: infinite;
+  }
+  
+  .star {
+    pointer-events:none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 0px 5px #ffffff);
+    filter: drop-shadow(0px 0px 5px #ffffff);
+    animation: blink 500ms linear infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes move {
+    0% {
+      top: -100px;
+    }
+    50% {
+      top: 600px;
+    }
+    100% {
+      top: 800px;
+    }
+  }
+  
+  .sole {
+    pointer-events:none;
+    position: absolute;
+    top: calc(50% - 110px);
+    left: calc(50% - 125px);
+    border-radius: 100%;
+    box-shadow: 0 0 12em 1em #b66011;
+  }
+  .sole img{
+    z-index: 99;
+    height: 240px;
+    width: 240px;
+    position: absolute;
+    top: 0;
+    left:0;
+    /*clip-path: circle(150%);/** to delete the black border into the gif*/
+    transform: rotate(-23.27deg);
+  }
+  .sole img{
+    z-index: 99;
+    pointer-events:none;
+    height: 240px;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 240px;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 0px 6px #b661118f);
+    filter: drop-shadow(0px 0px 6px #b661118f);
+    box-shadow: 0 0 12em 1em #b661118f;
+  }
+  .earth-zone{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+  }
+  .earth-container {
+    animation: spin  31.536s linear infinite;
+    }
+  .earth{
+    background: none;
+    height: 0px;
+    width: 0px;
+    transform-origin: 25px;
+    border-radius: 100%;
+    pointer-events:none;
+  }
+  .earth img{
+    height: 120px;
+    pointer-events:none;
+    transform-origin: 25px;
+    transform: translateX(-440px) translateY(-440px) rotate(210.27deg);
+    width: 120px;
+    -webkit-filter: drop-shadow(-20px 0px 45px #349cd8);
+    filter: drop-shadow(-20px 0px 45px #349cd8);
+    /*clip-path: circle(%);/** to delete the black border into the gif*/
+  }
+  .moon-container {
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 450px);
+    }
+  .moon{
+    animation: spin 5s linear infinite;/*dovrebbe essere 2.36s*/
+    background: none;
+    height: 0px;
+    width: 0px;
+    transform-origin: 0px;
+    border-radius: 100%;
+    pointer-events:none;
+  }
+  .moon img{
+    height: 40px;
+    pointer-events:none;
+    transform-origin: 25px;
+    transform: translateX(-75px) translateY(-150px);
+    width: 40px;
+    -webkit-filter: drop-shadow(0px 0px 5px #ffffff);
+    filter: drop-shadow(0px 0px 5px #ffffff);
+  }
+  .mercurio-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    animation: spin 7.6032s linear infinite;
+  }
+  .mercurio{
+    background: none;
+    height: 0px;
+    width: 0px;
+    transform-origin: 25px;
+    border-radius: 100%;
+    pointer-events:none;
+  }
+  .mercurio img{
+    height: 50px;
+    pointer-events:none;
+    transform-origin: 25px;
+    transform: translateX(-220px) translateY(-200px) rotate(210.27deg);
+    width: 50px;
+    -webkit-filter: drop-shadow(0px 0px 55px #ffa600);
+    filter: drop-shadow(0px 0px 55px #ffa600);
+  }
+  .venere-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    animation: spin 19.3536s linear infinite;
+    }
+  .venere{
+    background: none;
+    height: 0px;
+    width: 0px;
+    transform-origin: 25px;
+    border-radius: 100%;
+    pointer-events:none;
+  }
+  .venere img{
+    height: 110px;
+    pointer-events:none;
+    transform-origin: 25px;
+    transform: translateX(-290px) translateY(-290px) rotate(210.27deg);
+    width: 110px;
+    -webkit-filter: drop-shadow(-15px 0px 55px #ffa600db);
+    filter: drop-shadow(-15px 0px 55px #ffa600db);
+  }
+  .marte-container {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    animation: spin 59.3548s linear infinite;
+    }
+  .marte{
+    background: none;
+    height: 0px;
+    width: 0px;
+    transform-origin: 25px;
+    border-radius: 100%;
+    pointer-events:none;
+  }
+  .marte img{
+    height: 70px;
+    pointer-events:none;
+    transform-origin: 25px;
+    transform: translateX(-600px) translateY(-480px) rotate(210.27deg);
+    width: 70px;
+    -webkit-filter: drop-shadow( -15px 0px 55px #ff0000db);
+    filter: drop-shadow(-15px 0px 55px #ff0000db);
+  }
+
+  @keyframes spin{
+    to{
+      transform: rotateZ(-360deg);
+      -webkit-transform: rotateZ(-360deg);
+    }
+  }
+  @keyframes  rotate{
+    to{
+      transform: rotateY(360deg);
+      -webkit-transform: rotateY(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+  .space{
+    scale: 0.35;
+  }
+  #animation-component{
+    font-size: 1em;
+    font-weight:700;
+    height: 230px;
+    max-width: 330px;
+    padding: 10px;
+    font-family: "Courier New";
+  }
+  a{
+    cursor:none;
+  }
+}
