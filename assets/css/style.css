@@ -163,7 +163,7 @@ html, body{
   margin:0px;
   background-color: #000000;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 body::-webkit-scrollbar {
   width:0px;
