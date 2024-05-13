@@ -210,12 +210,10 @@ body::-webkit-scrollbar {
 /*- **************************************-*/
 body{    
   display: grid;
-  display: block;
   grid-template-areas:
   'header'
   'main'
   'footer';
-  grid-gap: 0px; 
 }
 /*- ****************************************************
 /*--------------------Style copied email--------------- 
@@ -229,6 +227,7 @@ body{
   color: var(--font-alpha);
   padding: 35px;
   text-align: center;
+  text-decoration: none;
   font-family: 'Poppins';
   font-weight: 700;
   border-radius: 15px;
@@ -676,11 +675,11 @@ input:checked + .slider:before {
 /*- Style  MAIN *****************************************/
 /*- **************************************************-*/
 .main{
-  display: grid;
-  grid-template-columns: auto;
   grid-area: main;
   color:var(--main_color);
   background-color: var(--background-main);
+  width: 100vw;
+  display: inline-block;
 }
 /*_ ************* WELCOME *************/
 .var-highlight{
@@ -786,6 +785,7 @@ input:checked + .slider:before {
   margin-left: 50%;
   transform: translateX(-50%);
   width: fit-content;
+  max-width: 90%;
   height: fit-content;
 }
 #animation-component{
@@ -1255,6 +1255,7 @@ input:checked + .slider:before {
   /*border: 0.1px solid var(--border-middle);*/
   height: max-content;
   padding: 50px 0px;
+  overflow: hidden;
 }
 .aboutme{
   padding: 50px;
@@ -1629,7 +1630,6 @@ input:checked + .slider:before {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   overflow: hidden;
-
 }
 .projects{
   font-family: 'Poppins', sans-serif;
@@ -1811,7 +1811,7 @@ input:checked + .slider:before {
   padding: 20px 50px;
   margin-top: 30px;
   height: 100%;
-  width: 80%;
+  width: max-content;
   color: var(--font-beta);
   border-radius: 35px;
   background: var(--background-neumorphism);
