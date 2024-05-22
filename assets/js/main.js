@@ -62,16 +62,6 @@ $(document).ready(function() {
     }, 100);
 });
 
-/**
- * change browser bar color on reload to "light" mode (witch is reversed with dark mode)
- * otherwise use the color #0f0f0f of the html tag */
-document.addEventListener("DOMContentLoaded", function() {
-  var metaThemeColor = document.querySelector('meta[name="theme-color"]');
-  if (currentTheme === 'dark' && metaThemeColor && metaThemeColor.setAttribute('content', '#007bff')) {
-  } 
-});
-
-
 /* switch mode */
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
@@ -95,6 +85,29 @@ if (currentTheme) {
     } 
   }
 }
+
+/**
+ * change browser bar color on reload to "light" mode (witch is reversed with dark mode)
+ * otherwise use the color #0f0f0f of the html tag */
+document.addEventListener("DOMContentLoaded", function() {
+  var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  var linkIcon = document.querySelector('link[rel="icon"]');
+  var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+  if (currentTheme === 'dark' && metaThemeColor && metaThemeColor.setAttribute('content', '#007bff')) {
+    if (linkIcon  && linkAppleIcon) { // change icon
+      linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+      linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+    }
+  } 
+  else{
+      // set the icon green if dark mode is active when the page loads
+      if (linkIcon && linkAppleIcon && currentTheme === 'light') {
+        linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico'); // by default it is blue
+        linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+      }
+  } 
+});
+ 
 function switchTheme(e) {
   $(document).ready(function() {
         intervalID = window.setInterval(updateScreen, 0);
@@ -111,9 +124,12 @@ function switchTheme(e) {
         
         // browser bar
         var metaThemeColor = document.querySelector('meta[name="theme-color"]');
-        if (metaThemeColor) {
-          metaThemeColor.setAttribute('content', '#0f0f0f');/*1e8601*/
-        }
+        if (metaThemeColor) metaThemeColor.setAttribute('content', '#0f0f0f');/*1e8601*/
+        // change icon
+        var linkIcon = document.querySelector('link[rel="icon"]');
+        if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+        var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+        if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
 
         $(document).ready(function() {
         setTimeout(function(){
@@ -123,7 +139,7 @@ function switchTheme(e) {
       });
     }
     else {
-          var x = document.getElementById("first");
+          var x = document.getElementById("first"); 
         if (x.className === "first") {
           x.className += " light-theme";
         } 
@@ -132,10 +148,12 @@ function switchTheme(e) {
 
           // browser bar
           var metaThemeColor = document.querySelector('meta[name="theme-color"]');
-          if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', '#007bff');/*e0e0e0*/
-          }
-
+          if (metaThemeColor) metaThemeColor.setAttribute('content', '#007bff');/*e0e0e0*/
+          // change icon
+          var linkIcon = document.querySelector('link[rel="icon"]');
+          if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+          var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+          if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico'); 
 
           $(document).ready(function() {
         setTimeout(function(){
