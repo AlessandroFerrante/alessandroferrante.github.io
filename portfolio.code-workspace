@@ -4,7 +4,5 @@
 			"path": "."
 		}
 	],
-	"settings": {
-		"liveServer.settings.port": 413 /*413-ALE, 404, 31415, 8008*/
-	}
+	"settings": {}
 }
