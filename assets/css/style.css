@@ -72,6 +72,8 @@
   --url-logo:url(../images/LogoAzure.svg);
   --drop-logo:#c2c2c2;
   --translateX:50px;
+  --spaceX-logo: var(--black);
+  --github-logo: invert();
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
 *{
@@ -153,6 +155,8 @@
   --url-logo:url(../images/LogoGreen.svg);
   --drop-logo:var(--white);
   --translateX:50px;
+  --spaceX-logo: var(--white);
+  --github-logo: initial;
   /** --msg:;  msg rimane cosi per essere cambiata con la funzione js*/
 }
 
@@ -997,29 +1001,27 @@ input:checked + .slider:before {
 @keyframes moveUpShuttle {
   0% {
     transform: rotate(270deg) translateX(0px);
-    filter: drop-shadow(-5px 0px 1px orange)
-            drop-shadow(-5px 0px 1px red)
-            drop-shadow(-1px 0px 1px violet) 
+    filter: drop-shadow(-5px 0px 1px rgba(255, 166, 0, 0.63))
+            drop-shadow(-5px 0px 1px rgba(255, 0, 0, 0.541))
+            drop-shadow(-1px 0px 1px rgb(238, 130, 238)) 
             drop-shadow(-1px 0px 1px purple)
-            drop-shadow(0px -1px 2px rgb(0, 0, 0)) /* top */
-            drop-shadow(0px 1px 2px rgb(0, 0, 0)) /* down */
             drop-shadow(-25px 0px 35px rgba(255, 166, 0, 0.158)) 
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
             
   }
   10% {
     transform: rotate(255deg) translateX(100px);
-    filter: drop-shadow(-5px 0px 2px orange) 
-            drop-shadow(-4px 0px 2px red)
+    filter: drop-shadow(-5px 0px 2px rgba(255, 166, 0, 0.76)) 
+            drop-shadow(-4px 0px 2px rgba(255, 0, 0, 0.685))
             drop-shadow(-1px 0px 1px violet)    
             drop-shadow(-2px 0px 1px purple)
-            drop-shadow(-5px 0px 9px var(--azure))
+            drop-shadow(-5px 0px 1px #007bff98)
             drop-shadow(-25px 0px 35px rgba(255, 165, 0, 0.6)) 
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
   }
   20% {
     transform: rotate(245deg) translateX(180px);
-    filter: drop-shadow(-8px 0px 3px orange) 
+    filter: drop-shadow(-8px 0px 3px rgba(255, 166, 0, 0.623)) 
             drop-shadow(-5px 0px 1px purple)
             drop-shadow(-25px 0px 35px rgba(255, 165, 0, 0.6)) 
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
@@ -1028,14 +1030,14 @@ input:checked + .slider:before {
     font-size: 1rem;
     height: 0.8rem;
     transform: rotate(235deg) translateX(280px);
-    filter: drop-shadow(-5px 0px 2px orange)  
+    filter: drop-shadow(-5px 0px 2px rgba(255, 166, 0, 0.671))  
             drop-shadow(-5px 0px 4px violet) 
             drop-shadow(-25px 0px 35px rgba(255, 165, 0, 0.6)) 
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
   }
   40% {
     transform: rotate(230deg) translateX(380px);
-    filter: drop-shadow(-5px 0px 2px orange)  
+    filter: drop-shadow(-5px 0px 2px rgba(255, 166, 0, 0.801))  
             drop-shadow(-5px 0px 4px violet) 
             drop-shadow(-25px 0px 35px rgba(255, 166, 0, 0.801)) 
             drop-shadow(-35px 0px 55px rgb(255, 140, 0));
@@ -1043,8 +1045,8 @@ input:checked + .slider:before {
   95% {
     height: 0px;
     font-size: 0px;
-    filter:drop-shadow(-5px 0px 3px orange)  
-           drop-shadow(-4px 0px 2px violet)  
+    filter:drop-shadow(-5px 0px 3px rgba(255, 166, 0, 0.705))  
+           drop-shadow(-4px 0px 2px rgba(238, 130, 238, 0.76))  
            drop-shadow(-5px 0px 1px violet)
            drop-shadow(-25px 0px 35px rgba(255, 165, 0, 0.6)) 
            drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
@@ -1053,7 +1055,7 @@ input:checked + .slider:before {
     height: 0px;
     font-size: 0px;
     transform: rotate(225deg) translateX(450px);
-    filter: drop-shadow(-5px 0px 2px orange)
+    filter: drop-shadow(-5px 0px 2px rgb(255, 166, 0))
             drop-shadow(-15px 0px 6px orange) 
             drop-shadow(-25px 0px 35px rgba(255, 165, 0, 0.6)) 
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
@@ -2348,7 +2350,34 @@ input:checked + .slider:before {
   margin-bottom: 0px;
 }
 
+.spaceXLogo {
+  margin-left: 50%;
+  transform: translateX(-40%);
+  width:130px; 
+  height: fit-content;
+  padding: 5px;
+  border-radius:5px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-style: normal;
+  text-decoration: none;
+  filter: drop-shadow( 0px 0px 1px var(--spaceX-logo)) ;
+}
+
+.fill-spaceX-logo{
+  fill: var(--spaceX-logo);
+}
+.fill-opnesea-logo{
+  fill: var(--spaceX-logo);
+}
+.github-logo{
+  width:60px; 
+  padding: 2px; 
+  border-radius:5px; 
+  filter: var(--github-logo);
+}
 /*- LOADER-*/
+
 .loading{
   margin: 0;
   position: fixed;
