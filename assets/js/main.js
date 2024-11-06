@@ -95,15 +95,15 @@ document.addEventListener("DOMContentLoaded", function() {
   var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
   if (currentTheme === 'dark' && metaThemeColor && metaThemeColor.setAttribute('content', '#007bff')) {
     if (linkIcon  && linkAppleIcon) { // change icon
-      linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
-      linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+      linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+      linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
     }
   } 
   else{
       // set the icon green if dark mode is active when the page loads
       if (linkIcon && linkAppleIcon && currentTheme === 'light') {
-        linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico'); // by default it is blue
-        linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+        linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico'); // by default it is blue
+        linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
       }
   } 
 });
@@ -127,16 +127,16 @@ function switchTheme(e) {
         if (metaThemeColor) metaThemeColor.setAttribute('content', '#0f0f0f');/*1e8601*/
         // change icon
         var linkIcon = document.querySelector('link[rel="icon"]');
-        if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+        if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
         var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
-        if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+        if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
 
         $(document).ready(function() {
         setTimeout(function(){
             $("#loading").hide();
             clearInterval(intervalID);
           },150);
-      });
+        });
     }
     else {
           var x = document.getElementById("first"); 
@@ -151,9 +151,9 @@ function switchTheme(e) {
           if (metaThemeColor) metaThemeColor.setAttribute('content', '#007bff');/*e0e0e0*/
           // change icon
           var linkIcon = document.querySelector('link[rel="icon"]');
-          if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+          if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
           var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
-          if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico'); 
+          if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico'); 
 
           $(document).ready(function() {
         setTimeout(function(){
@@ -208,7 +208,7 @@ function copyEmail() {
 /* STAR OF SPACE */
 /****************/
   const stars = document.querySelector('.stars');
-  const numStars = 450;
+  const numStars = 100;
   
   for (let i = 0; i < numStars; i++) {
     const star = document.createElement('div');
@@ -228,6 +228,8 @@ function copyEmail() {
     star.style.backgroundColor = `rgb(${r},${g},${b})`;
     stars.appendChild(star);
   }
+  
+  /*
   const numStars2 = 0;
   for (let i = 0; i < numStars2; i++) {
     const star = document.createElement('div');
@@ -254,26 +256,27 @@ function copyEmail() {
     stars2[i].style.animationDuration = `${duration}ms`;
     stars2[i].style.zIndex =`${0}`;
   }
-/********** */
-document.addEventListener("DOMContentLoaded", function () {
+  */
+
+  document.addEventListener("DOMContentLoaded", function () {
   var postContainer = document.getElementById("posts");
   var clonePosts = postContainer.innerHTML;
   var slideInterval;
   var isPlaying = true;
 
-  // Aggiunge il contenuto clonato all'inizio e alla fine del container
+  // Add the cloned content to the beginning and end of the container
   postContainer.innerHTML = clonePosts + clonePosts;
 
   function scrollPosts() {
-    postContainer.scrollLeft += 1; // Regola la velocità di scorrimento se necessario
-    // Se raggiunge la fine del contenuto, torna all'inizio
+    postContainer.scrollLeft += 1; // Adjust the scrolling speed if necessary
+    // If it reaches the end of the content, go back to the beginning
     if (postContainer.scrollLeft >= postContainer.scrollWidth / 2) {
       postContainer.scrollLeft = 0;
     }
   }
 
   function startSlider() {
-    slideInterval = setInterval(scrollPosts, 20); // Regola l'intervallo per uno scorrimento fluido
+    slideInterval = setInterval(scrollPosts, 20);
   }
 
   function pauseSlider() {
@@ -292,18 +295,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function prevSlide() {
-    // Scorre all'indietro di un determinato valore
-    postContainer.scrollLeft -= 250; // Imposta la quantità appropriata per tornare alla slide precedente
-    // Se è tornato all'inizio, va alla fine del contenuto
+    postContainer.scrollLeft -= 250; 
     if (postContainer.scrollLeft <= 0) {
       postContainer.scrollLeft = postContainer.scrollWidth / 2;
     }
   }
 
   function nextSlide() {
-    // Scorre in avanti di un determinato valore
-    postContainer.scrollLeft += 250; // Imposta la quantità appropriata per passare alla slide successiva
-    // Se è alla fine del contenuto, torna all'inizio
+    postContainer.scrollLeft += 250; 
     if (postContainer.scrollLeft >= postContainer.scrollWidth / 2) {
       postContainer.scrollLeft = 0;
     }
@@ -345,3 +344,66 @@ function toggleDetails(cardId, overlayId, arrowId) {
     z.className = "fa-solid fa-arrow-down";
   }
 };
+
+const checkbox = document.getElementById("toggle-checkbox");
+const secondComponent = document.getElementById("second-component");
+const shuttle = document.getElementById("fa-solid-fa-shuttle-space");
+const animationComponent = document.getElementById("animation-component");
+secondComponent.classList.add("show");
+
+checkbox.addEventListener("change", function() {
+  if (checkbox.checked) {
+    setTimeout(() => {
+      shuttle.style.animation="moveUpShuttle 20s linear forwards";
+    }, 150);
+    secondComponent.classList.remove("show");
+    animationComponent.classList.add("show");
+    
+    setTimeout(() => {
+        secondComponent.style.display = "none";
+        animationComponent.style.display = "block";
+    }, 150);
+    setTimeout(() => {
+        const destinationElement = document.getElementById("main");
+        destinationElement.scrollIntoView({ behavior: "smooth" });
+    },600);
+
+  } else {
+      shuttle.style.animation = "moveDownShuttle 18s linear";
+      
+      animationComponent.classList.remove("show");
+      secondComponent.classList.add("show");
+      
+      setTimeout(() => {
+          animationComponent.style.display = "none";
+          secondComponent.style.display = "block";
+      }, 150);
+    }
+});
+
+// For all links <a> tag
+const links = document.querySelectorAll("a[href^='#']");
+
+links.forEach(link => {
+    link.addEventListener("click", function(event) {
+        // Removes default behavior
+        event.preventDefault();
+
+        // to take destination element
+        const destinationID = link.getAttribute("href").substring(1);
+        const destinationElement = document.getElementById(destinationID);
+
+        // Scrolls to target element with smooth effect
+        if (destinationElement) 
+            destinationElement.scrollIntoView({ behavior: "smooth" });
+      
+        if(link.classList.contains("menu-link") )
+          setTimeout(() => {
+            responsiveFunction();
+          }, 750);
+
+        if (destinationElement === contacts) {
+          window.scrollTo({ bottom: 0, behavior: 'smooth' });
+        }
+    });
+});
