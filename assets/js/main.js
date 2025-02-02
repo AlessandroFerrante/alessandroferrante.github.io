@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function() {
   else{
       // set the icon green if dark mode is active when the page loads
       if (linkIcon && linkAppleIcon && currentTheme === 'light') {
-        linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico'); // by default it is blue
-        linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+        linkIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico'); // by default it is blue
+        linkAppleIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
       }
   } 
 });
@@ -127,9 +127,9 @@ function switchTheme(e) {
         if (metaThemeColor) metaThemeColor.setAttribute('content', '#0f0f0f');/*1e8601*/
         // change icon
         var linkIcon = document.querySelector('link[rel="icon"]');
-        if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+        if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
         var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
-        if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoAzure.ico');
+        if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
 
         $(document).ready(function() {
         setTimeout(function(){
@@ -345,6 +345,7 @@ function toggleDetails(cardId, overlayId, arrowId) {
   }
 };
 
+const spaceToggle = document.getElementById("space-toggle");
 const checkbox = document.getElementById("toggle-checkbox");
 const secondComponent = document.getElementById("second-component");
 const shuttle = document.getElementById("fa-solid-fa-shuttle-space");
@@ -353,6 +354,7 @@ secondComponent.classList.add("show");
 
 checkbox.addEventListener("change", function() {
   if (checkbox.checked) {
+    spaceToggle.style.opacity = "1";
     setTimeout(() => {
       shuttle.style.animation="moveUpShuttle 20s linear forwards";
     }, 150);

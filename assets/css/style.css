@@ -234,7 +234,7 @@ body{
   text-decoration: none;
   font-family: 'Poppins';
   font-weight: 700;
-  border-radius: 15px;
+  border-radius: 25px;
   z-index: 999;
   background: linear-gradient(145deg, #ffffff03, #ffffff00);
   backdrop-filter: blur(5px);
@@ -520,20 +520,22 @@ input:checked + .slider:before {
 .social-icons li{
   transition: 1s;
   margin-top: 50%;
+  border-radius: 35%;
+  backdrop-filter: blur(1.5px);
+  background: linear-gradient(145deg, #ffffff02, #ffffff01);
   list-style: none;
 }
 .social-icons li a{
   transition: 1s;
   position: relative;
   display: block;
-  border-radius: 20%;
+  border-radius: 35%;
   display: flex;
   width: 30px;
   height: 30px;
+  padding: 1.5px;
   color: var(--font-alpha);/*555555*/
-  border-right: 0.1px solid var(--list-border-right);
-  border-bottom: 0.1px solid var(--list-border-bottom);
-  background: #fff;
+  background: #ffffff00;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -542,6 +544,7 @@ input:checked + .slider:before {
   transform: perspective(1000px) rotate(0deg) skew(0deg) translate(0,0);
   -webkit-transform: perspective(1000px) rotate(0deg) skew(0deg) translate(0,0);
 }
+/*
 .social-icons li a::before{
   content: "";
   position: absolute;
@@ -566,6 +569,7 @@ input:checked + .slider:before {
   transform: rotate(0deg) skewX(-45deg);
   -webkit-transform: rotate(0deg) skewX(-45deg);
 }
+ */
 .social-icons li a:hover{
   border-radius: 20%;
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
@@ -742,9 +746,9 @@ input:checked + .slider:before {
   color: var(--initial-component);
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
-  padding: 25px 25px;
+  padding: 36.4px 42px;
   width: max-content;
-  border-radius: 17px;
+  border-radius: 25px;
   background: linear-gradient(145deg, var(--first-gradient), var(--second-gradient));
   box-shadow:  7px 7px 17px var(--up-box),
              -7px -7px 17px var(--down-box);
@@ -843,7 +847,7 @@ input:checked + .slider:before {
   font-size: 1.1rem;
   font-weight: 550;
   font-family: "Courier New";
-  border-radius: 17px;
+  border-radius: 25px;
   align-items: center;
   height: 300px;
   width: 550px;
@@ -865,6 +869,7 @@ input:checked + .slider:before {
   -webkit-tap-highlight-color: transparent;
   outline: none;
   caret-color: transparent;
+  opacity: 0;
 }
 
 .space-checkbox {
@@ -876,6 +881,7 @@ input:checked + .slider:before {
   border-radius: 50%;
   height: 35px;
   width: 35px;
+  padding: 3px;
   cursor: pointer;
   outline: none;
   caret-color: transparent;
@@ -883,11 +889,18 @@ input:checked + .slider:before {
 
 
 .space-checkbox:hover {
-  
+  background: linear-gradient(45deg, var(--first-gradient), var(--second-gradient));
+  box-shadow: 2px 2px 3px var(--up-box), -2px -2px 3px var(--down-box);
+}
+
+.space-checkbox:active {
   background: linear-gradient(45deg, var(--first-gradient), var(--second-gradient));
   box-shadow: inset 2px 2px 3px var(--up-box), inset -2px -2px 3px var(--down-box);
 }
 
+.space-checkbox:hover{
+  filter: blur(0px);
+}
 
 #fa-solid-fa-shuttle-space {
   background-color: none;
@@ -897,10 +910,10 @@ input:checked + .slider:before {
   cursor: pointer;
   outline: none;
   caret-color: transparent;
-  height: 1.2rem;
-  transform-origin: 24px -3px 0; /*only with image*/
+  height: 0.5rem;
+  transform-origin: 15px 3px 0; /*only with image*/
   filter: 
-          drop-shadow(0px -1px 2px rgb(0, 0, 0)) /* top */
+          drop-shadow(0px -1px 2px rgba(0, 0, 0, 0.737)) /* top */
           drop-shadow(0px 1px 2px rgb(0, 0, 0)) /* down */;
 }
 
@@ -1100,7 +1113,7 @@ input:checked + .slider:before {
             drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
   }
   55% {
-    font-size: 1rem;
+    font-size: 1.4rem;
     height: 1rem;
     transform: rotate(255deg) translateX(90px);
     filter: drop-shadow(-5px 0px 2px orange)  
@@ -1118,7 +1131,7 @@ input:checked + .slider:before {
            drop-shadow(-35px 0px 55px rgba(255, 140, 0, 0.3));
   }
   100% {
-    height: 1.2rem;
+    height: 0.5rem;
     font-size: 1rem;
     transform: rotate(270deg) translateX(0px);
     filter: drop-shadow(-5px 0px 1px orange) 
@@ -1184,6 +1197,7 @@ input:checked + .slider:before {
   }
   .initial-component{
     max-height:400px;
+    padding: 30px 25px;
     color: var(--initial-component);
   }
   #first-component{
@@ -1368,7 +1382,7 @@ input:checked + .slider:before {
   width: 100%;
   background-color: #000;
   overflow: hidden;
-  border-radius: 17px;
+  border-radius: 25px;
   box-shadow: inset 5px 5px 10px var(--up-box),
     inset -5px -5px 10px var(--down-box);
 }
@@ -1760,7 +1774,7 @@ input:checked + .slider:before {
 .skills-intern img{
   padding: 6px;
   width: 45px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: linear-gradient(45deg, var(--first-gradient), var(--second-gradient));
   box-shadow:  2px 2px 6px var(--up-box),
              -2px -2px 6px var(--down-box);
@@ -1877,10 +1891,10 @@ input:checked + .slider:before {
   color:var(--font-alpha);
   font-weight:600;
   font-size: 0.90rem;
-  border-radius: 30px;
+  border-radius: 25px;
   padding: 10px 10px;
   margin-left: 25px;
-   text-decoration: none;
+  text-decoration: none;
   border: none;
   background-color: var(--background-neumorphism);
   box-shadow: 4px 4px 5px var(--up-box),
@@ -2346,7 +2360,8 @@ input:checked + .slider:before {
 /*.powered{
   
 }*/
-.end p{
+
+.intern-end p{
   margin-bottom: 0px;
 }
 
@@ -2369,6 +2384,15 @@ input:checked + .slider:before {
 }
 .fill-opnesea-logo{
   fill: var(--spaceX-logo);
+}
+.find-hester-egg {
+  margin-top: -10px; 
+  margin-bottom: -12px;
+  font-size: 8px;
+  margin-left: 12px ;
+  color:  var(--spaceX-logo);
+  font-family: monospace;
+  filter: drop-shadow( 0px 0px 1px var(--spaceX-logo)) ;
 }
 .github-logo{
   width:60px; 

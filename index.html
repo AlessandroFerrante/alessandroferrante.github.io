@@ -11,8 +11,8 @@
     <meta name="keywords" content="Alessandro Ferrante, Alessandro Ferrante IT Expert, Alessandro Ferrante Web Developer, Web Designer, Siti Web, Alessandro Ferrante Modica, Alessandro Ferrante Ragusa, Alessandro Ferrante Sicilia, Alessandro Ferrante Italia, Developer, Designer, Alessandro Ferrante GitHub, Full Stack Developer, gestione server, hosting, gestione dominio">
     <meta content="Ferrante, Alessandro, ferrante alessandro, alessandro ferrante, full stack developer,developer, siti web, Modica, modica, ale, alessandro, dev, Alessandro dev, Alessandro Ferrante Italia, Alessandro Ferrante Modica , informatico, sistemazione computer, gestione server, hosting, gestione dominio" name="keywords">
     <meta name="google-site-verification" content="2DO0pW3_N0Ssf-b_ckfrqstqNLU3VhC4g0GEVsW_d0A" />    
-    <link rel="icon" href="assets/images/LogoAzure.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/LogoAzure.ico">
+    <link rel="icon" href="assets/images/LogoWhiteAzure.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/LogoWhiteAzure.ico">
     <link type="text/css" href="assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
@@ -23,7 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a726a595d5.js" crossorigin="anonymous"></script>
     <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="Alessandro Ferrante">
+    <meta property="og:site_name" content="alessandroferrante.net">
     <meta property="og:title" content="Alessandro Ferrante | IT Expert">
     <meta property="og:description" content="Ferrante Alessandro, IT Expert in Modica (RG), currently BSC 👨🏼‍💻 Undergraduate at University of Catania">
     <meta property="og:image" content="https://raw.githubusercontent.com/AlessandroFerrante/alessandroferrante.github.io/main/assets/images/WebSite-banner.jpg">
@@ -87,7 +87,7 @@
           </ul>
         </div>
         <!-- class="fa-solid fa-shuttle-space"-->
-        <div class="space-toggle">
+        <div class="space-toggle" id="space-toggle">
           <label for="toggle-checkbox" class="space-checkbox">
               <img src="/assets/images/Starship.png" alt="" id="fa-solid-fa-shuttle-space">
               <!--<i class="fa-solid fa-shuttle-space" id="fa-solid-fa-shuttle-space"></i>-->
@@ -298,6 +298,26 @@
                   </div>
                 </a>
               </li>-->
+              <li onclick="toggleDetails('card__header7', 'card__overlay7', 'arrow7')">
+                <a href="#" onclick="toggleDetails('card__header7', 'card__overlay7', 'arrow7')">
+                  <div  class="card" >
+                    <img style="filter: blur(4px);" src="assets/images/JsonBase-DataOrganizer.webp" class="card__image" alt="JsonBase-DataOrganizer"  loading="lazy"/>
+                    <div class="card__overlay" id="card__overlay7">
+                      <div class="card__header" id="card__header7" onclick="toggleDetails('card__header7', 'card__overlay7', 'arrow7')">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path/></svg>                 
+                        <div class="card__header-text">
+                          <h3 class="card__title">JsonBase - Data Organizer</h3>
+                          <span  class="card__status" ><i id="arrow7" class="fa-solid fa-arrow-up"></i> more details</span>
+                        </div>          
+                      </div>
+                      <p class="card__description">JsonBase allows you to create, modify, and manage registers with dynamic columns and records.</p>
+                      <p class="card__description">You can also import and export registers as JSON files.</p>
+                      <a href="https://alessandroferrante.github.io/JsonBase-Data-Organizer" target="_blank" class="card__description" style="color:#15B2E5;"><b>JsonBase - Data Organizer</b> <i class="fa-solid fa-link"></i></a>
+                      <a href="https://alessandroferrante.github.io/JsonBase-Data-Organizer" target="_blank"><img style="width:80px;margin-left: 30px;top: -80px; border-radius:5px; box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);" src="assets/images/GitHub_Logo_White.webp" alt="github"  loading="lazy"></a>
+                    </div>
+                  </div>
+                </a>
+              </li>
               <li onclick="toggleDetails('card__header5', 'card__overlay5', 'arrow5')">
                 <a href="#" onclick="toggleDetails('card__header5', 'card__overlay5', 'arrow5')">
                   <div  class="card" >
@@ -445,7 +465,8 @@
           </div>
           <div class="credits">
             <h3 class="string-highlight">Credits</h3>
-              <a href="https://spacex.com/" class="spaceXLogo"">
+            <p class="find-hester-egg">Finds the easter egg!</p>
+              <a href="https://spacex.com/" class="spaceXLogo">
                 <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" aria-hidden="true">
                 <title>Inspiration rendering of the rocket provided by SpaceX. This site is not affiliated with SpaceX</title>
                 <g class="letter_s">
@@ -503,7 +524,7 @@
           </div>    
         </div>
         <div class="intern-end" aria-label="end of page">
-          <p>© 2021-2024 Ferrante Alessandro. All rights reserved. </p>
+          <p>© 2021-2025 Ferrante Alessandro. All rights reserved. </p>
           <p> Ferrante Alessandro based in Modica(RG)</p>
         </div>
       </div>
