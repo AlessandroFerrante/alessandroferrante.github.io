@@ -345,6 +345,34 @@ function toggleDetails(cardId, overlayId, arrowId) {
   }
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+    const options = { threshold: 0.7 };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const targetLi = entry.target;
+            const hId = targetLi.getAttribute('data-card');
+            const oId = targetLi.getAttribute('data-overlay');
+            const aId = targetLi.getAttribute('data-arrow');
+            const headerEl = document.getElementById(hId);
+            if (!headerEl) return;
+            if (entry.isIntersecting) {
+                if (headerEl.className === "card__header") {
+                    toggleDetails(hId, oId, aId);
+                }
+            } 
+            else {
+                if (headerEl.className.includes("responsive")) {
+                    toggleDetails(hId, oId, aId);
+                }
+            }
+        });
+    }, options);
+    const cards = document.querySelectorAll('.autotrigger');
+    cards.forEach(card => observer.observe(card));
+});
+
+
 const spaceToggle = document.getElementById("space-toggle");
 const checkbox = document.getElementById("toggle-checkbox");
 const secondComponent = document.getElementById("second-component");
