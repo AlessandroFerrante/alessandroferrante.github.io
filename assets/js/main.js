@@ -75,6 +75,7 @@ if (currentTheme) {
     }
     else
       x.className = "first";
+    toggleThemeImages(false);
   }
   else{
     toggleSwitch.checked = false;
@@ -83,6 +84,7 @@ if (currentTheme) {
     if (x.className === "first") {
       x.className += " light-theme";
     } 
+    toggleThemeImages(true);
   }
 }
 
@@ -98,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
       linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
       linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
     }
+    toggleThemeImages(true);
   } 
   else{
       // set the icon green if dark mode is active when the page loads
@@ -105,9 +108,33 @@ document.addEventListener("DOMContentLoaded", function() {
         linkIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico'); // by default it is blue
         linkAppleIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
       }
+    toggleThemeImages(false);
   } 
 });
- 
+
+function toggleThemeImages(isDark) {
+    const lightImages = document.querySelectorAll('.repo-img-light');
+    const darkImages = document.querySelectorAll('.repo-img-dark');
+
+    if (isDark) {
+        lightImages.forEach(img => {
+            img.style.display = "none";
+        });
+
+        darkImages.forEach(img => {
+            img.style.display = "block";
+        });
+
+    } else {
+        lightImages.forEach(img => {
+            img.style.display = "block";
+        });
+        darkImages.forEach(img => {
+            img.style.display = "none";
+        });
+    }
+}
+
 function switchTheme(e) {
   $(document).ready(function() {
         intervalID = window.setInterval(updateScreen, 0);
@@ -130,6 +157,8 @@ function switchTheme(e) {
         if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
         var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
         if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
+        
+        toggleThemeImages(false);
 
         $(document).ready(function() {
         setTimeout(function(){
@@ -154,6 +183,8 @@ function switchTheme(e) {
           if (linkIcon) linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
           var linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]');
           if(linkAppleIcon) linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico'); 
+
+          toggleThemeImages(true);
 
           $(document).ready(function() {
         setTimeout(function(){
@@ -435,5 +466,73 @@ links.forEach(link => {
         if (destinationElement === contacts) {
           window.scrollTo({ bottom: 0, behavior: 'smooth' });
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const listItems = document.querySelectorAll('.repo-grid li');
+
+    listItems.forEach(item => {
+        // Durata casuale tra 3s e 7s
+        const randomDuration = 3 + Math.random() * 4; 
+        
+        // Ritardo casuale tra 0s e 2s
+        const randomDelay = Math.random() * 2;
+
+        // Applichiamo l'animazione al LI
+        item.style.animationName = 'float';
+        item.style.animationDuration = `${randomDuration}s`;
+        item.style.animationDelay = `${randomDelay}s`;
+        item.style.animationTimingFunction = 'ease-in-out';
+        item.style.animationIterationCount = 'infinite';
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.repo-card');
+    const observerOptions = {
+        root: null,   
+        threshold: 1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        let delayCounter = 0; // Contatore per gestire l'effetto "1 alla volta"
+
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                const parentLi = card.parentElement; // Selezioniamo il LI padre
+
+                // Se la card è già stata animata di recente, ignoriamo per evitare loop fastidiosi
+                if (card.classList.contains('animating')) return;
+
+                // Aumentiamo il ritardo per ogni card trovata in questo blocco
+                // Es: la prima parte a 0ms, la seconda a 200ms, la terza a 400ms...
+                setTimeout(() => {
+                    // 1. Attiva l'effetto
+                    card.classList.add('simulate-hover', 'animating');
+                    parentLi.classList.add('z-active'); // Porta in primo piano il padre
+
+                    // 2. Rimuovi l'effetto dopo 1 secondo (crea l'effetto "pulsazione")
+                    setTimeout(() => {
+                        card.classList.remove('simulate-hover');
+                        parentLi.classList.remove('z-active');
+
+                        setTimeout(() => {
+                            card.classList.remove('animating');
+                        }, 1000); 
+
+                    }, 350); // Durata effetto "hover"
+
+                }, delayCounter * 320); // 200ms di distanza tra una card e l'altra
+
+                delayCounter++; // Incrementa il ritardo per la prossima card
+            }
+        });
+    }, observerOptions);
+
+    // Diciamo all'observer di controllare tutte le card
+    cards.forEach(card => {
+        observer.observe(card);
     });
 });
