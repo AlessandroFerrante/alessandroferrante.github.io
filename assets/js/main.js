@@ -99,16 +99,16 @@ document.addEventListener("DOMContentLoaded", function() {
     if (linkIcon  && linkAppleIcon) { // change icon
       linkIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
       linkAppleIcon.setAttribute('href', 'assets/images/LogoGreen.ico');
+      toggleThemeImages(true);
     }
-    toggleThemeImages(true);
   } 
   else{
       // set the icon green if dark mode is active when the page loads
       if (linkIcon && linkAppleIcon && currentTheme === 'light') {
         linkIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico'); // by default it is blue
         linkAppleIcon.setAttribute('href', 'assets/images/LogoWhiteAzure.ico');
+        toggleThemeImages(false);
       }
-    toggleThemeImages(false);
   } 
 });
 
