@@ -471,15 +471,9 @@ links.forEach(link => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const listItems = document.querySelectorAll('.repo-grid li');
-
     listItems.forEach(item => {
-        // Durata casuale tra 3s e 7s
         const randomDuration = 3 + Math.random() * 4; 
-        
-        // Ritardo casuale tra 0s e 2s
         const randomDelay = Math.random() * 2;
-
-        // Applichiamo l'animazione al LI
         item.style.animationName = 'float';
         item.style.animationDuration = `${randomDuration}s`;
         item.style.animationDelay = `${randomDelay}s`;
@@ -494,45 +488,41 @@ document.addEventListener("DOMContentLoaded", function() {
         root: null,   
         threshold: 1 
     };
-
     const observer = new IntersectionObserver((entries) => {
-        let delayCounter = 0; // Contatore per gestire l'effetto "1 alla volta"
-
+        let delayCounter = 0; 
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const card = entry.target;
-                const parentLi = card.parentElement; // Selezioniamo il LI padre
-
-                // Se la card è già stata animata di recente, ignoriamo per evitare loop fastidiosi
+                const parentLi = card.parentElement; 
                 if (card.classList.contains('animating')) return;
-
-                // Aumentiamo il ritardo per ogni card trovata in questo blocco
-                // Es: la prima parte a 0ms, la seconda a 200ms, la terza a 400ms...
                 setTimeout(() => {
-                    // 1. Attiva l'effetto
                     card.classList.add('simulate-hover', 'animating');
-                    parentLi.classList.add('z-active'); // Porta in primo piano il padre
-
-                    // 2. Rimuovi l'effetto dopo 1 secondo (crea l'effetto "pulsazione")
+                    parentLi.classList.add('z-active'); 
                     setTimeout(() => {
                         card.classList.remove('simulate-hover');
                         parentLi.classList.remove('z-active');
-
                         setTimeout(() => {
                             card.classList.remove('animating');
                         }, 1000); 
-
-                    }, 350); // Durata effetto "hover"
-
-                }, delayCounter * 320); // 200ms di distanza tra una card e l'altra
-
-                delayCounter++; // Incrementa il ritardo per la prossima card
+                    }, 350); 
+                }, delayCounter * 320); 
+                delayCounter++;
             }
         });
     }, observerOptions);
-
-    // Diciamo all'observer di controllare tutte le card
     cards.forEach(card => {
         observer.observe(card);
     });
 });
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(registration => {
+                console.log('Service Worker del Portfolio registrato con successo!', registration.scope);
+            })
+            .catch(error => {
+                console.warn('Registrazione Service Worker fallita:', error);
+            });
+    });
+}

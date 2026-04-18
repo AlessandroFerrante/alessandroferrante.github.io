@@ -32,6 +32,7 @@
     <link rel="canonical" href="https://alessandroferrante.net/"/>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
+    <link rel="manifest" href="./manifest.json">
     <script type="text/javascript" src="assets/js/main.js" defer></script>
     <script src="[https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js](https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js)"></script>
  </head>
@@ -317,7 +318,7 @@
                       <p class="card__description">StreetSignSense is an AI-powered tool designed to recognize and classify road signs in real-time.</p>
                       <p class="card__description">Leveraging deep learning models, it provides accurate identification to enhance road safety and navigation.</p>
                         <div class="cards_links" style="padding: 0 2em 2em;">
-                            <a href="https://alessandroferrante.github.io/StreetSignSense" target="_blank" style="color:#15B2E5; margin-right: 5px;">
+                            <a href="https://streetsignsense.alessandroferrante.net" target="_blank" style="color:#15B2E5; margin-right: 5px;">
                                 <b>StreetSignSense</b> <i class="fa-solid fa-link"></i>
                             </a>
                             <a href="https://github.com/AlessandroFerrante/StreetSignSense/" target="_blank">
@@ -334,27 +335,60 @@
                   </div>
                 </a>
               </li>
+              <li class="autotrigger" data-card="card__header11" data-overlay="card__overlay11" data-arrow="arrow11" onclick="toggleDetails('card__header11', 'card__overlay11', 'arrow11')">
+                <a href="#" onclick="toggleDetails('card__header11', 'card__overlay11', 'arrow11')">
+                  <div class="card">
+                    <!-- Ricordati di inserire l'immagine corretta nella cartella assets/images/ -->
+                    <img style="filter: blur(0px);" src="assets/images/ackermann4ws.png" onclick="toggleDetails('card__header11', 'card__overlay11', 'arrow11')" class="card__image" alt="Ackermann 4WS Simulator" loading="lazy"/>
+                    <div class="card__overlay" id="card__overlay11">
+                      <div class="card__header" id="card__header11" onclick="toggleDetails('card__header11', 'card__overlay11', 'arrow11')">
+                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z"/></svg>
+                        <div class="card__header-text">
+                          <h3 class="card__title">Ackermann 4WS</h3>
+                          <span class="card__status"><i id="arrow11" class="fa-solid fa-arrow-up"></i> more details</span>
+                        </div>          
+                      </div>
+                      <p class="card__description">Ackermann 4WS is a vehicle dynamics and autonomous driving simulator built with Godot Engine 4 and Python.</p>
+                      <p class="card__description">It explores the dynamic behavior of a '69 Ford Mustang using a custom 4-Wheel Steering system managed by full PID controllers.</p>
+                      <div class="cards_links" style="padding: 0 2em 2em;">
+                          <!-- Link al simulatore web -->
+                          <a href="https://ackermann4ws.alessandroferrante.net" target="_blank" style="color:#15B2E5; margin-right: 5px;">
+                              <b>Ackermann 4WS</b> <i class="fa-solid fa-link"></i>
+                          </a>
+                          <!-- Link a GitHub -->
+                          <a href="https://github.com/AlessandroFerrante/Ackermann4WS/" target="_blank">
+                              <i class="fa-brands fa-github fa-2x" style="font-size: 20px; vertical-align: middle; color: white; margin-right: 5px;"></i>
+                          </a>
+                          <!-- Link alla documentazione LaTeX
+                          <a href="https://ackermann4ws.alessandroferrante.net/ReportAckermann4WS.html" target="_blank" title="LaTeX Report">
+                              <i class="fa-solid fa-file-pdf fa-2x" style="font-size: 20px; vertical-align: middle; color: #ff4757; margin-right: 5px;"></i>
+                          </a> -->
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                </li>
               <li class="autotrigger" data-card="card__header10" data-overlay="card__overlay10" data-arrow="arrow10" onclick="toggleDetails('card__header10', 'card__overlay10', 'arrow10')">
                 <a href="#" onclick="toggleDetails('card__header10', 'card__overlay10', 'arrow10')">
                   <div class="card">
-                    <img style="filter: blur(0px);" src="assets/images/IrrigationControl.png" onclick="toggleDetails('card__header10', 'card__overlay10', 'arrow10')" class="card__image" alt="Irrigation Control Unit" loading="lazy"/>
+                    <img style="filter: blur(0px);" src="assets/images/IrriGo.png" onclick="toggleDetails('card__header10', 'card__overlay10', 'arrow10')" class="card__image" alt="IrriGo System" loading="lazy"/>
                     <div class="card__overlay" id="card__overlay10">
                       <div class="card__header" id="card__header10" onclick="toggleDetails('card__header10', 'card__overlay10', 'arrow10')">
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z"/></svg>
                         <div class="card__header-text">
-                          <h3 class="card__title">Irrigation Control Unit</h3>
+                          <h3 class="card__title">IrriGo System</h3>
                           <span class="card__status"><i id="arrow10" class="fa-solid fa-arrow-up"></i> more details</span>
                         </div>          
                       </div>
-                      <p class="card__description">An advanced ESP32-based controller designed to manage 4 distinct irrigation zones with precision timing.</p>
-                      <p class="card__description">Features efficient TOON binary logging, circular memory buffers, and a responsive Web Interface.</p>
+                      <p class="card__description">An advanced ESP32-based controller designed to manage distinct irrigation zones with precision timing. Features efficient TOON binary logging, circular memory buffers.</p>
+                      <p class="card__description">A smart, PWA using Web Bluetooth. Features programmable cycles, dynamic water budget, manual quick-controls, and interactive consumption statistics.</p>
                         <div class="cards_links" style="padding: 0 2em 2em;">
-                            <a href="https://alessandroferrante.github.io/Irrigation-Control-Unit" target="_blank" style="color:#15B2E5; margin-right: 15px;">
-                                <b>Irrigation Unit</b> <i class="fa-solid fa-link"></i>
+                            <a href="https://irrigo.alessandroferrante.net" target="_blank" style="color:#15B2E5; margin-right: 15px;">
+                                <b>IrriGo App</b> <i class="fa-solid fa-link"></i>
                             </a>
-                            <a href="https://github.com/AlessandroFerrante/Irrigation-Control-Unit" target="_blank">
+                            <!--<a href="https://github.com/AlessandroFerrante/IrriGo-System" target="_blank">
                                 <i class="fa-brands fa-github fa-2x" style="vertical-align: middle; color: white;"></i>
-                            </a>
+                            </a>-->
                         </div>
                     </div>
                   </div>
