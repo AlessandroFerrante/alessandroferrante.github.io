@@ -8,18 +8,6 @@
   "theme_color": "#007bff",
   "orientation": "portrait-primary",
   "icons": [
-    {   
-      "src": "./assets/images/LogoAzure.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {   
-      "src": "./assets/images/LogoGreen.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
     {
       "src": "./assets/images/AF-192.png",
       "sizes": "192x192",
