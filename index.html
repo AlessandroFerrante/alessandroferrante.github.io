@@ -115,6 +115,7 @@
             <div id="second-component" class="initial-component">
               <h2 class="string-highlight">I’m a Developer & AI Student</h2>
               <p>This is my info—I'm sharing all this with ya’ll to show you the work I've done in recent years. Once you're continue to scroll down,you can see details and info about me.</p>
+
               <p class="button"><a href="#aboutme" text-decoration="none" class="aboutme-button"> More info <i id="fa-solid fa-arrow-down1" class="fa-solid fa-arrow-down" style="margin-left: 5px; margin-right:3px;"></i> </a> </p>
             </div> 
             <div id="animation-component">
@@ -156,6 +157,7 @@
               </div>
               </a>
             </div>  
+            
           </div>
         </div> 
         
@@ -394,6 +396,7 @@
                   </div>
                 </a>
               </li>
+
               <li class="autotrigger" data-card="card__header9" data-overlay="card__overlay9" data-arrow="arrow9" onclick="toggleDetails('card__header9', 'card__overlay9', 'arrow9')">
                 <a href="#" onclick="toggleDetails('card__header9', 'card__overlay9', 'arrow9')">
                   <div class="card">
@@ -420,6 +423,32 @@
                   </div>
                 </a>
               </li>
+            <li class="autotrigger" data-card="card__header12" data-overlay="card__overlay12" data-arrow="arrow12" onclick="toggleDetails('card__header12', 'card__overlay12', 'arrow12')">
+              <a href="#" onclick="toggleDetails('card__header12', 'card__overlay12', 'arrow12')">
+                <div class="card">
+                  <img style="filter: blur(0px);" src="assets/images/qrltree.png" onclick="toggleDetails('card__header12', 'card__overlay12', 'arrow12')" class="card__image" alt="QRLTree" loading="lazy"/>
+                  <div class="card__overlay" id="card__overlay12">
+                    <div class="card__header" id="card__header12" onclick="toggleDetails('card__header12', 'card__overlay12', 'arrow12')">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z"/></svg>
+                      <div class="card__header-text">
+                        <h3 class="card__title">QRLTree</h3>
+                        <span class="card__status"><i id="arrow12" class="fa-solid fa-arrow-up"></i> more details</span>
+                      </div>          
+                    </div>
+                    <p class="card__description">QRLTree is a web-based digital ecosystem designed to manage, monitor, and catalog plants and trees using QR codes.</p>
+                    <p class="card__description">It features a built-in scanner, a label generator, and a real-time admin dashboard, requiring no external apps.</p>
+                    <div class="cards_links" style="padding: 0 2em 2em;">
+                        <a href="https://qrltree.alessandroferrante.net" target="_blank" style="color:#15B2E5; margin-right: 5px;">
+                            <b>QRLTree</b> <i class="fa-solid fa-link"></i>
+                        </a>
+                        <a href="https://github.com/AlessandroFerrante/QRLTree/" target="_blank">
+                            <i class="fa-brands fa-github fa-2x" style="font-size: 20px; vertical-align: middle; color: white; margin-right: 5px;"></i>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
               <li class="autotrigger" data-card="card__header7" data-overlay="card__overlay7" data-arrow="arrow7" onclick="toggleDetails('card__header7', 'card__overlay7', 'arrow7')">
                 <a href="#" onclick="toggleDetails('card__header7', 'card__overlay7', 'arrow7')">
                   <div  class="card" >
@@ -564,7 +593,98 @@
             <h2>Dev Lab</h2>
             <p class="projects-subtitle">A technical deep dive: from low-level C/C++ logic and IoT protocols to specialized AI models and datasets.</p>   
             <br>       
-            <ul class="repo-grid">
+            <ul class="repo-grid" id="repo-grid">
+                <li>
+                  <a href="https://huggingface.co/datasets/AlessandroFerrante/StreetSignSet" target="_blank" class="repo-card hf-custom-card">
+                      <div class="hf-container">
+                          <div class="hf-header">
+                              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 20px; vertical-align: middle;" alt="">
+                              <span class="hf-owner">AlessandroFerrante /</span>
+                          </div>
+                          <div class="hf-content">
+                              <h3 class="hf-repo-name"><i class="fa-solid fa-database"></i> StreetSignSet</h3>
+                              <span class="hf-repo-downloads" ><i class="fa-solid fa-download" style="margin-right: 5px;"></i> <span data-hf-id="StreetSignSet">- </span> downloads</span>
+                              <p class="hf-description">A specialized dataset for traffic sign recognition and computer vision training.</p>
+                          </div>
+                          <div class="hf-meta">
+                              <span class="hf-status"><i class="fa-solid fa-database" style="margin-right: 5px;"></i> Dataset</span>
+                              <span class="hf-status"><i class="fa-solid fa-bars" style="border: 1.6px solid; border-radius: 3px; margin-right: 5px;"></i> 7373 rows</span>
+                              <span class="hf-tag">Hugging Face</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12n" target="_blank" class="repo-card hf-custom-card">
+                      <div class="hf-container">
+                          <div class="hf-header">
+                              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
+                              <span class="hf-owner">AlessandroFerrante /</span>
+                          </div>
+                          <div class="hf-content">
+                              <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12n</h3>
+                              <span class="hf-repo-downloads"><i class="fa-solid fa-download" style="margin-right: 5px; "></i> <span data-hf-id="StreetSignSenseY12n">- </span> downloads</span>
+                              <p class="hf-description">Fine-tuned model YOLO12n for traffic sign classification based on the StreetSignSet dataset.</p>
+                          </div>
+                          <div class="hf-meta">
+                              <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
+                              <span class="hf-status"><i class="fa-solid fa-search" style="margin-right: 5px;"></i> Object Detection</span> 
+                              <span class="hf-tag">Hugging Face</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12s" target="_blank" class="repo-card hf-custom-card">
+                      <div class="hf-container">
+                          <div class="hf-header">
+                              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
+                              <span class="hf-owner">AlessandroFerrante /</span>
+                          </div>
+                          <div class="hf-content">
+                              <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12s</h3>                             
+                              <span class="hf-repo-downloads"><i class="fa-solid fa-download" style="margin-right: 5px;"></i> <span data-hf-id="StreetSignSenseY12s">- </span> downloads</span>
+                              <p class="hf-description">Fine-tuned model YOLO12s for traffic sign classification based on the StreetSignSet dataset.</p>
+                          </div>
+                          <div class="hf-meta">
+                              <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
+                              <span class="hf-status"><i class="fa-solid fa-search" style="margin-right: 5px;"></i> Object Detection</span>
+                              <span class="hf-tag">Hugging Face</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12m" target="_blank" class="repo-card hf-custom-card">
+                      <div class="hf-container">
+                          <div class="hf-header">
+                              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
+                              <span class="hf-owner">AlessandroFerrante /</span>
+                          </div>
+                          <div class="hf-content">
+                              <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12m</h3>
+                              <span class="hf-repo-downloads"><i class="fa-solid fa-download" style="margin-right: 5px;"></i> <span data-hf-id="StreetSignSenseY12m">- </span> downloads</span>
+                              <p class="hf-description">Fine-tuned model YOLO12m for traffic sign classification based on the StreetSignSet dataset.</p>
+                          </div>
+                          <div class="hf-meta">
+                              <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
+                              <span class="hf-status"><i class="fa-solid fa-search style="margin-right: 5px;"></i> Object Detection</span>
+                              <span class="hf-tag">Hugging Face</span>
+                          </div>
+                      </div>
+                  </a>
+              </li>              
+              <li style="flex: 0 0 100%; width: 100%; height: 0;"></li>
+              <li>
+                  <a href="https://github.com/AlessandroFerrante/StreetSignSense" target="_blank" class="repo-card">
+                      <img class="repo-img-light" 
+                          src="https://github-readme-stats-alessandroferrante.vercel.app/api/pin/?username=AlessandroFerrante&repo=StreetSignSense&bg_color=00000000&hide_border=true&title_color=v&text_color=2d2d2d82&icon_color=007bff&show_owner=true" 
+                          alt="StreetSignSense">
+                      <img class="repo-img-dark" 
+                          src="https://github-readme-stats-alessandroferrante.vercel.app/api/pin/?username=AlessandroFerrante&repo=StreetSignSense&bg_color=00000000&hide_border=true&title_color=32e600&text_color=9CAEA9&icon_color=32e600&show_owner=true" 
+                          alt="StreetSignSense">
+                  </a>
+              </li>
               <li>
                   <a href="https://github.com/AlessandroFerrante/C-language" target="_blank" class="repo-card">
                       <img class="repo-img-light" 
@@ -608,18 +728,6 @@
                           alt="IoT">
                   </a>
               </li>
-
-              <li>
-                  <a href="https://github.com/AlessandroFerrante/StreetSignSense" target="_blank" class="repo-card">
-                      <img class="repo-img-light" 
-                          src="https://github-readme-stats-alessandroferrante.vercel.app/api/pin/?username=AlessandroFerrante&repo=StreetSignSense&bg_color=00000000&hide_border=true&title_color=v&text_color=2d2d2d82&icon_color=007bff&show_owner=true" 
-                          alt="StreetSignSense">
-                      <img class="repo-img-dark" 
-                          src="https://github-readme-stats-alessandroferrante.vercel.app/api/pin/?username=AlessandroFerrante&repo=StreetSignSense&bg_color=00000000&hide_border=true&title_color=32e600&text_color=9CAEA9&icon_color=32e600&show_owner=true" 
-                          alt="StreetSignSense">
-                  </a>
-              </li>
-
               <li>
                   <a href="https://github.com/AlessandroFerrante/Software-Engineering" target="_blank" class="repo-card">
                       <img class="repo-img-light"
@@ -672,82 +780,6 @@
                     >
                 </a>
               </li>
-              <li>
-                <a href="https://huggingface.co/datasets/AlessandroFerrante/StreetSignSet" target="_blank" class="repo-card hf-custom-card">
-                    <div class="hf-container">
-                        <div class="hf-header">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 20px; vertical-align: middle;" alt="">
-                            <span class="hf-owner">AlessandroFerrante /</span>
-                        </div>
-                        <div class="hf-content">
-                            <h3 class="hf-repo-name"><i class="fa-solid fa-database"></i> StreetSignSet</h3>
-                            <p class="hf-description">A specialized dataset for traffic sign recognition and computer vision training.</p>
-                        </div>
-                        <div class="hf-meta">
-                            <span class="hf-status"><i class="fa-solid fa-database" style="margin-right: 5px;"></i> Dataset</span>
-                            <span class="hf-status"><i class="fa-solid fa-bars" style="border: 1.6px solid; border-radius: 3px; margin-right: 5px;"></i> 7373 rows</span>
-                            <span class="hf-tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12n" target="_blank" class="repo-card hf-custom-card">
-                    <div class="hf-container">
-                        <div class="hf-header">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
-                            <span class="hf-owner">AlessandroFerrante /</span>
-                        </div>
-                        <div class="hf-content">
-                            <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12n</h3>
-                            <p class="hf-description">Fine-tuned model YOLO12n for traffic sign classification based on the StreetSignSet dataset.</p>
-                        </div>
-                        <div class="hf-meta">
-                            <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
-                            <span class="hf-status"><i class="fa-solid fa-search" style="margin-right: 5px;"></i> Object Detection</span> 
-                            <span class="hf-tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12s" target="_blank" class="repo-card hf-custom-card">
-                    <div class="hf-container">
-                        <div class="hf-header">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
-                            <span class="hf-owner">AlessandroFerrante /</span>
-                        </div>
-                        <div class="hf-content">
-                            <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12s</h3>
-                            <p class="hf-description">Fine-tuned model YOLO12s for traffic sign classification based on the StreetSignSet dataset.</p>
-                        </div>
-                        <div class="hf-meta">
-                            <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
-                            <span class="hf-status"><i class="fa-solid fa-search" style="margin-right: 5px;"></i> Object Detection</span>
-                            <span class="hf-tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://huggingface.co/AlessandroFerrante/StreetSignSenseY12m" target="_blank" class="repo-card hf-custom-card">
-                    <div class="hf-container">
-                        <div class="hf-header">
-                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" style="height: 18px; vertical-align: middle;" alt="">
-                            <span class="hf-owner">AlessandroFerrante /</span>
-                        </div>
-                        <div class="hf-content">
-                            <h3 class="hf-repo-name"><i class="fa-solid fa-cube"></i> StreetSignSenseY12m</h3>
-                            <p class="hf-description">Fine-tuned model YOLO12m for traffic sign classification based on the StreetSignSet dataset.</p>
-                        </div>
-                        <div class="hf-meta">
-                            <span class="hf-status"><i class="fa-solid fa-cube" style="margin-right: 5px;"></i> Model</span>
-                            <span class="hf-status"><i class="fa-solid fa-search style="margin-right: 5px;"></i> Object Detection</span>
-                            <span class="hf-tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
             </ul>
           </div>      
         </div>

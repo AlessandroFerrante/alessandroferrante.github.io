@@ -2327,7 +2327,13 @@ input:checked + .slider:before {
   font-weight: 800;
   margin: 4px 0;
 }
-
+.hf-repo-downloads {
+  color: #a300a9; 
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+}
 .hf-description {
   font-size: 14px;
   color: var(--devlab-card);

@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting) {
                 const card = entry.target;
                 const parentLi = card.parentElement; 
-                if (card.classList.contains('animating')) return;
+                if (card.classList.contains('animating') || card.classList.contains('already-animated')) return;
                 setTimeout(() => {
                     card.classList.add('simulate-hover', 'animating');
                     parentLi.classList.add('z-active'); 
@@ -503,6 +503,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         parentLi.classList.remove('z-active');
                         setTimeout(() => {
                             card.classList.remove('animating');
+                            card.classList.add('already-animated');
+                            observer.unobserve(card);
                         }, 1000); 
                     }, 350); 
                 }, delayCounter * 320); 
@@ -513,6 +515,93 @@ document.addEventListener("DOMContentLoaded", function() {
     cards.forEach(card => {
         observer.observe(card);
     });
+});
+// 1. Funzione per recuperare i dati da Hugging Face
+async function getHuggingFaceDownloads() {
+    const targets = [
+        { id: 'AlessandroFerrante/StreetSignSenseY12n', type: 'model' },
+        { id: 'AlessandroFerrante/StreetSignSenseY12s', type: 'model' },
+        { id: 'AlessandroFerrante/StreetSignSenseY12m', type: 'model' },
+        { id: 'AlessandroFerrante/StreetSignSet', type: 'dataset' }
+    ];
+
+    const results = {};
+    const requests = targets.map(async (target) => {
+        const baseUrl = target.type === 'model' 
+            ? 'https://huggingface.co/api/models/' 
+            : 'https://huggingface.co/api/datasets/';
+        
+        const url = `${baseUrl}${target.id}?expand[]=downloadsAllTime`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            
+            const shortName = target.id.split('/').pop();
+            results[shortName] = data.downloadsAllTime || 0;
+        } catch (error) {
+            console.error(`Errore per ${target.id}:`, error);
+            const shortName = target.id.split('/').pop();
+            results[shortName] = 0; // Fallback a 0 in caso di errore
+        }
+    });
+
+    await Promise.all(requests);
+    return results;
+}
+
+function animateCounter(element, targetValue) {
+    if (targetValue === 0) {
+        element.innerText = "0";
+        return;
+    }
+
+    const duration = 2000; // durataanimazione
+    const startTime = performance.now();
+
+    function updateNumber(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1); 
+        const easeProgress = progress * (2 - progress);
+        
+        const currentValue = Math.floor(easeProgress * targetValue);
+        
+        element.innerText = currentValue.toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+        }
+    }
+
+    requestAnimationFrame(updateNumber);
+}
+document.addEventListener('DOMContentLoaded', async () => {
+    const apiData = await getHuggingFaceDownloads();
+
+    // Observe the #devlab container so counters animate every time the list becomes visible
+    const repoGrid = document.querySelector('#devlab');
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // animate all counters currently in the grid; do NOT unobserve so it can trigger again
+          const counterElements = entry.target.querySelectorAll('[data-hf-id]');
+          counterElements.forEach(element => {
+            const hfId = element.getAttribute('data-hf-id');
+            const finalValue = apiData[hfId] || 0;
+            animateCounter(element, finalValue);
+          });
+        }
+      });
+    }, observerOptions);
+
+    if (repoGrid) observer.observe(repoGrid);
 });
 
 if ('serviceWorker' in navigator) {
